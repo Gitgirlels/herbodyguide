@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initBackToTop();
   });
-  
-  // ==========================
+ 
+// ==========================
 // Website Search Functionality
 // ==========================
 
@@ -253,6 +253,19 @@ document.addEventListener('DOMContentLoaded', function() {
   if (searchForm) {
     searchForm.addEventListener('submit', function(e) {
       e.preventDefault();
+      e.stopPropagation();
+      const query = document.getElementById('searchInput').value;
+      lastSearchQuery = query;
+      performSearch(query, currentCategory);
+      return false; // Extra prevention
+    });
+  }
+
+  // Search button click
+  const searchButton = document.getElementById('searchButton');
+  if (searchButton) {
+    searchButton.addEventListener('click', function(e) {
+      e.preventDefault();
       const query = document.getElementById('searchInput').value;
       lastSearchQuery = query;
       performSearch(query, currentCategory);
@@ -269,6 +282,16 @@ document.addEventListener('DOMContentLoaded', function() {
         performSearch(query, currentCategory);
       } else if (query.length === 0) {
         hideResults();
+      }
+    });
+
+    // Handle Enter key press
+    searchInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const query = e.target.value;
+        lastSearchQuery = query;
+        performSearch(query, currentCategory);
       }
     });
 
@@ -292,6 +315,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// ==========================
+// Utility Functions
+// ==========================
+
+/**
+ * Add new content to search database
+ * @param {Object} content - Content object with title, url, category, excerpt, date, keywords
+ */
+function addContentToSearch(content) {
+  websiteContent.push(content);
+}
+
+/**
+ * Update existing content in search database
+ * @param {string} url - URL of content to update
+ * @param {Object} updates - Object with properties to update
+ */
+function updateSearchContent(url, updates) {
+  const index = websiteContent.findIndex(item => item.url === url);
+  if (index !== -1) {
+    websiteContent[index] = { ...websiteContent[index], ...updates };
+  }
+}
 
 // ==========================
 // Utility Functions
