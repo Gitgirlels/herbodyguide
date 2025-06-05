@@ -31,7 +31,7 @@
 <div class="search-section">
   <h3>🔍 Search Her Body Guide</h3>
   <div class="search-container">
-    <form class="search-form" id="searchForm">
+    <form class="search-form" id="searchForm" onsubmit="return false;">
       <input 
         type="text" 
         class="search-input" 
@@ -39,16 +39,16 @@
         placeholder="Search for topics, articles, or information..."
         autocomplete="off"
       >
-      <button type="submit" class="search-button">
+      <button type="button" class="search-button" id="searchButton">
         <span>Search</span>
       </button>
     </form>
     
     <div class="search-filters">
       <button class="filter-button active" data-category="all">All Topics</button>
-      <button class="filter-button" data-category="conceiving">Conceiving Confidently</button>
+      <button class="filter-button" data-category="conceiving">Conceiving</button>
       <button class="filter-button" data-category="contraception">Contraception</button>
-      <button class="filter-button" data-category="anatomy">Female Anatomy</button>
+      <button class="filter-button" data-category="anatomy">Anatomy</button>
       <button class="filter-button" data-category="menstruation">Menstruation</button>
       <button class="filter-button" data-category="pregnancy">Pregnancy</button>
       <button class="filter-button" data-category="legal">Legal Rights</button>
