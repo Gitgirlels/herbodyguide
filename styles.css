@@ -65,7 +65,7 @@
     .search-button {
       padding: 0.8rem 1.5rem;
       border: none;
-      background: white;
+      background: linear-gradient(135deg, var(--link-color), var(--link-hover));
       color: #fff;
       border-radius: 8px;
       cursor: pointer;
