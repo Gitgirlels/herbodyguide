@@ -27,6 +27,41 @@
       <strong>About Her Body Guide:</strong> We provide evidence-based information to help women understand their bodies better. Our content is carefully researched and presented in an accessible way to support informed health decisions. Always consult with healthcare professionals for personalized medical advice.
     </div>
 
+<!-- Search Section - Add this to your index.html after the about-card -->
+<div class="search-section">
+  <h3>🔍 Search Her Body Guide</h3>
+  <div class="search-container">
+    <form class="search-form" id="searchForm">
+      <input 
+        type="text" 
+        class="search-input" 
+        id="searchInput"
+        placeholder="Search for topics, articles, or information..."
+        autocomplete="off"
+      >
+      <button type="submit" class="search-button">
+        <span>Search</span>
+      </button>
+    </form>
+    
+    <div class="search-filters">
+      <button class="filter-button active" data-category="all">All Topics</button>
+      <button class="filter-button" data-category="conceiving">Conceiving Confidently</button>
+      <button class="filter-button" data-category="contraception">Contraception</button>
+      <button class="filter-button" data-category="anatomy">Female Anatomy</button>
+      <button class="filter-button" data-category="menstruation">Menstruation</button>
+      <button class="filter-button" data-category="pregnancy">Pregnancy</button>
+      <button class="filter-button" data-category="legal">Legal Rights</button>
+    </div>
+  </div>
+</div>
+
+<!-- Search Results Section -->
+<div class="search-results" id="searchResults" style="display: none;">
+  <div class="results-header" id="resultsHeader"></div>
+  <div id="resultsContainer"></div>
+</div>
+    
     <!-- Conceiving Confidently Section -->
     <section class="category-section">
       <h2 class="category-title">Conceiving Confidently</h2>
