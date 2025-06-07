@@ -543,6 +543,143 @@ width: 100%;
 height: 100%;
 border: none;
 }
+ /* Menu Bar Styles */
+    .menu-bar {
+      background-color: #e6a3de;
+      padding: 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .menu-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .menu-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #6a4a3c;
+      text-decoration: none;
+      padding: 15px 0;
+    }
+
+    .menu-nav {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 0;
+    }
+
+    .menu-nav li {
+      position: relative;
+    }
+
+    .menu-nav a {
+      color: #6a4a3c;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: block;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .menu-nav a:hover {
+      background-color: rgba(106, 74, 60, 0.1);
+    }
+
+    /* Dropdown Styles */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #e6a3de;
+      min-width: 250px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1001;
+      top: 100%;
+      left: 0;
+      border-top: 2px solid #6a4a3c;
+    }
+
+    .dropdown-content a {
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(106, 74, 60, 0.1);
+    }
+
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown > a::after {
+      content: ' ▼';
+      font-size: 0.8rem;
+      margin-left: 5px;
+    }
+
+    /* Mobile Menu Styles */
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #6a4a3c;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .menu-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #e6a3de;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .menu-nav.active {
+        display: flex;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .dropdown-content {
+        position: static;
+        display: block;
+        box-shadow: none;
+        background-color: rgba(106, 74, 60, 0.05);
+        margin-left: 20px;
+      }
+
+      .dropdown > a::after {
+        display: none;
+      }
+    }
+
+    /* Existing styles compatibility */
+    .site-header {
+      margin-top: 0;
+    }
 
 /* ==========================
  Subscribe Section
