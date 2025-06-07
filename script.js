@@ -29,7 +29,7 @@ const websiteContent = [
     keywords: ["anatomy", "reproductive", "ovaries", "fallopian tubes", "uterus", "cervix", "conception"]
   },
   {
-    title: "Top 5 Prenatal Vitamins: Science and Chemistry",
+    title: "Top 10 Prenatal Vitamins: Science and Chemistry",
     url: "post3.html",
     category: "conceiving",
     excerpt: "Prenatal vitamins support a healthy pregnancy. Folic acid, iron, calcium, vitamin D, and omega-3 are crucial—here's why and how they work chemically.",
@@ -121,6 +121,50 @@ const websiteContent = [
 // Global variables
 let currentCategory = 'all';
 let lastSearchQuery = '';
+
+// Mobile menu toggle function
+    function toggleMobileMenu() {
+      const menuNav = document.getElementById('menuNav');
+      menuNav.classList.toggle('active');
+    }
+
+    // Back to top functionality
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Subscribe form functionality
+    const subscribeForm = document.querySelector('.subscribe-form');
+    subscribeForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      alert(`Thank you for subscribing with email: ${email}`);
+      e.target.reset();
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const menuBar = document.querySelector('.menu-bar');
+      const menuNav = document.getElementById('menuNav');
+      const toggleButton = document.querySelector('.mobile-menu-toggle');
+      
+      if (!menuBar.contains(e.target) && menuNav.classList.contains('active')) {
+        menuNav.classList.remove('active');
+      }
+    });
 
 // ==========================
 // Core Search Functions
