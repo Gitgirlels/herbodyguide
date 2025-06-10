@@ -57,6 +57,23 @@ h1, h2, p, div {
   margin-bottom: 20px;
 }
 
+.menu-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.menu-content.show {
+  display: block !important;
+  opacity: 1;
+  transform: translateY(0);
+}
 /* ==========================
  Site Header
  ========================== */
@@ -409,11 +426,7 @@ box-shadow: var(--box-shadow);
 font-size: 0.9rem;
 color: var(--subheading-color);
 }
-.menu-content.show {
-  display: block !important;
-  opacity: 1;
-  transform: translateY(0);
-}
+
 /* ==========================
  Back to Top Button
  ========================== */
