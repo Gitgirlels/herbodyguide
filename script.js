@@ -5,7 +5,101 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initBackToTop();
   });
- 
+
+// ==========================
+// Quick Article Menu Functions
+// ==========================
+
+/**
+ * Toggle the quick article menu visibility
+ */
+function toggleMenu() {
+  const menuContent = document.getElementById('menuContent');
+  const menuToggle = document.querySelector('.menu-toggle');
+  
+  if (menuContent.style.display === 'none' || menuContent.style.display === '') {
+    menuContent.style.display = 'block';
+    menuToggle.textContent = 'Hide Articles';
+  } else {
+    menuContent.style.display = 'none';
+    menuToggle.textContent = 'Browse All Articles by Category';
+  }
+}
+
+/**
+ * Search through articles in the quick menu
+ * @param {string} query - Search query from input
+ */
+function searchArticles(query) {
+  const searchResults = document.getElementById('searchResults');
+  const menuCategories = document.querySelectorAll('.menu-category');
+  
+  // Clear previous results
+  searchResults.innerHTML = '';
+  
+  if (query.trim() === '') {
+    // Show all categories when search is empty
+    menuCategories.forEach(category => {
+      category.style.display = 'block';
+    });
+    searchResults.style.display = 'none';
+    return;
+  }
+  
+  // Hide categories when searching
+  menuCategories.forEach(category => {
+    category.style.display = 'none';
+  });
+  
+  // Search through all links
+  const allLinks = document.querySelectorAll('.menu-links a');
+  const matchingResults = [];
+  
+  allLinks.forEach(link => {
+    const title = link.textContent.toLowerCase();
+    const searchTerm = query.toLowerCase();
+    
+    if (title.includes(searchTerm)) {
+      matchingResults.push({
+        title: link.textContent,
+        url: link.href,
+        category: link.closest('.menu-category').querySelector('h3').textContent
+      });
+    }
+  });
+  
+  // Display results
+  if (matchingResults.length > 0) {
+    searchResults.innerHTML = `
+      <div class="search-results-header">Found ${matchingResults.length} result${matchingResults.length !== 1 ? 's' : ''}:</div>
+      ${matchingResults.map(result => `
+        <div class="search-result-item">
+          <a href="${result.url}">${highlightSearchTerm(result.title, query)}</a>
+          <span class="result-category">${result.category}</span>
+        </div>
+      `).join('')}
+    `;
+  } else {
+    searchResults.innerHTML = `
+      <div class="no-search-results">No articles found for "${query}"</div>
+    `;
+  }
+  
+  searchResults.style.display = 'block';
+}
+
+/**
+ * Highlight search terms in article titles
+ * @param {string} text - Text to highlight
+ * @param {string} query - Search query to highlight
+ * @returns {string} Text with highlighted terms
+ */
+function highlightSearchTerm(text, query) {
+  if (!query) return text;
+  const regex = new RegExp(`(${query})`, 'gi');
+  return text.replace(regex, '<mark style="background-color: rgba(230, 163, 222, 0.3); padding: 2px 4px; border-radius: 3px;">$1</mark>');
+}
+
 // ==========================
 // Website Search Functionality
 // ==========================
