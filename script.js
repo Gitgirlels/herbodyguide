@@ -14,18 +14,33 @@ document.addEventListener('DOMContentLoaded', () => {
  * Toggle the quick article menu visibility
  */
 function toggleMenu() {
+  console.log('toggleMenu() called');
+  
   const menuContent = document.getElementById('menuContent');
   const menuToggle = document.querySelector('.menu-toggle');
   
-  if (menuContent.style.display === 'none' || menuContent.style.display === '') {
+  if (!menuContent) {
+    console.error('menuContent element not found');
+    return;
+  }
+  
+  const isHidden = !menuContent.classList.contains('show');
+  
+  if (isHidden) {
     menuContent.style.display = 'block';
+    setTimeout(() => {
+      menuContent.classList.add('show');
+    }, 10);
     menuToggle.textContent = 'Hide Articles';
   } else {
-    menuContent.style.display = 'none';
+    menuContent.classList.remove('show');
+    setTimeout(() => {
+      menuContent.style.display = 'none';
+    }, 300);
     menuToggle.textContent = 'Browse All Articles by Category';
   }
 }
-
+window.toggleMenu = toggleMenu;
 /**
  * Search through articles in the quick menu
  * @param {string} query - Search query from input
