@@ -41,6 +41,7 @@ function toggleMenu() {
   }
 }
 window.toggleMenu = toggleMenu;
+window.searchArticles = searchArticles;
 /**
  * Search through articles in the quick menu
  * @param {string} query - Search query from input
