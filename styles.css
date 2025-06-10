@@ -409,7 +409,11 @@ box-shadow: var(--box-shadow);
 font-size: 0.9rem;
 color: var(--subheading-color);
 }
-
+.menu-content.show {
+  display: block !important;
+  opacity: 1;
+  transform: translateY(0);
+}
 /* ==========================
  Back to Top Button
  ========================== */
