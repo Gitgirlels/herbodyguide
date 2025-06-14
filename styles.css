@@ -487,11 +487,10 @@ line-height: 1.6;
 }
 
 .posts-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
 
 .post-card {
 background: white;
