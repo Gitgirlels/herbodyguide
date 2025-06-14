@@ -1208,3 +1208,11 @@ body {
   .nav-menu { flex-direction: column; align-items: center; }
   .contact-links { flex-direction: column; }
 }
+
+.posts-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem !important;
+  max-width: 800px;
+  margin: 0 auto;
+}
