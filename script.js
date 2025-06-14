@@ -1,5 +1,4 @@
-
-// ─── Wait until DOM is loaded ───
+   // ─── Wait until DOM is loaded ───
 document.addEventListener('DOMContentLoaded', () => {
     handleCommentForms();
     handleSubscribeForm();
