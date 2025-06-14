@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,21 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2936158828082668" crossorigin="anonymous"></script>
 </head>
 <body>
+  
+    <header class="site-header">
+    <div class="wrapper">
+      <h1 class="site-title">Her Body Guide</h1>
+      <p class="site-tagline">Science-based guidance for women for their bodies</p>
+      <nav class="main-navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact-and-privacy-policy.html">Contact & Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  
   <main class="wrapper">
     <!-- About Card -->
     <div class="about-card">
@@ -674,6 +688,34 @@
   </footer>
 
   <button id="backToTop" title="Back to top">↑</button>
-<script src="script.js"></script>
+
+  <script>
+    // Back to top functionality
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Subscribe form functionality
+    const subscribeForm = document.querySelector('.subscribe-form');
+    subscribeForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      alert(`Thank you for subscribing with email: ${email}`);
+      e.target.reset();
+    });
+  </script>
 </body>
 </html>
