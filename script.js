@@ -1,370 +1,473 @@
-   // ─── Wait until DOM is loaded ───
+// ─── Wait until DOM is loaded ───
 document.addEventListener('DOMContentLoaded', () => {
     handleCommentForms();
     handleSubscribeForm();
     initScrollReveal();
     initBackToTop();
   });
-// sidebar-script.js
 
-// All articles data for search functionality
-const articles = [
-  // Conceiving Confidently
-  { title: "Factors Affecting Fertilization & Implantation", url: "post1.html", category: "Conceiving Confidently" },
-  { title: "The Reproductive Anatomy: Key Players in Conception", url: "post2.html", category: "Conceiving Confidently" },
-  { title: "Top 10 Prenatal Vitamins: Science and Chemistry", url: "post3.html", category: "Conceiving Confidently" },
-  { title: "Miscarriage: The Science of Pregnancy Loss", url: "miscarriage.html", category: "Conceiving Confidently" },
-  { title: "The Complete Guide to Reproductive Hormones", url: "hormones.html", category: "Conceiving Confidently" },
-  { title: "The Science of Fertility: Understanding Women's Fertility and Aging", url: "what-is-fertility.html", category: "Conceiving Confidently" },
-  { title: "PCOS: The Science Behind Polycystic Ovarian Syndrome", url: "pcos.html", category: "Conceiving Confidently" },
-  
-  // Contraception
-  { title: "Birth Control Pills: The Science of Oral Contraception", url: "birthcontrolpills.html", category: "Contraception" },
-  { title: "What is an IUD: The Complete Guide to Intrauterine Devices", url: "iud.html", category: "Contraception" },
-  
-  // Female Anatomy & Conditions
-  { title: "Endometriosis: The Science Behind This Complex Condition", url: "endometriosis.html", category: "Female Anatomy & Conditions" },
-  { title: "The Science of Endo Belly", url: "endobelly.html", category: "Female Anatomy & Conditions" },
-  
-  // Menstruation
-  { title: "The Science of Menstruation: Understanding Periods", url: "period.html", category: "Menstruation" },
-  { title: "The Science of Period Cramps", url: "cramps.html", category: "Menstruation" },
-  { title: "Clue vs Flo: The Science Behind Period Tracking Apps", url: "cluevsflo.html", category: "Menstruation" },
-  
-  // Pregnancy
-  { title: "Pregnancy: The Science of Morning Sickness", url: "morning-sickness.html", category: "Pregnancy" },
-  { title: "Understanding Breastfeeding: The Science of Human Lactation", url: "breastfeeding.html", category: "Pregnancy" },
-  { title: "The Science of Pregnancy Dating", url: "ultrasoundlmp.html", category: "Pregnancy" },
-  { title: "The Science of Blood", url: "blood.html", category: "Pregnancy" },
-  { title: "The Science Behind Pregnancy Dietary Restrictions", url: "pregfoods.html", category: "Pregnancy" },
-  
-  // Legal Rights
-  { title: "What is Consent?", url: "what-is-consent.html", category: "Legal Rights" }
-];
+// ==========================
+// Quick Article Menu Functions
+// ==========================
 
-// DOM elements
-let searchInput;
-let searchResults;
-
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-  initializeSidebar();
-});
-
-// Main initialization function
-function initializeSidebar() {
-  // Get DOM elements
-  searchInput = document.getElementById('searchInput');
-  searchResults = document.getElementById('searchResults');
+/**
+ * Toggle the quick article menu visibility
+ */
+function toggleMenu() {
+  console.log('toggleMenu() called');
   
-  // Set up event listeners
-  setupSearchFunctionality();
-  setupMobileHandlers();
-  setActiveLink();
+  const menuContent = document.getElementById('menuContent');
+  const menuToggle = document.querySelector('.menu-toggle');
   
-  console.log('Sidebar navigation initialized successfully');
+  if (!menuContent) {
+    console.error('menuContent element not found');
+    return;
+  }
+  
+  const isHidden = !menuContent.classList.contains('show');
+  
+  if (isHidden) {
+    menuContent.style.display = 'block';
+    setTimeout(() => {
+      menuContent.classList.add('show');
+    }, 10);
+    menuToggle.textContent = 'Hide Articles';
+  } else {
+    menuContent.classList.remove('show');
+    setTimeout(() => {
+      menuContent.style.display = 'none';
+    }, 300);
+    menuToggle.textContent = 'Browse All Articles by Category';
+  }
+}
+window.toggleMenu = toggleMenu;
+/**
+ * Search through articles in the quick menu
+ * @param {string} query - Search query from input
+ */
+function searchArticles(query) {
+  const searchResults = document.getElementById('searchResults');
+  const menuCategories = document.querySelectorAll('.menu-category');
+  
+  // Clear previous results
+  searchResults.innerHTML = '';
+  
+  if (query.trim() === '') {
+    // Show all categories when search is empty
+    menuCategories.forEach(category => {
+      category.style.display = 'block';
+    });
+    searchResults.style.display = 'none';
+    return;
+  }
+  
+  // Hide categories when searching
+  menuCategories.forEach(category => {
+    category.style.display = 'none';
+  });
+  
+  // Search through all links
+  const allLinks = document.querySelectorAll('.menu-links a');
+  const matchingResults = [];
+  
+  allLinks.forEach(link => {
+    const title = link.textContent.toLowerCase();
+    const searchTerm = query.toLowerCase();
+    
+    if (title.includes(searchTerm)) {
+      matchingResults.push({
+        title: link.textContent,
+        url: link.href,
+        category: link.closest('.menu-category').querySelector('h3').textContent
+      });
+    }
+  });
+  
+  // Display results
+  if (matchingResults.length > 0) {
+    searchResults.innerHTML = `
+      <div class="search-results-header">Found ${matchingResults.length} result${matchingResults.length !== 1 ? 's' : ''}:</div>
+      ${matchingResults.map(result => `
+        <div class="search-result-item">
+          <a href="${result.url}">${highlightSearchTerm(result.title, query)}</a>
+          <span class="result-category">${result.category}</span>
+        </div>
+      `).join('')}
+    `;
+  } else {
+    searchResults.innerHTML = `
+      <div class="no-search-results">No articles found for "${query}"</div>
+    `;
+  }
+  
+  searchResults.style.display = 'block';
 }
 
-// Search functionality
-function setupSearchFunctionality() {
-  if (!searchInput || !searchResults) {
-    console.error('Search elements not found');
+/**
+ * Highlight search terms in article titles
+ * @param {string} text - Text to highlight
+ * @param {string} query - Search query to highlight
+ * @returns {string} Text with highlighted terms
+ */
+function highlightSearchTerm(text, query) {
+  if (!query) return text;
+  const regex = new RegExp(`(${query})`, 'gi');
+  return text.replace(regex, '<mark style="background-color: rgba(230, 163, 222, 0.3); padding: 2px 4px; border-radius: 3px;">$1</mark>');
+}
+
+// ==========================
+// Website Search Functionality
+// ==========================
+
+// Website content database - Add your actual content here
+const websiteContent = [
+  {
+    title: "Factors Affecting Fertilization & Implantation",
+    url: "post1.html",
+    category: "conceiving",
+    excerpt: "Understanding the biological factors that influence fertilization and implantation can help you optimize your chances of success. A complex process influenced by numerous factors that science is continuing to unravel.",
+    date: "June 1, 2025",
+    keywords: ["fertilization", "implantation", "conception", "pregnancy", "fertility", "ovulation", "embryo"]
+  },
+  {
+    title: "The Reproductive Anatomy: Key Players in Conception",
+    url: "post2.html",
+    category: "anatomy",
+    excerpt: "Understanding how your reproductive organs work is essential: ovaries, fallopian tubes, uterus, cervix, sperm—all must function in harmony for conception to occur.",
+    date: "June 1, 2025",
+    keywords: ["anatomy", "reproductive", "ovaries", "fallopian tubes", "uterus", "cervix", "conception"]
+  },
+  {
+    title: "Top 10 Prenatal Vitamins: Science and Chemistry",
+    url: "post3.html",
+    category: "conceiving",
+    excerpt: "Prenatal vitamins support a healthy pregnancy. Folic acid, iron, calcium, vitamin D, and omega-3 are crucial—here's why and how they work chemically.",
+    date: "June 1, 2025",
+    keywords: ["prenatal vitamins", "folic acid", "iron", "calcium", "vitamin D", "omega-3", "pregnancy", "supplements"]
+  },
+  {
+    title: "Miscarriage: The Science of Pregnancy Loss",
+    url: "miscarriage.html",
+    category: "pregnancy",
+    excerpt: "Miscarriage affects approximately 15-20% of recognized pregnancies. This comprehensive guide explores the biology, causes, treatment options, and emotional aspects of pregnancy loss.",
+    date: "June 3, 2025",
+    keywords: ["miscarriage", "pregnancy loss", "early pregnancy", "complications", "fertility"]
+  },
+  {
+    title: "The Complete Guide to Reproductive Hormones",
+    url: "hormones.html",
+    category: "anatomy",
+    excerpt: "Reproductive hormones work like a sophisticated communication network, preparing your body for conception, supporting pregnancy, and regulating fertility.",
+    date: "June 1, 2025",
+    keywords: ["hormones", "reproductive", "ovulation", "menstrual cycle", "fertility", "pregnancy", "estrogen", "progesterone"]
+  },
+  {
+    title: "The Science of Fertility: Understanding Women's Fertility and Aging",
+    url: "what-is-fertility.html",
+    category: "conceiving",
+    excerpt: "Female fertility follows a predictable biological timeline. Understanding fertility aging, ovarian reserve, and egg quality decline empowers informed reproductive decisions.",
+    date: "June 3, 2025",
+    keywords: ["fertility", "aging", "ovarian reserve", "egg quality", "biological clock", "reproduction"]
+  },
+  {
+    title: "Birth Control Pills: The Science of Oral Contraception",
+    url: "birthcontrolpills.html",
+    category: "contraception",
+    excerpt: "Birth control pills represent one of the most significant medical advances of the 20th century. Currently used by over 100 million women globally with 91-99% effectiveness.",
+    date: "June 5, 2025",
+    keywords: ["birth control", "contraception", "oral contraceptives", "hormones", "prevention", "family planning"]
+  },
+  {
+    title: "What is an IUD: The Complete Guide to Intrauterine Devices",
+    url: "iud.html",
+    category: "contraception",
+    excerpt: "IUDs represent one of the most effective forms of reversible contraception with failure rates as low as 0.02-0.08%. Long-acting birth control for 3-12 years.",
+    date: "June 5, 2025",
+    keywords: ["IUD", "intrauterine device", "contraception", "birth control", "long-acting", "reversible"]
+  },
+  {
+    title: "The Science of Menstruation: Understanding Periods",
+    url: "period.html",
+    category: "menstruation",
+    excerpt: "The average menstrual cycle lasts 28 days, with normal cycles ranging from 21 to 35 days. Understanding the biological processes behind menstruation.",
+    date: "June 2, 2025",
+    keywords: ["menstruation", "period", "menstrual cycle", "bleeding", "reproductive health", "hormones"]
+  },
+  {
+    title: "The Science of Period Cramps: Understanding Menstrual Pain",
+    url: "cramps.html",
+    category: "menstruation",
+    excerpt: "Period cramps affect up to 90% of menstruating women. This guide explores the molecular mechanisms of dysmenorrhea and scientifically-proven relief methods.",
+    date: "June 1, 2025",
+    keywords: ["period cramps", "menstrual pain", "dysmenorrhea", "pain relief", "menstruation"]
+  },
+  {
+    title: "Pregnancy: The Science of Morning Sickness",
+    url: "morning-sickness.html",
+    category: "pregnancy",
+    excerpt: "Morning sickness affects most pregnant women. Symptoms can occur at any time and typically begin between 4-6 weeks of pregnancy, peaking around 9-10 weeks.",
+    date: "June 3, 2025",
+    keywords: ["morning sickness", "pregnancy", "nausea", "vomiting", "first trimester", "symptoms"]
+  },
+  {
+    title: "Understanding Breastfeeding: The Science of Human Lactation",
+    url: "breastfeeding.html",
+    category: "pregnancy",
+    excerpt: "Breastfeeding involves complex anatomical, physiological, and hormonal mechanisms. This guide explores breast anatomy, milk production, and feeding techniques.",
+    date: "June 3, 2025",
+    keywords: ["breastfeeding", "lactation", "breast milk", "nursing", "infant feeding", "postpartum"]
+  },
+  {
+    title: "What is Consent?",
+    url: "what-is-consent.html",
+    category: "legal",
+    excerpt: "Understanding sexual consent from legal, historical, and scientific perspectives empowers women to recognize their rights and make informed decisions.",
+    date: "June 1, 2025",
+    keywords: ["consent", "sexual consent", "legal rights", "women's rights", "boundaries", "autonomy"]
+  }
+];
+
+// Global variables
+let currentCategory = 'all';
+let lastSearchQuery = '';
+
+// Mobile menu toggle function
+    function toggleMobileMenu() {
+      const menuNav = document.getElementById('menuNav');
+      menuNav.classList.toggle('active');
+    }
+
+    // Back to top functionality
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Subscribe form functionality
+    const subscribeForm = document.querySelector('.subscribe-form');
+    subscribeForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      alert(`Thank you for subscribing with email: ${email}`);
+      e.target.reset();
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const menuBar = document.querySelector('.menu-bar');
+      const menuNav = document.getElementById('menuNav');
+      const toggleButton = document.querySelector('.mobile-menu-toggle');
+      
+      if (!menuBar.contains(e.target) && menuNav.classList.contains('active')) {
+        menuNav.classList.remove('active');
+      }
+    });
+
+// ==========================
+// Core Search Functions
+// ==========================
+
+/**
+ * Performs search across website content
+ * @param {string} query - Search query
+ * @param {string} category - Category filter
+ */
+function performSearch(query, category = 'all') {
+  const searchTerm = query.toLowerCase().trim();
+  
+  if (searchTerm === '') {
+    hideResults();
     return;
   }
 
-  // Search input event listener
-  searchInput.addEventListener('input', function() {
-    const query = this.value.toLowerCase().trim();
+  let results = websiteContent.filter(item => {
+    // Category filter
+    const categoryMatch = category === 'all' || item.category === category;
     
-    if (query.length === 0) {
-      searchResults.classList.remove('active');
-      return;
-    }
-
-    const filteredArticles = articles.filter(article => 
-      article.title.toLowerCase().includes(query) || 
-      article.category.toLowerCase().includes(query)
+    // Search in title, excerpt, and keywords
+    const titleMatch = item.title.toLowerCase().includes(searchTerm);
+    const excerptMatch = item.excerpt.toLowerCase().includes(searchTerm);
+    const keywordMatch = item.keywords.some(keyword => 
+      keyword.toLowerCase().includes(searchTerm)
     );
-
-    displaySearchResults(filteredArticles);
-  });
-
-  // Hide search results when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.search-container')) {
-      searchResults.classList.remove('active');
-    }
-  });
-
-  // Handle keyboard navigation in search results
-  searchInput.addEventListener('keydown', function(e) {
-    const activeResults = searchResults.querySelectorAll('li');
-    const currentActive = searchResults.querySelector('li.keyboard-active');
     
-    if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      navigateSearchResults(activeResults, currentActive, 'down');
-    } else if (e.key === 'ArrowUp') {
-      e.preventDefault();
-      navigateSearchResults(activeResults, currentActive, 'up');
-    } else if (e.key === 'Enter' && currentActive) {
-      e.preventDefault();
-      const link = currentActive.querySelector('a');
-      if (link) {
-        window.location.href = link.href;
-      }
-    }
+    return categoryMatch && (titleMatch || excerptMatch || keywordMatch);
   });
+
+  // Sort results by relevance
+  results.sort((a, b) => {
+    const aTitle = a.title.toLowerCase().includes(searchTerm) ? 2 : 0;
+    const bTitle = b.title.toLowerCase().includes(searchTerm) ? 2 : 0;
+    const aKeyword = a.keywords.some(k => k.toLowerCase().includes(searchTerm)) ? 1 : 0;
+    const bKeyword = b.keywords.some(k => k.toLowerCase().includes(searchTerm)) ? 1 : 0;
+    
+    return (bTitle + bKeyword) - (aTitle + aKeyword);
+  });
+
+  displayResults(results, searchTerm, category);
 }
 
-// Display search results
-function displaySearchResults(results) {
-  if (!searchResults) return;
+/**
+ * Displays search results in the DOM
+ * @param {Array} results - Search results array
+ * @param {string} query - Search query for highlighting
+ * @param {string} category - Current category filter
+ */
+function displayResults(results, query, category) {
+  const resultsContainer = document.getElementById('resultsContainer');
+  const resultsHeader = document.getElementById('resultsHeader');
+  const searchResults = document.getElementById('searchResults');
   
-  searchResults.innerHTML = '';
+  searchResults.style.display = 'block';
+  
+  const categoryText = category === 'all' ? 'all topics' : category;
+  resultsHeader.innerHTML = `Found ${results.length} result${results.length !== 1 ? 's' : ''} for "${query}" in ${categoryText}`;
   
   if (results.length === 0) {
-    searchResults.innerHTML = '<li style="padding: 12px; color: rgba(255,255,255,0.7); font-style: italic;">No articles found</li>';
-  } else {
-    results.slice(0, 8).forEach((article, index) => {
-      const li = document.createElement('li');
-      li.innerHTML = `<a href="${article.url}">${article.title}</a>`;
-      
-      // Add click tracking
-      li.addEventListener('click', () => {
-        trackSearchClick(article.title);
-      });
-      
-      searchResults.appendChild(li);
-    });
+    resultsContainer.innerHTML = `
+      <div class="no-results">
+        <h3>No results found</h3>
+        <p>Try different keywords or browse all topics using the category filters above.</p>
+      </div>
+    `;
+    return;
   }
   
-  searchResults.classList.add('active');
+  resultsContainer.innerHTML = results.map(item => `
+    <div class="result-item">
+      <div class="result-category">${getCategoryDisplayName(item.category)}</div>
+      <h3 class="result-title">
+        <a href="${item.url}">${highlightText(item.title, query)}</a>
+      </h3>
+      <p class="result-excerpt">${highlightText(item.excerpt, query)}</p>
+      <div class="result-date">${item.date}</div>
+    </div>
+  `).join('');
 }
 
-// Navigate search results with keyboard
-function navigateSearchResults(results, currentActive, direction) {
-  if (results.length === 0) return;
-  
-  // Remove current active state
-  if (currentActive) {
-    currentActive.classList.remove('keyboard-active');
-  }
-  
-  let newActiveIndex = 0;
-  
-  if (currentActive) {
-    const currentIndex = Array.from(results).indexOf(currentActive);
-    if (direction === 'down') {
-      newActiveIndex = (currentIndex + 1) % results.length;
-    } else {
-      newActiveIndex = currentIndex === 0 ? results.length - 1 : currentIndex - 1;
-    }
-  }
-  
-  results[newActiveIndex].classList.add('keyboard-active');
+/**
+ * Highlights search terms in text
+ * @param {string} text - Text to highlight
+ * @param {string} query - Search query to highlight
+ * @returns {string} Text with highlighted terms
+ */
+function highlightText(text, query) {
+  if (!query) return text;
+  const regex = new RegExp(`(${query})`, 'gi');
+  return text.replace(regex, '<mark style="background-color: rgba(230, 163, 222, 0.3); padding: 2px 4px; border-radius: 3px;">$1</mark>');
 }
 
-// Section toggle functionality
-function toggleSection(header) {
-  if (!header) return;
-  
-  const content = header.nextElementSibling;
-  const toggle = header.querySelector('.section-toggle');
-  
-  if (!content || !toggle) return;
-  
-  const isActive = content.classList.contains('active');
-  
-  // Toggle the section
-  content.classList.toggle('active');
-  
-  // Update toggle icon rotation
-  if (content.classList.contains('active')) {
-    toggle.style.transform = 'rotate(180deg)';
-  } else {
-    toggle.style.transform = 'rotate(0deg)';
-  }
-  
-  // Track section toggle
-  const sectionName = header.querySelector('span').textContent;
-  trackSectionToggle(sectionName, !isActive);
-}
-
-// Mobile sidebar toggle
-function toggleSidebar() {
-  const sidebar = document.getElementById('sidebar');
-  if (sidebar) {
-    sidebar.classList.toggle('mobile-open');
-    
-    // Update mobile toggle button
-    const toggleButton = document.querySelector('.mobile-toggle');
-    if (toggleButton) {
-      toggleButton.innerHTML = sidebar.classList.contains('mobile-open') ? '✕' : '☰';
-    }
-  }
-}
-
-// Setup mobile event handlers
-function setupMobileHandlers() {
-  // Close sidebar when clicking on main content on mobile
-  const mainContent = document.querySelector('.main-content');
-  if (mainContent) {
-    mainContent.addEventListener('click', function() {
-      if (window.innerWidth <= 768) {
-        const sidebar = document.getElementById('sidebar');
-        if (sidebar) {
-          sidebar.classList.remove('mobile-open');
-          const toggleButton = document.querySelector('.mobile-toggle');
-          if (toggleButton) {
-            toggleButton.innerHTML = '☰';
-          }
-        }
-      }
-    });
-  }
-
-  // Handle window resize
-  window.addEventListener('resize', function() {
-    const sidebar = document.getElementById('sidebar');
-    const toggleButton = document.querySelector('.mobile-toggle');
-    
-    if (window.innerWidth > 768 && sidebar) {
-      sidebar.classList.remove('mobile-open');
-      if (toggleButton) {
-        toggleButton.innerHTML = '☰';
-      }
-    }
-  });
-}
-
-// Set active link based on current page
-function setActiveLink() {
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const links = document.querySelectorAll('.nav-link');
-  
-  links.forEach(link => {
-    // Remove any existing active class
-    link.classList.remove('active');
-    
-    // Check if this link matches the current page
-    if (link.getAttribute('href') === currentPage) {
-      link.classList.add('active');
-      
-      // Expand the parent section if it exists
-      const section = link.closest('.section-content');
-      if (section) {
-        section.classList.add('active');
-        const header = section.previousElementSibling;
-        if (header) {
-          const toggle = header.querySelector('.section-toggle');
-          if (toggle) {
-            toggle.style.transform = 'rotate(180deg)';
-          }
-        }
-      }
-    }
-  });
-}
-
-// Utility Functions
-
-// Track search clicks (for analytics)
-function trackSearchClick(articleTitle) {
-  // You can implement analytics tracking here
-  console.log('Search click:', articleTitle);
-  
-  // Example: Google Analytics tracking
-  if (typeof gtag !== 'undefined') {
-    gtag('event', 'search_click', {
-      'search_term': searchInput.value,
-      'article_title': articleTitle
-    });
-  }
-}
-
-// Track section toggles (for analytics)
-function trackSectionToggle(sectionName, isOpened) {
-  console.log('Section toggle:', sectionName, isOpened ? 'opened' : 'closed');
-  
-  // Example: Google Analytics tracking
-  if (typeof gtag !== 'undefined') {
-    gtag('event', 'section_toggle', {
-      'section_name': sectionName,
-      'action': isOpened ? 'expand' : 'collapse'
-    });
-  }
-}
-
-// Clear search
-function clearSearch() {
-  if (searchInput) {
-    searchInput.value = '';
-    searchResults.classList.remove('active');
-  }
-}
-
-// Get all articles (for external use)
-function getAllArticles() {
-  return articles;
-}
-
-// Search articles programmatically
-function searchArticles(query) {
-  return articles.filter(article => 
-    article.title.toLowerCase().includes(query.toLowerCase()) || 
-    article.category.toLowerCase().includes(query.toLowerCase())
-  );
-}
-
-// Expand all sections
-function expandAllSections() {
-  const sections = document.querySelectorAll('.section-content');
-  const toggles = document.querySelectorAll('.section-toggle');
-  
-  sections.forEach(section => {
-    section.classList.add('active');
-  });
-  
-  toggles.forEach(toggle => {
-    toggle.style.transform = 'rotate(180deg)';
-  });
-}
-
-// Collapse all sections
-function collapseAllSections() {
-  const sections = document.querySelectorAll('.section-content');
-  const toggles = document.querySelectorAll('.section-toggle');
-  
-  sections.forEach(section => {
-    section.classList.remove('active');
-  });
-  
-  toggles.forEach(toggle => {
-    toggle.style.transform = 'rotate(0deg)';
-  });
-}
-
-// Export functions for external use (if using modules)
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = {
-    toggleSection,
-    toggleSidebar,
-    clearSearch,
-    getAllArticles,
-    searchArticles,
-    expandAllSections,
-    collapseAllSections
+/**
+ * Gets display name for category
+ * @param {string} category - Category key
+ * @returns {string} Display name
+ */
+function getCategoryDisplayName(category) {
+  const categoryNames = {
+    'conceiving': 'Conceiving Confidently',
+    'contraception': 'Contraception',
+    'anatomy': 'Female Anatomy',
+    'menstruation': 'Menstruation',
+    'pregnancy': 'Pregnancy',
+    'legal': 'Legal Rights'
   };
+  return categoryNames[category] || category;
 }
 
-// Global functions for HTML onclick handlers
-window.toggleSection = toggleSection;
-window.toggleSidebar = toggleSidebar;
+/**
+ * Hides search results
+ */
+function hideResults() {
+  document.getElementById('searchResults').style.display = 'none';
+}
+
 // ==========================
 // Event Listeners
 // ==========================
 
+/**
+ * Initialize search functionality when DOM is loaded
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  // Search form submission
+  const searchForm = document.getElementById('searchForm');
+  if (searchForm) {
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const query = document.getElementById('searchInput').value;
+      lastSearchQuery = query;
+      performSearch(query, currentCategory);
+      return false; // Extra prevention
+    });
+  }
+
+  // Search button click
+  const searchButton = document.getElementById('searchButton');
+  if (searchButton) {
+    searchButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      const query = document.getElementById('searchInput').value;
+      lastSearchQuery = query;
+      performSearch(query, currentCategory);
+    });
+  }
+
+  // Real-time search as user types
+  const searchInput = document.getElementById('searchInput');
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      const query = e.target.value;
+      lastSearchQuery = query;
+      if (query.length >= 2) {
+        performSearch(query, currentCategory);
+      } else if (query.length === 0) {
+        hideResults();
+      }
+    });
+
+    // Handle Enter key press
+    searchInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const query = e.target.value;
+        lastSearchQuery = query;
+        performSearch(query, currentCategory);
+      }
+    });
+
+    // Focus search input on page load
+    searchInput.focus();
+  }
+
+  // Category filter buttons
+  document.querySelectorAll('.filter-button').forEach(button => {
+    button.addEventListener('click', function() {
+      // Update active filter
+      document.querySelectorAll('.filter-button').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      
+      currentCategory = this.dataset.category;
+      
+      // Re-run search with new category if there's a query
+      if (lastSearchQuery) {
+        performSearch(lastSearchQuery, currentCategory);
+      }
+    });
+  });
+});
 
 // ==========================
 // Utility Functions
