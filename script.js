@@ -5,194 +5,362 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initBackToTop();
   });
+// sidebar-script.js
 
-// ==========================
-// Quick Article Menu Functions
-// ==========================
+// All articles data for search functionality
+const articles = [
+  // Conceiving Confidently
+  { title: "Factors Affecting Fertilization & Implantation", url: "post1.html", category: "Conceiving Confidently" },
+  { title: "The Reproductive Anatomy: Key Players in Conception", url: "post2.html", category: "Conceiving Confidently" },
+  { title: "Top 10 Prenatal Vitamins: Science and Chemistry", url: "post3.html", category: "Conceiving Confidently" },
+  { title: "Miscarriage: The Science of Pregnancy Loss", url: "miscarriage.html", category: "Conceiving Confidently" },
+  { title: "The Complete Guide to Reproductive Hormones", url: "hormones.html", category: "Conceiving Confidently" },
+  { title: "The Science of Fertility: Understanding Women's Fertility and Aging", url: "what-is-fertility.html", category: "Conceiving Confidently" },
+  { title: "PCOS: The Science Behind Polycystic Ovarian Syndrome", url: "pcos.html", category: "Conceiving Confidently" },
+  
+  // Contraception
+  { title: "Birth Control Pills: The Science of Oral Contraception", url: "birthcontrolpills.html", category: "Contraception" },
+  { title: "What is an IUD: The Complete Guide to Intrauterine Devices", url: "iud.html", category: "Contraception" },
+  
+  // Female Anatomy & Conditions
+  { title: "Endometriosis: The Science Behind This Complex Condition", url: "endometriosis.html", category: "Female Anatomy & Conditions" },
+  { title: "The Science of Endo Belly", url: "endobelly.html", category: "Female Anatomy & Conditions" },
+  
+  // Menstruation
+  { title: "The Science of Menstruation: Understanding Periods", url: "period.html", category: "Menstruation" },
+  { title: "The Science of Period Cramps", url: "cramps.html", category: "Menstruation" },
+  { title: "Clue vs Flo: The Science Behind Period Tracking Apps", url: "cluevsflo.html", category: "Menstruation" },
+  
+  // Pregnancy
+  { title: "Pregnancy: The Science of Morning Sickness", url: "morning-sickness.html", category: "Pregnancy" },
+  { title: "Understanding Breastfeeding: The Science of Human Lactation", url: "breastfeeding.html", category: "Pregnancy" },
+  { title: "The Science of Pregnancy Dating", url: "ultrasoundlmp.html", category: "Pregnancy" },
+  { title: "The Science of Blood", url: "blood.html", category: "Pregnancy" },
+  { title: "The Science Behind Pregnancy Dietary Restrictions", url: "pregfoods.html", category: "Pregnancy" },
+  
+  // Legal Rights
+  { title: "What is Consent?", url: "what-is-consent.html", category: "Legal Rights" }
+];
 
-/**
- * Toggle the quick article menu visibility
- */
-function toggleMenu() {
-  console.log('toggleMenu() called');
+// DOM elements
+let searchInput;
+let searchResults;
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  initializeSidebar();
+});
+
+// Main initialization function
+function initializeSidebar() {
+  // Get DOM elements
+  searchInput = document.getElementById('searchInput');
+  searchResults = document.getElementById('searchResults');
   
-  const menuContent = document.getElementById('menuContent');
-  const menuToggle = document.querySelector('.menu-toggle');
+  // Set up event listeners
+  setupSearchFunctionality();
+  setupMobileHandlers();
+  setActiveLink();
   
-  if (!menuContent) {
-    console.error('menuContent element not found');
-    return;
-  }
-  
-  const isHidden = !menuContent.classList.contains('show');
-  
-  if (isHidden) {
-    menuContent.style.display = 'block';
-    setTimeout(() => {
-      menuContent.classList.add('show');
-    }, 10);
-    menuToggle.textContent = 'Hide Articles';
-  } else {
-    menuContent.classList.remove('show');
-    setTimeout(() => {
-      menuContent.style.display = 'none';
-    }, 300);
-    menuToggle.textContent = 'Browse All Articles by Category';
-  }
+  console.log('Sidebar navigation initialized successfully');
 }
-window.toggleMenu = toggleMenu;
-window.searchArticles = searchArticles;
 
-    // Back to top functionality
-    const backToTopButton = document.getElementById('backToTop');
-    
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 100) {
-        backToTopButton.classList.add('visible');
-      } else {
-        backToTopButton.classList.remove('visible');
-      }
-    });
-    
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-
-    // Subscribe form functionality
-    const subscribeForm = document.querySelector('.subscribe-form');
-    subscribeForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = e.target.querySelector('input[type="email"]').value;
-      alert(`Thank you for subscribing with email: ${email}`);
-      e.target.reset();
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      const menuBar = document.querySelector('.menu-bar');
-      const menuNav = document.getElementById('menuNav');
-      const toggleButton = document.querySelector('.mobile-menu-toggle');
-      
-      if (!menuBar.contains(e.target) && menuNav.classList.contains('active')) {
-        menuNav.classList.remove('active');
-      }
-    });
-
-// ==========================
-// Core Search Functions
-// ==========================
-
-/**
- * Performs search across website content
- * @param {string} query - Search query
- * @param {string} category - Category filter
- */
-function performSearch(query, category = 'all') {
-  const searchTerm = query.toLowerCase().trim();
-  
-  if (searchTerm === '') {
-    hideResults();
+// Search functionality
+function setupSearchFunctionality() {
+  if (!searchInput || !searchResults) {
+    console.error('Search elements not found');
     return;
   }
 
-  let results = websiteContent.filter(item => {
-    // Category filter
-    const categoryMatch = category === 'all' || item.category === category;
+  // Search input event listener
+  searchInput.addEventListener('input', function() {
+    const query = this.value.toLowerCase().trim();
     
-    // Search in title, excerpt, and keywords
-    const titleMatch = item.title.toLowerCase().includes(searchTerm);
-    const excerptMatch = item.excerpt.toLowerCase().includes(searchTerm);
-    const keywordMatch = item.keywords.some(keyword => 
-      keyword.toLowerCase().includes(searchTerm)
+    if (query.length === 0) {
+      searchResults.classList.remove('active');
+      return;
+    }
+
+    const filteredArticles = articles.filter(article => 
+      article.title.toLowerCase().includes(query) || 
+      article.category.toLowerCase().includes(query)
     );
-    
-    return categoryMatch && (titleMatch || excerptMatch || keywordMatch);
+
+    displaySearchResults(filteredArticles);
   });
 
-  // Sort results by relevance
-  results.sort((a, b) => {
-    const aTitle = a.title.toLowerCase().includes(searchTerm) ? 2 : 0;
-    const bTitle = b.title.toLowerCase().includes(searchTerm) ? 2 : 0;
-    const aKeyword = a.keywords.some(k => k.toLowerCase().includes(searchTerm)) ? 1 : 0;
-    const bKeyword = b.keywords.some(k => k.toLowerCase().includes(searchTerm)) ? 1 : 0;
-    
-    return (bTitle + bKeyword) - (aTitle + aKeyword);
+  // Hide search results when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.search-container')) {
+      searchResults.classList.remove('active');
+    }
   });
 
-  displayResults(results, searchTerm, category);
+  // Handle keyboard navigation in search results
+  searchInput.addEventListener('keydown', function(e) {
+    const activeResults = searchResults.querySelectorAll('li');
+    const currentActive = searchResults.querySelector('li.keyboard-active');
+    
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      navigateSearchResults(activeResults, currentActive, 'down');
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      navigateSearchResults(activeResults, currentActive, 'up');
+    } else if (e.key === 'Enter' && currentActive) {
+      e.preventDefault();
+      const link = currentActive.querySelector('a');
+      if (link) {
+        window.location.href = link.href;
+      }
+    }
+  });
 }
 
-/**
- * Displays search results in the DOM
- * @param {Array} results - Search results array
- * @param {string} query - Search query for highlighting
- * @param {string} category - Current category filter
- */
-function displayResults(results, query, category) {
-  const resultsContainer = document.getElementById('resultsContainer');
-  const resultsHeader = document.getElementById('resultsHeader');
-  const searchResults = document.getElementById('searchResults');
+// Display search results
+function displaySearchResults(results) {
+  if (!searchResults) return;
   
-  searchResults.style.display = 'block';
-  
-  const categoryText = category === 'all' ? 'all topics' : category;
-  resultsHeader.innerHTML = `Found ${results.length} result${results.length !== 1 ? 's' : ''} for "${query}" in ${categoryText}`;
+  searchResults.innerHTML = '';
   
   if (results.length === 0) {
-    resultsContainer.innerHTML = `
-      <div class="no-results">
-        <h3>No results found</h3>
-        <p>Try different keywords or browse all topics using the category filters above.</p>
-      </div>
-    `;
-    return;
+    searchResults.innerHTML = '<li style="padding: 12px; color: rgba(255,255,255,0.7); font-style: italic;">No articles found</li>';
+  } else {
+    results.slice(0, 8).forEach((article, index) => {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${article.url}">${article.title}</a>`;
+      
+      // Add click tracking
+      li.addEventListener('click', () => {
+        trackSearchClick(article.title);
+      });
+      
+      searchResults.appendChild(li);
+    });
   }
   
-  resultsContainer.innerHTML = results.map(item => `
-    <div class="result-item">
-      <div class="result-category">${getCategoryDisplayName(item.category)}</div>
-      <h3 class="result-title">
-        <a href="${item.url}">${highlightText(item.title, query)}</a>
-      </h3>
-      <p class="result-excerpt">${highlightText(item.excerpt, query)}</p>
-      <div class="result-date">${item.date}</div>
-    </div>
-  `).join('');
+  searchResults.classList.add('active');
 }
 
-/**
- * Highlights search terms in text
- * @param {string} text - Text to highlight
- * @param {string} query - Search query to highlight
- * @returns {string} Text with highlighted terms
- */
-function highlightText(text, query) {
-  if (!query) return text;
-  const regex = new RegExp(`(${query})`, 'gi');
-  return text.replace(regex, '<mark style="background-color: rgba(230, 163, 222, 0.3); padding: 2px 4px; border-radius: 3px;">$1</mark>');
+// Navigate search results with keyboard
+function navigateSearchResults(results, currentActive, direction) {
+  if (results.length === 0) return;
+  
+  // Remove current active state
+  if (currentActive) {
+    currentActive.classList.remove('keyboard-active');
+  }
+  
+  let newActiveIndex = 0;
+  
+  if (currentActive) {
+    const currentIndex = Array.from(results).indexOf(currentActive);
+    if (direction === 'down') {
+      newActiveIndex = (currentIndex + 1) % results.length;
+    } else {
+      newActiveIndex = currentIndex === 0 ? results.length - 1 : currentIndex - 1;
+    }
+  }
+  
+  results[newActiveIndex].classList.add('keyboard-active');
 }
 
-/**
- * Gets display name for category
- * @param {string} category - Category key
- * @returns {string} Display name
- */
-function getCategoryDisplayName(category) {
-  const categoryNames = {
-    'conceiving': 'Conceiving Confidently',
-    'contraception': 'Contraception',
-    'anatomy': 'Female Anatomy',
-    'menstruation': 'Menstruation',
-    'pregnancy': 'Pregnancy',
-    'legal': 'Legal Rights'
+// Section toggle functionality
+function toggleSection(header) {
+  if (!header) return;
+  
+  const content = header.nextElementSibling;
+  const toggle = header.querySelector('.section-toggle');
+  
+  if (!content || !toggle) return;
+  
+  const isActive = content.classList.contains('active');
+  
+  // Toggle the section
+  content.classList.toggle('active');
+  
+  // Update toggle icon rotation
+  if (content.classList.contains('active')) {
+    toggle.style.transform = 'rotate(180deg)';
+  } else {
+    toggle.style.transform = 'rotate(0deg)';
+  }
+  
+  // Track section toggle
+  const sectionName = header.querySelector('span').textContent;
+  trackSectionToggle(sectionName, !isActive);
+}
+
+// Mobile sidebar toggle
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  if (sidebar) {
+    sidebar.classList.toggle('mobile-open');
+    
+    // Update mobile toggle button
+    const toggleButton = document.querySelector('.mobile-toggle');
+    if (toggleButton) {
+      toggleButton.innerHTML = sidebar.classList.contains('mobile-open') ? '✕' : '☰';
+    }
+  }
+}
+
+// Setup mobile event handlers
+function setupMobileHandlers() {
+  // Close sidebar when clicking on main content on mobile
+  const mainContent = document.querySelector('.main-content');
+  if (mainContent) {
+    mainContent.addEventListener('click', function() {
+      if (window.innerWidth <= 768) {
+        const sidebar = document.getElementById('sidebar');
+        if (sidebar) {
+          sidebar.classList.remove('mobile-open');
+          const toggleButton = document.querySelector('.mobile-toggle');
+          if (toggleButton) {
+            toggleButton.innerHTML = '☰';
+          }
+        }
+      }
+    });
+  }
+
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    const sidebar = document.getElementById('sidebar');
+    const toggleButton = document.querySelector('.mobile-toggle');
+    
+    if (window.innerWidth > 768 && sidebar) {
+      sidebar.classList.remove('mobile-open');
+      if (toggleButton) {
+        toggleButton.innerHTML = '☰';
+      }
+    }
+  });
+}
+
+// Set active link based on current page
+function setActiveLink() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const links = document.querySelectorAll('.nav-link');
+  
+  links.forEach(link => {
+    // Remove any existing active class
+    link.classList.remove('active');
+    
+    // Check if this link matches the current page
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+      
+      // Expand the parent section if it exists
+      const section = link.closest('.section-content');
+      if (section) {
+        section.classList.add('active');
+        const header = section.previousElementSibling;
+        if (header) {
+          const toggle = header.querySelector('.section-toggle');
+          if (toggle) {
+            toggle.style.transform = 'rotate(180deg)';
+          }
+        }
+      }
+    }
+  });
+}
+
+// Utility Functions
+
+// Track search clicks (for analytics)
+function trackSearchClick(articleTitle) {
+  // You can implement analytics tracking here
+  console.log('Search click:', articleTitle);
+  
+  // Example: Google Analytics tracking
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'search_click', {
+      'search_term': searchInput.value,
+      'article_title': articleTitle
+    });
+  }
+}
+
+// Track section toggles (for analytics)
+function trackSectionToggle(sectionName, isOpened) {
+  console.log('Section toggle:', sectionName, isOpened ? 'opened' : 'closed');
+  
+  // Example: Google Analytics tracking
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'section_toggle', {
+      'section_name': sectionName,
+      'action': isOpened ? 'expand' : 'collapse'
+    });
+  }
+}
+
+// Clear search
+function clearSearch() {
+  if (searchInput) {
+    searchInput.value = '';
+    searchResults.classList.remove('active');
+  }
+}
+
+// Get all articles (for external use)
+function getAllArticles() {
+  return articles;
+}
+
+// Search articles programmatically
+function searchArticles(query) {
+  return articles.filter(article => 
+    article.title.toLowerCase().includes(query.toLowerCase()) || 
+    article.category.toLowerCase().includes(query.toLowerCase())
+  );
+}
+
+// Expand all sections
+function expandAllSections() {
+  const sections = document.querySelectorAll('.section-content');
+  const toggles = document.querySelectorAll('.section-toggle');
+  
+  sections.forEach(section => {
+    section.classList.add('active');
+  });
+  
+  toggles.forEach(toggle => {
+    toggle.style.transform = 'rotate(180deg)';
+  });
+}
+
+// Collapse all sections
+function collapseAllSections() {
+  const sections = document.querySelectorAll('.section-content');
+  const toggles = document.querySelectorAll('.section-toggle');
+  
+  sections.forEach(section => {
+    section.classList.remove('active');
+  });
+  
+  toggles.forEach(toggle => {
+    toggle.style.transform = 'rotate(0deg)';
+  });
+}
+
+// Export functions for external use (if using modules)
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    toggleSection,
+    toggleSidebar,
+    clearSearch,
+    getAllArticles,
+    searchArticles,
+    expandAllSections,
+    collapseAllSections
   };
-  return categoryNames[category] || category;
 }
 
-
+// Global functions for HTML onclick handlers
+window.toggleSection = toggleSection;
+window.toggleSidebar = toggleSidebar;
 // ==========================
 // Event Listeners
 // ==========================
