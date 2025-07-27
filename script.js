@@ -244,7 +244,7 @@ function updateSearchContent(url, updates) {
     });
   }
   
-  / ===== EVENT LISTENERS =====
+   ===== EVENT LISTENERS =====
 
         document.addEventListener('DOMContentLoaded', function() {
             // Search form submission
