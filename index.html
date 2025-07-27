@@ -132,6 +132,247 @@
     </div>
 
     <title>Search Functionality - Her Body Guide</title>
+     <!-- SEARCH BAR CODE TO PASTE IN YOUR HEADER -->
+    <div class="search-container">
+        <form class="search-form" id="searchForm">
+            <input 
+                type="text" 
+                class="search-input" 
+                id="searchInput" 
+                placeholder="Search articles, topics, health info..." 
+                autocomplete="off"
+            >
+            <button type="submit" class="search-button" id="searchButton">
+                Search
+            </button>
+        </form>
+    </div>
+
+    <!-- FILTER BUTTONS -->
+    <div class="search-filters">
+        <button class="filter-button active" data-category="all">All</button>
+        <button class="filter-button" data-category="conceiving">Conceiving</button>
+        <button class="filter-button" data-category="contraception">Contraception</button>
+        <button class="filter-button" data-category="anatomy">Anatomy</button>
+        <button class="filter-button" data-category="menstruation">Menstruation</button>
+        <button class="filter-button" data-category="pregnancy">Pregnancy</button>
+        <button class="filter-button" data-category="legal">Legal Rights</button>
+    </div>
+
+    <!-- SEARCH RESULTS -->
+    <div class="search-results" id="searchResults">
+        <div class="results-header">
+            <div class="results-count" id="resultsCount">Found 0 results</div>
+        </div>
+        <div id="resultsList"></div>
+    </div>
+
+    <script>
+        // ===== COMPLETE SEARCH FUNCTIONALITY =====
+        
+        // Website content database - ADD YOUR PAGES HERE
+        const websiteContent = [
+            {
+                title: "Birth Control Pills: The Science of Oral Contraception",
+                url: "birthcontrolpills.html",
+                category: "contraception",
+                excerpt: "Comprehensive scientific guide to birth control pills, covering mechanisms, top brands in Australia and America, history, anatomy, physiology, and evidence-based insights.",
+                content: "birth control pills oral contraceptives hormonal contraception reproductive health HPO axis ovulation suppression estrogen progesterone levlen microgynon yasmin yaz brenda-35 ortho tri-cyclen lo loestrin seasonique norethindrone levonorgestrel drospirenone cyproterone acetate effectiveness side effects venous thromboembolism cancer protection acne treatment",
+                date: "June 16, 2025",
+                keywords: ["birth control", "pills", "contraception", "hormones", "estrogen", "progesterone"]
+            },
+            {
+                title: "The Science of Labor Induction: Top 10 Methods",
+                url: "laborinduction.html",
+                category: "pregnancy",
+                excerpt: "Comprehensive guide to labor induction methods backed by scientific research. Learn about medical and natural induction techniques, their effectiveness rates, safety profiles.",
+                content: "labor induction pregnancy childbirth pitocin prostaglandins membrane sweep natural induction due date overdue pregnancy cervical ripening oxytocin synthetic oxytocin dinoprostone misoprostol amniotomy foley catheter nipple stimulation sexual intercourse acupuncture bishop score effectiveness safety complications",
+                date: "June 15, 2025",
+                keywords: ["labor", "induction", "pregnancy", "birth", "oxytocin", "prostaglandins"]
+            },
+            {
+                title: "Factors Affecting Fertilization & Implantation",
+                url: "post1.html",
+                category: "conceiving",
+                excerpt: "Understanding the biological factors that influence fertilization and implantation can help you optimize your chances of conception success.",
+                content: "fertilization implantation conception pregnancy fertility age ovulation timing lifestyle nutrition body weight exercise stress sleep male factors hormonal balance thyroid contraceptive use optimization timing tracking BMI mediterranean diet supplements folic acid vitamin D evidence-based recommendations",
+                date: "June 1, 2025",
+                keywords: ["fertilization", "conception", "fertility", "implantation", "pregnancy", "ovulation"]
+            },
+            {
+                title: "Top 10 Essential Vitamins for Fertility and Pregnancy",
+                url: "post3.html",
+                category: "conceiving",
+                excerpt: "Complete guide to the 10 most important vitamins for conception and pregnancy. Scientific evidence, dosages, and biochemistry explained.",
+                content: "prenatal vitamins fertility vitamins preconception pregnancy supplements folic acid vitamin D iron vitamin B12 B6 vitamin C vitamin E vitamin A vitamin K choline folate neural tube defects ovarian health fertility optimization dosages biochemistry absorption bioavailability supplements quality",
+                date: "June 1, 2025",
+                keywords: ["vitamins", "prenatal", "fertility", "pregnancy", "supplements", "nutrition"]
+            },
+            {
+                title: "Top 10 Pregnancy Symptoms: The Complete Scientific Guide",
+                url: "pregsym.html",
+                category: "pregnancy",
+                excerpt: "Comprehensive scientific guide to the most common pregnancy symptoms including nausea, fatigue, skin changes, and hormonal effects with real medical data.",
+                content: "pregnancy symptoms morning sickness nausea fatigue breast tenderness frequent urination food aversions mood changes constipation headaches vaginal discharge skin changes melasma skin tags armpit changes freckles pigmentation hormonal changes hCG progesterone estradiol first trimester second trimester third trimester",
+                date: "July 6, 2025",
+                keywords: ["pregnancy", "symptoms", "morning sickness", "hormones", "skin changes", "nausea"]
+            },
+            {
+                title: "Undereating: Its Effect on the Female Body",
+                url: "undereating.html",
+                category: "anatomy",
+                excerpt: "Comprehensive scientific guide on the effects of undereating on the female body, including hormonal balance, menstrual health, fertility, and bone density.",
+                content: "undereating female hormones menstrual cycle amenorrhea fertility conception hypothalamic amenorrhea reproductive health hormonal imbalance eating disorders bone health menopause ovarian aging energy availability leptin cortisol thyroid function recovery nutrition pregnancy fetal programming maternal health",
+                date: "July 24, 2025",
+                keywords: ["undereating", "hormones", "menstruation", "fertility", "bone health", "nutrition"]
+            }
+        ];
+
+        // Search variables
+        let currentCategory = 'all';
+        let lastSearchQuery = '';
+
+        // ===== SEARCH FUNCTIONS =====
+
+        function highlightText(text, query) {
+            if (!query) return text;
+            const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+            return text.replace(regex, '<span class="highlight">$1</span>');
+        }
+
+        function calculateRelevanceScore(item, query) {
+            if (!query) return 0;
+            
+            const queryWords = query.toLowerCase().split(' ').filter(word => word.length > 0);
+            let score = 0;
+            
+            queryWords.forEach(word => {
+                // Title matches (highest weight)
+                if (item.title.toLowerCase().includes(word)) {
+                    score += 10;
+                }
+                
+                // Exact title word matches
+                const titleWords = item.title.toLowerCase().split(' ');
+                if (titleWords.includes(word)) {
+                    score += 15;
+                }
+                
+                // Keywords matches (high weight)
+                if (item.keywords && item.keywords.some(keyword => keyword.toLowerCase().includes(word))) {
+                    score += 8;
+                }
+                
+                // Content matches (medium weight)
+                if (item.content && item.content.toLowerCase().includes(word)) {
+                    score += 3;
+                }
+                
+                // Excerpt matches (medium weight)
+                if (item.excerpt.toLowerCase().includes(word)) {
+                    score += 5;
+                }
+                
+                // Category matches
+                if (item.category.toLowerCase().includes(word)) {
+                    score += 6;
+                }
+            });
+            
+            return score;
+        }
+
+        function performSearch(query, category = 'all') {
+            const resultsContainer = document.getElementById('searchResults');
+            const resultsList = document.getElementById('resultsList');
+            const resultsCount = document.getElementById('resultsCount');
+            
+            if (!query || query.length < 2) {
+                hideResults();
+                return;
+            }
+            
+            // Show loading
+            resultsList.innerHTML = '<div class="loading">Searching</div>';
+            resultsContainer.classList.add('show');
+            
+            // Simulate search delay for better UX
+            setTimeout(() => {
+                let filteredContent = websiteContent;
+                
+                // Filter by category
+                if (category !== 'all') {
+                    filteredContent = websiteContent.filter(item => item.category === category);
+                }
+                
+                // Search and score results
+                const searchResults = filteredContent
+                    .map(item => ({
+                        ...item,
+                        relevanceScore: calculateRelevanceScore(item, query)
+                    }))
+                    .filter(item => item.relevanceScore > 0)
+                    .sort((a, b) => b.relevanceScore - a.relevanceScore);
+                
+                displayResults(searchResults, query);
+            }, 300);
+        }
+
+        function displayResults(results, query) {
+            const resultsList = document.getElementById('resultsList');
+            const resultsCount = document.getElementById('resultsCount');
+            
+            resultsCount.textContent = `Found ${results.length} result${results.length !== 1 ? 's' : ''}`;
+            
+            if (results.length === 0) {
+                resultsList.innerHTML = `
+                    <div class="no-results">
+                        <div class="no-results-icon">🔍</div>
+                        <h3>No results found</h3>
+                        <p>Try different keywords or check spelling</p>
+                        <p><strong>Suggestions:</strong></p>
+                        <p>• Use broader terms (e.g., "pregnancy" instead of "prenatal vitamins")</p>
+                        <p>• Try different categories using the filter buttons</p>
+                        <p>• Search for topics like "birth control", "fertility", "menstruation"</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            resultsList.innerHTML = results.map(item => `
+                <div class="result-item" onclick="navigateToPage('${item.url}')">
+                    <div class="result-category">${getCategoryName(item.category)}</div>
+                    <a href="${item.url}" class="result-title">
+                        ${highlightText(item.title, query)}
+                    </a>
+                    <div class="result-excerpt">
+                        ${highlightText(item.excerpt, query)}
+                    </div>
+                    <div class="result-url">${item.url}</div>
+                </div>
+            `).join('');
+        }
+
+        function getCategoryName(category) {
+            const categoryNames = {
+                'conceiving': 'Conceiving Confidently',
+                'contraception': 'Contraception',
+                'anatomy': 'Female Anatomy & Conditions',
+                'menstruation': 'Menstruation',
+                'pregnancy': 'Pregnancy',
+                'legal': 'Legal Rights'
+            };
+            return categoryNames[category] || category;
+        }
+
+        function hideResults() {
+            const resultsContainer = document.getElementById('searchResults');
+            resultsContainer.classList.remove('show');
+        }
+
+        function navigateToPage(url) {
+            window.location.href = url;
+        }
   
     <!-- Conceiving Confidently Section -->
     <section class="category-section">
