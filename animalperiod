@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,8 +16,6 @@
 
 <div id="sidebar" class="sidebar">
     <!-- Sidebar content -->
-
-```
 <ul class="sidebar-nav">
     <li class="nav-section">
         <button class="section-header" onclick="toggleSection(this)">
