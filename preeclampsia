@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preeclampsia: The Complete Scientific Guide — Her Body Guide</title>
+  <meta name="description" content="Comprehensive scientific exploration of preeclampsia, from early warning signs to prevention strategies. Discover the pathophysiology, risk factors, diagnosis, treatment, and long-term implications of this serious pregnancy complication.">
+  <meta name="keywords" content="preeclampsia, pregnancy complications, high blood pressure pregnancy, HELLP syndrome, eclampsia, pregnancy hypertension, gestational hypertension, maternal health, prenatal care, pregnancy risks">
+  <link rel="canonical" href="https://herbodyguide.com/preeclampsia.html">
+  <meta property="og:title" content="Preeclampsia: The Complete Scientific Guide">
+  <meta property="og:description" content="Explore everything about preeclampsia, including causes, symptoms, diagnosis, treatment, and prevention.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://herbodyguide.com/preeclampsia.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Preeclampsia: The Complete Scientific Guide",
+    "author": "Her Body Guide",
+    "url": "https://herbodyguide.com/preeclampsia.html"
+  }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<button class="mobile-toggle" onclick="toggleSidebar()">☰</button>
+
+<div id="sidebar" class="sidebar">
+<ul class="sidebar-nav">
+    <li class="nav-section">
+        <button class="section-header" onclick="toggleSection(this)">
+            Conceiving Confidently <span class="section-toggle">◀</span>
+        </button>
+        <ul class="section-content">
+            <li><a href="post1.html">Factors affecting fertilization</a></li>
+            <li><a href="post2.html">Reproductive Anatomy</a></li>
+            <li><a href="post3.html">Prenatal Vitamins</a></li>
+            <li><a href="miscarriage.html">Miscarriage</a></li>
+            <li><a href="hormones.html">Reproductive Hormones</a></li>
+            <li><a href="what-is-fertility.html">What is Fertility?</a></li>
+            <li><a href="pcos.html">PCOS</a></li>
+            <li><a href="ivfegg.html">IVF and Egg Freezing</a></li>
+            <li><a href="pregtest.html">Pregnancy Tests</a></li>
+            <li><a href="twins.html">Twins</a></li>
+            <li><a href="iui.html">IUI</a></li>
+            <li><a href="bloodtests.html">Blood tests</a></li>
+        </ul>
+    </li>
+    
+    <li class="nav-section">
+        <button class="section-header" onclick="toggleSection(this)">
+            Contraception<span class="section-toggle">◀</span>
+        </button>   
+        <ul class="section-content">
+            <li><a href="birthcontrolpills.html">Birth Control pills</a></li>
+            <li><a href="iud.html">IUD</a></li>
+            <li><a href="rod.html">Contraceptive implant - The Rod</a></li>
+            <li><a href="condoms.html">The Science of Condoms</a></li>
+        </ul>
+    </li>
+    
+    <li class="nav-section">
+        <button class="section-header" onclick="toggleSection(this)">
+            Female anatomy and conditions <span class="section-toggle">◀</span>
+        </button>  
+        <ul class="section-content">
+            <li><a href="post2.html">Reproductive Anatomy</a></li>
+            <li><a href="hormones.html">Reproductive Hormones</a></li>
+            <li><a href="pcos.html">PCOS</a></li>
+            <li><a href="endometriosis.html">Endometriosis</a></li>
+            <li><a href="endobelly.html">Endobelly</a></li>
+            <li><a href="cysts.html">Ovarian Cysts</a></li>
+            <li><a href="vagina.html">The Vagina</a></li> 
+            <li><a href="menopause.html">Menopause and perimenopause</a></li>
+            <li><a href="uterus.html">The Uterus</a></li>
+            <li><a href="breastcancer.html">Breast Cancer</a></li>
+            <li><a href="migraines.html">Migraines and Women</a></li>
+        </ul>
+    </li>
+
+    <li class="nav-section">
+        <button class="section-header" onclick="toggleSection(this)">
+            Menstruation <span class="section-toggle">◀</span>
+        </button> 
+        <ul class="section-content">
+            <li><a href="period.html">Period</a></li>
+            <li><a href="birthcontrolpills.html">Birth Control pills</a></li>
+            <li><a href="cramps.html">Period Cramps</a></li>
+            <li><a href="cluevsflo.html">Clue vs Flo</a></li>
+            <li><a href="tampons.html">Tampons</a></li>
+            <li><a href="animalperiod.html">Animals That Menstruate</a></li>
+        </ul>
+    </li>
+    
+    <li class="nav-section">
+        <button class="section-header" onclick="toggleSection(this)">
+            Pregnancy <span class="section-toggle">◀</span>
+        </button>  
+        <ul class="section-content">
+            <li><a href="morning-sickness.html">Morning Sickness</a></li>
+            <li><a href="breastfeeding.html">Breastfeeding</a></li>
+            <li><a href="ultrasoundlmp.html">Pregnancy Dating</a></li>
+            <li><a href="blood.html">The Science of blood</a></li>
+            <li><a href="post3.html">Prenatal Vitamins</a></li>
+            <li><a href="miscarriage.html">Miscarriage</a></li>
+            <li><a href="pregfoods.html">Pregnancy dietary restrictions</a></li>
+            <li><a href="preeclampsia.html">Preeclampsia</a></li>
+            <li><a href="gender.html">Gender predicting &amp; Old wives tales</a></li>
+            <li><a href="chempreg.html">Chemical Pregnancy</a></li>
+            <li><a href="pregtest.html">Pregnancy Tests</a></li>
+            <li><a href="twins.html">Twins</a></li>
+            <li><a href="laborinduction.html">Labor Induction</a></li>
+            <li><a href="vaccinebaby.html">Infant Vaccinations</a></li>
+            <li><a href="homebirths.html">Home Births</a></li>
+            <li><a href="pregsym.html">Pregnancy symptoms</a></li>
+            <li><a href="fetalgrowth.html">Fetal Growth</a></li>
+        </ul>
+    </li>
+    
+    <li class="nav-section">
+        <button class="section-header" onclick="toggleSection(this)">
+            Legal Rights <span class="section-toggle">◀</span>
+        </button>  
+        <ul class="section-content">
+            <li><a href="what-is-consent.html">What is Consent?</a></li>
+        </ul>
+    </li>
+</ul> 
+</div>
+
+<header class="site-header">
+    <div class="wrapper">
+        <h1 class="site-title"><a href="index.html">Her Body Guide</a></h1>
+        <p class="site-tagline">Science-based guidance for women for their bodies</p>
+    </div>
+    <nav class="main-navigation">
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact-and-privacy-policy.html">Contact &amp; Privacy Policy</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="post-meta">
+    <span class="post-date">August 9, 2025</span>
+</div>
+
+<div class="container">
+    <h1>Preeclampsia: The Complete Scientific Guide</h1>
+    <div class="intro">
+        Preeclampsia affects <span class="highlight">2-8% of all pregnancies worldwide</span>, making it one of the leading causes of maternal and fetal morbidity and mortality globally. This complex, multi-system disorder remains one of medicine's most enigmatic conditions—despite decades of research, its exact cause remains incompletely understood, and the only definitive cure is delivery of the baby and placenta.
+        <div class="key-point">
+            This comprehensive scientific exploration delves into the pathophysiology, risk factors, diagnosis, treatment, and prevention of preeclampsia. From the earliest molecular signals in placental development to the long-term cardiovascular consequences that can persist decades after pregnancy, understanding preeclampsia is crucial for every woman of childbearing age, her family, and the healthcare providers who care for them. What begins as a disease of pregnancy reveals itself as a window into lifelong vascular health.
+        </div>
+    </div>
+
+<h2>Defining Preeclampsia: What Makes It Unique</h2>
+
+<div class="anatomy-section">
+    <h3>The Clinical Definition of Preeclampsia</h3>
+    <p>Preeclampsia is defined as <span class="highlight">new-onset hypertension (blood pressure ≥140/90 mmHg) occurring after 20 weeks of gestation, accompanied by proteinuria or other signs of end-organ dysfunction</span>. The condition represents a pregnancy-specific syndrome that reflects widespread maternal endothelial dysfunction triggered by factors released from a dysfunctional placenta.</p>
+</div>
+
+<div class="key-point">
+    The definition of preeclampsia has evolved significantly over time. While proteinuria (excess protein in urine) was once considered essential for diagnosis, current guidelines recognize that preeclampsia can occur without proteinuria when other features of severe disease are present, including thrombocytopenia, impaired liver function, renal insufficiency, pulmonary edema, or new-onset cerebral or visual disturbances.
+</div>
+
+<div class="anatomy-section">
+    <h4>Distinguishing Preeclampsia from Other Hypertensive Disorders</h4>
+    <p>Hypertensive disorders of pregnancy form a spectrum of conditions that must be carefully differentiated for appropriate management. Chronic hypertension exists before pregnancy or develops before 20 weeks. Gestational hypertension involves elevated blood pressure after 20 weeks without proteinuria or organ dysfunction. Preeclampsia superimposed on chronic hypertension occurs when a woman with pre-existing hypertension develops new proteinuria or other signs of organ dysfunction.</p>
+</div>
+
+<div class="statistic">
+    Hypertensive disorders complicate approximately 10% of all pregnancies globally, with preeclampsia accounting for 2-8% of cases depending on population characteristics. The incidence is rising in many developed countries, likely due to increasing rates of maternal obesity, advanced maternal age, and use of assisted reproductive technologies—all of which are independent risk factors.
+</div>
+
+<div class="anatomy-section">
+    <h4>The Two-Stage Model of Preeclampsia</h4>
+    <p>Modern understanding conceptualizes preeclampsia as a two-stage disease. Stage 1 involves abnormal placentation during the first trimester, when trophoblast invasion of the spiral arteries is shallow or incomplete. Stage 2 occurs later in pregnancy when the poorly perfused placenta releases factors into the maternal circulation that cause widespread endothelial dysfunction and the clinical syndrome of preeclampsia.</p>
+</div>
+
+<h2>Pathophysiology: Understanding the Disease Process</h2>
+
+<h3>Abnormal Placental Development</h3>
+<p>The origins of preeclampsia begin in the first weeks of pregnancy, long before any clinical symptoms appear. Understanding this early pathology is essential for appreciating why the condition remains so difficult to prevent and treat.</p>
+
+<div class="anatomy-section">
+    <h4>Normal Placentation</h4>
+    <p>In normal pregnancy, specialized cells called extravillous trophoblasts invade the decidua and myometrium, transforming the spiral arteries from narrow, muscular vessels into wide, low-resistance channels. This remodeling dramatically increases blood flow to the intervillous space, meeting the growing metabolic demands of the fetus. <span class="highlight">By 18-20 weeks of normal pregnancy, spiral artery transformation is complete, increasing vessel diameter by 5-10 fold</span>.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Defective Spiral Artery Remodeling in Preeclampsia</h4>
+    <p>In preeclampsia, trophoblast invasion is shallow and incomplete, affecting only the decidual portions of the spiral arteries while leaving the myometrial segments unremodeled. These narrow, high-resistance vessels cannot adequately perfuse the placenta, resulting in placental ischemia and hypoxia. The stressed placenta then releases an array of factors that trigger the maternal syndrome.</p>
+</div>
+
+<div class="statistic">
+    Histological studies of preeclamptic placentas reveal that only 18-40% of spiral arteries show normal transformation, compared to 80-100% in normal pregnancies. This incomplete remodeling creates a hostile uterine environment where the placenta receives only 30-50% of the blood flow seen in healthy pregnancies, triggering a cascade of pathological responses.
+</div>
+
+<div class="anatomy-section">
+    <h4>The Hypoxic Placenta</h4>
+    <p>Chronic placental hypoxia triggers multiple adaptive and maladaptive responses. The placenta upregulates hypoxia-inducible factors, increases production of anti-angiogenic factors like soluble fms-like tyrosine kinase 1 (sFlt-1), and decreases production of pro-angiogenic factors like placental growth factor (PlGF). This imbalance of angiogenic factors is central to the maternal vascular dysfunction that characterizes preeclampsia.</p>
+</div>
+
+<h3>Maternal Endothelial Dysfunction</h3>
+<p>The clinical manifestations of preeclampsia result from widespread maternal endothelial dysfunction caused by placental factors entering the maternal circulation.</p>
+
+<div class="anatomy-section">
+    <h4>Anti-Angiogenic Factors</h4>
+    <p><strong>Soluble fms-like tyrosine kinase 1 (sFlt-1):</strong> This protein binds and neutralizes vascular endothelial growth factor (VEGF) and PlGF, disrupting their normal protective effects on the endothelium. sFlt-1 levels are markedly elevated in preeclampsia and correlate with disease severity.<br>
+    <strong>Soluble endoglin (sEng):</strong> This factor interferes with transforming growth factor-β signaling, further impairing endothelial function. When combined with elevated sFlt-1, soluble endoglin dramatically increases the risk of severe preeclampsia and HELLP syndrome.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Consequences of Endothelial Dysfunction</h4>
+    <p>Endothelial dysfunction leads to the classic features of preeclampsia through several mechanisms:<br>
+    <strong>Vasoconstriction:</strong> Loss of endothelial-dependent vasodilation causes hypertension<br>
+    <strong>Increased permeability:</strong> Damage to the endothelial barrier allows proteins to leak into tissues and urine<br>
+    <strong>Activation of coagulation:</strong> Endothelial injury triggers platelet aggregation and microthrombi formation<br>
+    <strong>End-organ damage:</strong> These processes combine to produce injury in the brain, liver, kidneys, and other organs</p>
+</div>
+
+<div class="key-point">
+    The ratio of sFlt-1 to PlGF has emerged as a valuable biomarker for preeclampsia. A ratio greater than 85 has high predictive value for preeclampsia within two weeks, while a ratio less than 38 effectively rules out the development of preeclampsia in the following week. This biomarker is increasingly used in clinical practice to guide management decisions.
+</div>
+
+<h3>Immune and Inflammatory Mechanisms</h3>
+<p>Preeclampsia involves significant immune dysregulation, reflecting the delicate immunological balance required for successful pregnancy.</p>
+
+<div class="anatomy-section">
+    <h4>Maternal-Fetal Immune Interface</h4>
+    <p>Successful pregnancy requires tolerance of the semi-allogenic fetus while maintaining immune competence. In preeclampsia, this balance is disrupted. Decreased regulatory T cells, increased inflammatory cytokines, and altered natural killer cell function all contribute to defective placentation and subsequent disease manifestations.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Systemic Inflammatory Response</h4>
+    <p>Normal pregnancy involves a controlled inflammatory state that intensifies as term approaches. In preeclampsia, this inflammation is exaggerated and poorly controlled. Elevated levels of tumor necrosis factor-α, interleukin-6, and other inflammatory mediators contribute to endothelial activation and dysfunction.</p>
+</div>
+
+<div class="statistic">
+    Inflammatory markers are elevated 2-4 weeks before clinical diagnosis of preeclampsia in many cases. C-reactive protein levels are 1.5-2 times higher in women who will develop preeclampsia compared to those with normal pregnancies, suggesting potential utility as an early warning marker when combined with other clinical and biochemical assessments.
+</div>
+
+<h2>Risk Factors: Who Is at Increased Risk?</h2>
+
+<h3>Maternal Risk Factors</h3>
+<p>Multiple maternal characteristics increase the risk of developing preeclampsia, though many women with these risk factors will have uneventful pregnancies while some women without identifiable risk factors will develop the condition.</p>
+
+<div class="anatomy-section">
+    <h4>Prior Pregnancy History</h4>
+    <p><strong>Previous preeclampsia:</strong> History of preeclampsia increases risk by 7-8 fold<br>
+    <strong>Nulliparity:</strong> First pregnancies carry 2-3 times higher risk than subsequent pregnancies<br>
+    <strong>New paternity:</strong> Changing partners partially "resets" the protective effect of prior pregnancy<br>
+    <strong>Pregnancy interval:</strong> Intervals longer than 10 years increase risk similar to first pregnancies<br>
+    <strong>Previous adverse outcomes:</strong> Prior stillbirth, placental abruption, or fetal growth restriction increase risk</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Medical Conditions</h4>
+    <p><strong>Chronic hypertension:</strong> 15-25% of women with chronic hypertension develop superimposed preeclampsia<br>
+    <strong>Diabetes mellitus:</strong> Pre-existing or gestational diabetes doubles the risk<br>
+    <strong>Chronic kidney disease:</strong> Risk increases with degree of renal impairment<br>
+    <strong>Autoimmune diseases:</strong> Systemic lupus erythematosus and antiphospholipid syndrome significantly increase risk<br>
+    <strong>Obesity:</strong> BMI &gt;30 doubles the risk; BMI &gt;35 triples it</p>
+</div>
+
+<div class="statistic">
+    A meta-analysis of 25 million pregnancies found that the strongest individual risk factors for preeclampsia are antiphospholipid syndrome (relative risk 9.7), prior preeclampsia (relative risk 7.2), chronic hypertension (relative risk 5.1), pregestational diabetes (relative risk 3.6), and BMI &gt;30 (relative risk 2.8). Multiple risk factors have additive or multiplicative effects.
+</div>
+
+<div class="anatomy-section">
+    <h4>Demographic Factors</h4>
+    <p><strong>Age:</strong> Maternal age over 40 increases risk by 2-fold; teenage pregnancies also have elevated risk<br>
+    <strong>Race/ethnicity:</strong> Black women have 1.5-2 times higher risk than white women, with higher rates of severe disease<br>
+    <strong>Socioeconomic status:</strong> Lower education and income levels are associated with increased risk<br>
+    <strong>Family history:</strong> Mother or sister with preeclampsia doubles the risk</p>
+</div>
+
+<h3>Pregnancy-Specific Risk Factors</h3>
+<p>Certain characteristics of the current pregnancy independently increase preeclampsia risk.</p>
+
+<div class="anatomy-section">
+    <h4>Multiple Gestation</h4>
+    <p>Twin pregnancies have 2-3 times higher risk of preeclampsia than singleton pregnancies, with higher-order multiples having even greater risk. The increased placental mass and enhanced placental demands may explain this association. Multiple gestation preeclampsia also tends to occur earlier in pregnancy and with greater severity.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Assisted Reproductive Technologies</h4>
+    <p>Pregnancies conceived through IVF and other assisted reproductive technologies carry 1.5-2 times higher risk of preeclampsia. <span class="highlight">Donor oocyte pregnancies have particularly elevated risk (2-4 fold increase), supporting the role of immune factors in preeclampsia pathogenesis</span>—the genetic dissimilarity between mother and fetus may impair normal placentation.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Placental Abnormalities</h4>
+    <p><strong>Molar pregnancy:</strong> Dramatically increased risk, with preeclampsia occurring before 20 weeks in complete molar pregnancies<br>
+    <strong>Triploidy:</strong> Chromosomally abnormal pregnancies with excess placental tissue<br>
+    <strong>Hydrops fetalis:</strong> Associated with increased placental mass and preeclampsia risk</p>
+</div>
+
+<div class="key-point">
+    The presence of multiple risk factors should trigger enhanced surveillance and consideration of preventive strategies. Women with two or more moderate risk factors or one high risk factor should be considered candidates for low-dose aspirin prophylaxis initiated between 12-16 weeks of gestation and continued until delivery.
+</div>
+
+<h2>Clinical Presentation: Signs and Symptoms</h2>
+
+<h3>Classical Clinical Features</h3>
+<p>Preeclampsia can present with a wide spectrum of findings, from asymptomatic blood pressure elevation detected at routine prenatal visits to fulminant multi-organ failure.</p>
+
+<div class="anatomy-section">
+    <h4>Hypertension</h4>
+    <p>Elevated blood pressure is the hallmark of preeclampsia. Diagnostic criteria require systolic blood pressure ≥140 mmHg or diastolic blood pressure ≥90 mmHg on two occasions at least 4 hours apart after 20 weeks of gestation. Severe hypertension (systolic ≥160 mmHg or diastolic ≥110 mmHg) requires urgent treatment to prevent stroke and other complications.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Proteinuria</h4>
+    <p>Protein in the urine reflects glomerular endothelial damage. Significant proteinuria is defined as ≥300 mg in a 24-hour urine collection, protein/creatinine ratio ≥0.3 mg/dL, or persistent 2+ on urine dipstick. However, proteinuria is no longer required for diagnosis if other severe features are present.</p>
+</div>
+
+<div class="statistic">
+    Among women diagnosed with preeclampsia, approximately 70% present with proteinuria at diagnosis. However, 10-20% of women with severe preeclampsia, including those with eclampsia (seizures) and HELLP syndrome, may have minimal or no proteinuria at presentation, emphasizing the importance of recognizing other features of the syndrome.
+</div>
+
+<div class="anatomy-section">
+    <h4>Edema</h4>
+    <p>While edema is common in normal pregnancy, sudden or severe edema—particularly of the face and hands—may signal preeclampsia. Rapid weight gain (more than 2 pounds per week) can indicate fluid retention. However, edema alone is not diagnostic and many women with preeclampsia have minimal swelling.</p>
+</div>
+
+<h3>Severe Features of Preeclampsia</h3>
+<p>The distinction between preeclampsia with and without severe features is crucial for management decisions and prognosis.</p>
+
+<div class="anatomy-section">
+    <h4>Severe Blood Pressure Elevation</h4>
+    <p>Systolic blood pressure ≥160 mmHg or diastolic blood pressure ≥110 mmHg on two occasions at least 4 hours apart (or once if antihypertensive therapy is initiated) indicates severe disease requiring immediate treatment and close monitoring.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Central Nervous System Symptoms</h4>
+    <p><strong>Severe headache:</strong> Persistent, often described as "worst headache of life"<br>
+    <strong>Visual disturbances:</strong> Blurred vision, photopsia (flashing lights), scotomata (blind spots), or cortical blindness<br>
+    <strong>Altered mental status:</strong> Confusion, agitation, or decreased consciousness<br>
+    <strong>Hyperreflexia with clonus:</strong> Sign of cerebral irritability that may precede seizures</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Hepatic Involvement</h4>
+    <p><strong>Right upper quadrant or epigastric pain:</strong> Indicates liver capsule distension<br>
+    <strong>Elevated liver enzymes:</strong> AST or ALT greater than twice normal<br>
+    <strong>Subcapsular hematoma:</strong> Rare but life-threatening complication<br>
+    <strong>Hepatic rupture:</strong> Catastrophic complication with high mortality</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Renal Dysfunction</h4>
+    <p>Serum creatinine greater than 1.1 mg/dL or doubling of baseline creatinine indicates severe disease. Oliguria (urine output less than 500 mL in 24 hours) may occur in advanced cases. Acute kidney injury complicates 1-2% of preeclampsia cases and usually resolves after delivery.</p>
+</div>
+
+<div class="trimester-box">
+    <h3>Criteria for Preeclampsia with Severe Features</h3>
+    <p><span class="highlight">Any ONE of the following indicates severe preeclampsia:</span><br>
+    • Systolic BP ≥160 mmHg or diastolic BP ≥110 mmHg<br>
+    • Platelet count &lt;100,000/μL<br>
+    • Liver enzymes elevated to twice normal with right upper quadrant or epigastric pain<br>
+    • Serum creatinine &gt;1.1 mg/dL or doubling of baseline<br>
+    • Pulmonary edema<br>
+    • New-onset headache unresponsive to medication<br>
+    • Visual disturbances</p>
+</div>
+
+<h3>Atypical Presentations</h3>
+<p>Preeclampsia does not always follow the classical pattern, and atypical presentations can lead to delayed diagnosis.</p>
+
+<div class="anatomy-section">
+    <h4>Early-Onset Preeclampsia</h4>
+    <p>Preeclampsia developing before 34 weeks is considered early-onset and typically reflects more severe placental pathology. Early-onset disease carries higher risks of maternal complications, fetal growth restriction, and adverse neonatal outcomes. It accounts for approximately 10-15% of preeclampsia cases but contributes disproportionately to maternal and perinatal mortality.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Postpartum Preeclampsia</h4>
+    <p><span class="highlight">Preeclampsia can develop for the first time after delivery, typically within 48 hours but sometimes up to 6 weeks postpartum</span>. Late postpartum preeclampsia (occurring more than 48 hours after delivery) is increasingly recognized and requires high clinical suspicion, as women may have been discharged from hospital care.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Preeclampsia Without Hypertension</h4>
+    <p>Rarely, preeclampsia can present with proteinuria and severe features before significant hypertension develops. This "normotensive" preeclampsia is dangerous because it may not trigger usual warning protocols. Serial blood pressure monitoring and attention to other symptoms are essential.</p>
+</div>
+
+<h2>HELLP Syndrome: A Severe Variant</h2>
+
+<h3>Understanding HELLP Syndrome</h3>
+<p>HELLP syndrome represents one of the most severe manifestations of the preeclampsia spectrum, characterized by Hemolysis, Elevated Liver enzymes, and Low Platelets.</p>
+
+<div class="anatomy-section">
+    <h4>Diagnostic Criteria</h4>
+    <p><strong>Hemolysis:</strong> Abnormal peripheral blood smear with schistocytes, elevated LDH (&gt;600 U/L), elevated total bilirubin (&gt;1.2 mg/dL)<br>
+    <strong>Elevated Liver enzymes:</strong> AST or ALT &gt;2 times upper limit of normal<br>
+    <strong>Low Platelets:</strong> Platelet count &lt;100,000/μL<br>
+    Complete HELLP syndrome requires all three criteria; partial HELLP involves one or two features.</p>
+</div>
+
+<div class="statistic">
+    HELLP syndrome complicates 0.5-0.9% of all pregnancies and 10-20% of severe preeclampsia cases. Maternal mortality rates range from 1-3%, while perinatal mortality reaches 7-20% depending on gestational age and severity. The condition can develop rapidly and progress to life-threatening complications within hours.
+</div>
+
+<div class="anatomy-section">
+    <h4>Clinical Presentation of HELLP</h4>
+    <p>HELLP syndrome often presents with non-specific symptoms that can mimic other conditions. Right upper quadrant or epigastric pain occurs in 40-90% of cases. Nausea and vomiting are common. Malaise and fatigue may be attributed to normal pregnancy discomforts. <span class="highlight">Notably, 15-20% of women with HELLP syndrome do not have hypertension or proteinuria at presentation</span>, making diagnosis challenging.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Complications of HELLP Syndrome</h4>
+    <p><strong>Disseminated intravascular coagulation (DIC):</strong> Occurs in 20-40% of cases<br>
+    <strong>Placental abruption:</strong> Complicates 16% of HELLP cases<br>
+    <strong>Acute kidney injury:</strong> Occurs in 8-10% of patients<br>
+    <strong>Hepatic hemorrhage or rupture:</strong> Rare but potentially fatal<br>
+    <strong>Pulmonary edema and ARDS:</strong> Can develop rapidly<br>
+    <strong>Stroke:</strong> Risk increased especially with severe hypertension</p>
+</div>
+
+<h2>Eclampsia: Seizures in Preeclampsia</h2>
+
+<h3>Understanding Eclampsia</h3>
+<p>Eclampsia is defined as new-onset tonic-clonic seizures in a woman with preeclampsia that cannot be attributed to other causes. It represents a neurological emergency with significant maternal and fetal risks.</p>
+
+<div class="anatomy-section">
+    <h4>Pathophysiology of Eclamptic Seizures</h4>
+    <p>Eclamptic seizures result from cerebral endothelial dysfunction, disruption of the blood-brain barrier, and cerebral edema. Posterior reversible encephalopathy syndrome (PRES) is commonly seen on brain imaging. The mechanism involves loss of cerebral autoregulation, allowing blood pressure surges to cause vasogenic edema primarily in the posterior brain regions.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Timing of Eclampsia</h4>
+    <p><strong>Antepartum:</strong> Approximately 38-53% of cases occur before delivery<br>
+    <strong>Intrapartum:</strong> 18-36% occur during labor and delivery<br>
+    <strong>Postpartum:</strong> 11-44% occur after delivery, sometimes several days later<br>
+    Late postpartum eclampsia (occurring more than 48 hours after delivery) accounts for approximately 16% of cases.</p>
+</div>
+
+<div class="statistic">
+    Eclampsia occurs in 0.5-1% of women with severe preeclampsia and 2-3% of those with HELLP syndrome. Maternal mortality from eclampsia has declined dramatically in developed countries to approximately 0-1.8% but remains significant in resource-limited settings where it contributes to 10-15% of maternal deaths globally.
+</div>
+
+<div class="anatomy-section">
+    <h4>Warning Signs</h4>
+    <p>While eclampsia can occur without warning, many women experience prodromal symptoms:<br>
+    <strong>Severe persistent headache:</strong> Present in 50-70% of cases before seizure<br>
+    <strong>Visual disturbances:</strong> Reported by 20-30% of women<br>
+    <strong>Right upper quadrant pain:</strong> Especially with HELLP syndrome<br>
+    <strong>Hyperreflexia and clonus:</strong> Signs of cerebral irritability<br>
+    However, 20-25% of women have no warning signs before their first seizure.</p>
+</div>
+
+<h2>Diagnosis: Clinical and Laboratory Assessment</h2>
+
+<h3>Clinical Evaluation</h3>
+<p>Accurate diagnosis of preeclampsia requires careful clinical assessment combined with appropriate laboratory testing.</p>
+
+<div class="anatomy-section">
+    <h4>Blood Pressure Measurement</h4>
+    <p>Proper technique is essential for accurate diagnosis:<br>
+    • Patient should be seated and resting for 5 minutes<br>
+    • Appropriate cuff size (bladder encircling 80% of arm circumference)<br>
+    • Arm supported at heart level<br>
+    • Two measurements at least 4 hours apart to confirm diagnosis<br>
+    • In severe cases, one severely elevated measurement justifies treatment initiation</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Urine Assessment</h4>
+    <p><strong>24-hour urine collection:</strong> Gold standard for quantifying proteinuria; ≥300 mg is significant<br>
+    <strong>Protein/creatinine ratio:</strong> Acceptable alternative; ≥0.3 mg/dL is significant<br>
+    <strong>Urine dipstick:</strong> Screening tool only; 2+ is suspicious but requires confirmation<br>
+    <strong>Urinalysis:</strong> May show red blood cells and casts in severe cases</p>
+</div>
+
+<div class="key-point">
+    While proteinuria has traditionally been considered essential for preeclampsia diagnosis, current guidelines recognize that preeclampsia can occur without proteinuria when other severe features are present. This change reflects improved understanding of preeclampsia as a multi-system disorder where renal involvement varies among patients.
+</div>
+
+<h3>Laboratory Testing</h3>
+<p>A comprehensive laboratory evaluation helps confirm diagnosis, assess severity, and guide management.</p>
+
+<div class="anatomy-section">
+    <h4>Complete Blood Count</h4>
+    <p><strong>Hemoglobin/hematocrit:</strong> May be elevated due to hemoconcentration; falling values may indicate hemolysis<br>
+    <strong>Platelet count:</strong> &lt;100,000/μL indicates severe disease; declining trend is concerning<br>
+    <strong>Peripheral smear:</strong> Schistocytes and helmet cells indicate microangiopathic hemolytic anemia</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Liver Function Tests</h4>
+    <p><strong>AST and ALT:</strong> Elevation to twice normal indicates severe disease<br>
+    <strong>LDH:</strong> Elevated with hemolysis; often &gt;600 U/L in HELLP syndrome<br>
+    <strong>Bilirubin:</strong> Elevated with hemolysis<br>
+    <strong>Albumin:</strong> May be decreased, contributing to edema</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Renal Function</h4>
+    <p><strong>Serum creatinine:</strong> &gt;1.1 mg/dL or doubling indicates severe disease<br>
+    <strong>BUN:</strong> May be elevated with renal dysfunction<br>
+    <strong>Uric acid:</strong> Often elevated in preeclampsia; values &gt;5.5 mg/dL correlate with severity</p>
+</div>
+
+<div class="trimester-box">
+    <h3>Recommended Laboratory Assessment</h3>
+    <p><span class="highlight">Initial evaluation:</span><br>
+    • Complete blood count with platelet count<br>
+    • Comprehensive metabolic panel (creatinine, AST, ALT)<br>
+    • LDH<br>
+    • Urine protein quantification<br>
+    <br>
+    <span class="highlight">Additional tests in severe cases:</span><br>
+    • Peripheral blood smear<br>
+    • Coagulation studies (PT, PTT, fibrinogen)<br>
+    • Uric acid<br>
+    • Typing and screening (anticipating possible transfusion)</p>
+</div>
+
+<h3>Angiogenic Biomarkers</h3>
+<p>Novel biomarkers are increasingly used to aid diagnosis and risk stratification.</p>
+
+<div class="anatomy-section">
+    <h4>sFlt-1 and PlGF</h4>
+    <p>The ratio of soluble fms-like tyrosine kinase 1 (sFlt-1) to placental growth factor (PlGF) has emerged as a valuable diagnostic and prognostic tool. An sFlt-1/PlGF ratio &lt;38 has high negative predictive value for preeclampsia developing within one week. A ratio &gt;85 (&gt;110 if &lt;34 weeks) has high positive predictive value for preeclampsia within 4 weeks.</p>
+</div>
+
+<div class="statistic">
+    Studies show that sFlt-1/PlGF ratio can accurately rule out preeclampsia with negative predictive value of 99.3% when the ratio is below 38. This allows clinicians to safely reduce monitoring in women with suspected preeclampsia who have low ratios, while intensifying surveillance in those with elevated ratios who are at high risk of disease development.
+</div>
+
+<h2>Fetal Assessment in Preeclampsia</h2>
+
+<h3>Impact on Fetal Development</h3>
+<p>Preeclampsia affects the fetus through reduced placental perfusion and direct effects of the disease process on fetal well-being.</p>
+
+<div class="anatomy-section">
+    <h4>Fetal Growth Restriction</h4>
+    <p>Intrauterine growth restriction (IUGR) complicates 25-30% of preeclampsia cases, particularly in early-onset disease. Chronic placental insufficiency limits nutrient and oxygen delivery, resulting in asymmetric growth restriction where the fetal brain is preferentially spared. Severe growth restriction increases risks of stillbirth and neonatal complications.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Oligohydramnios</h4>
+    <p>Reduced amniotic fluid volume reflects decreased fetal urine production due to redistribution of blood flow away from the fetal kidneys. Oligohydramnios is associated with poorer outcomes and may indicate need for delivery. <span class="highlight">Amniotic fluid index below 5 cm or single deepest pocket below 2 cm warrants concern</span>.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Placental Abruption</h4>
+    <p>The risk of placental abruption (premature separation of the placenta from the uterine wall) is increased 3-fold in preeclampsia. Abruption can cause acute fetal distress, hemorrhage, and maternal DIC. Warning signs include vaginal bleeding, abdominal pain, uterine tenderness, and fetal heart rate abnormalities.</p>
+</div>
+
+<h3>Fetal Monitoring</h3>
+<p>Regular fetal surveillance is essential to assess fetal well-being and determine optimal timing of delivery.</p>
+
+<div class="anatomy-section">
+    <h4>Non-Stress Testing</h4>
+    <p>Non-stress tests (NST) assess fetal heart rate reactivity and are typically performed 1-2 times weekly in preeclampsia without severe features, and more frequently in severe disease. A reactive NST (with adequate accelerations) is reassuring, while a non-reactive test requires further evaluation.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Biophysical Profile</h4>
+    <p>The biophysical profile (BPP) combines NST with ultrasound assessment of fetal breathing movements, body movements, tone, and amniotic fluid volume. Scores of 8-10 are reassuring; 6 is equivocal; 4 or below indicates fetal compromise and typically mandates delivery.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Doppler Velocimetry</h4>
+    <p><strong>Umbilical artery Doppler:</strong> Assesses placental resistance; absent or reversed end-diastolic flow is ominous<br>
+    <strong>Middle cerebral artery Doppler:</strong> Low resistance indicates fetal brain-sparing response to hypoxia<br>
+    <strong>Ductus venosus Doppler:</strong> Abnormalities indicate cardiac compromise and predict stillbirth</p>
+</div>
+
+<div class="statistic">
+    In preeclampsia with severe features before 34 weeks, abnormal umbilical artery Doppler is present in 40-60% of cases. The finding of absent or reversed end-diastolic flow increases perinatal mortality risk by 4-7 fold and typically indicates need for delivery after corticosteroid administration and careful evaluation of maternal and fetal status.
+</div>
+
+<h2>Management: Treatment Strategies</h2>
+
+<h3>General Principles</h3>
+<p>The only definitive treatment for preeclampsia is delivery of the baby and placenta. Management decisions balance the risks of prematurity against the risks of continuing pregnancy.</p>
+
+<div class="anatomy-section">
+    <h4>Expectant Management</h4>
+    <p>In preeclampsia without severe features remote from term (typically 24-37 weeks), expectant management with close monitoring may allow fetal maturation. This approach requires hospitalization or very close outpatient surveillance with:</p>
+    <p>• Daily blood pressure monitoring<br>
+    • Regular laboratory assessment (at least twice weekly)<br>
+    • Fetal surveillance with NST and AFI 1-2 times weekly<br>
+    • Patient education about warning symptoms<br>
+    • Ready access to delivery facilities</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Indications for Delivery</h4>
+    <p>Delivery is indicated regardless of gestational age when:<br>
+    • Gestational age ≥37 weeks (or ≥34 weeks with severe features)<br>
+    • Severe uncontrolled hypertension despite maximum therapy<br>
+    • Eclampsia<br>
+    • HELLP syndrome<br>
+    • Progressive organ dysfunction (worsening renal function, liver abnormalities, thrombocytopenia)<br>
+    • Fetal compromise (non-reassuring testing, absent or reversed umbilical artery flow)</p>
+</div>
+
+<div class="key-point">
+    The decision about timing of delivery in preeclampsia is one of the most complex in obstetrics, requiring careful consideration of gestational age, disease severity, maternal condition, and fetal status. In cases of severe preeclampsia before viability or at the threshold of viability, discussions about goals of care and potential outcomes should involve maternal-fetal medicine specialists and neonatologists.
+</div>
+
+<h3>Antihypertensive Therapy</h3>
+<p>Treatment of severe hypertension is essential to prevent maternal cerebrovascular complications while maintaining adequate placental perfusion.</p>
+
+<div class="anatomy-section">
+    <h4>Acute Severe Hypertension</h4>
+    <p>Severe hypertension (systolic ≥160 mmHg or diastolic ≥110 mmHg) requires treatment within 30-60 minutes to prevent stroke and other complications. First-line agents include:<br>
+    <strong>Labetalol:</strong> 20 mg IV initially, may repeat with escalating doses (40 mg, then 80 mg) every 10-20 minutes<br>
+    <strong>Hydralazine:</strong> 5-10 mg IV every 20-40 minutes<br>
+    <strong>Nifedipine:</strong> 10-20 mg oral every 20-30 minutes (immediate release)</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Maintenance Therapy</h4>
+    <p>Once severe hypertension is controlled, maintenance therapy helps prevent recurrent severe elevations. Common agents include:<br>
+    <strong>Labetalol:</strong> 200-800 mg orally 2-3 times daily<br>
+    <strong>Nifedipine extended-release:</strong> 30-120 mg daily<br>
+    <strong>Hydralazine:</strong> 25-50 mg orally 2-4 times daily<br>
+    <strong>Methyldopa:</strong> 250-500 mg orally 2-3 times daily</p>
+</div>
+
+<div class="statistic">
+    Studies show that treating severe hypertension to target blood pressures of less than 160/110 mmHg reduces maternal complications by approximately 50% compared to more permissive thresholds. The goal is to reduce blood pressure gradually, avoiding precipitous drops that could compromise placental perfusion. Target blood pressure is typically 130-150/80-100 mmHg.
+</div>
+
+<h3>Seizure Prophylaxis</h3>
+<p>Magnesium sulfate is the drug of choice for seizure prevention and treatment in preeclampsia and eclampsia.</p>
+
+<div class="anatomy-section">
+    <h4>Indications for Magnesium Sulfate</h4>
+    <p>Magnesium sulfate is recommended for:<br>
+    • All women with severe preeclampsia<br>
+    • During labor and for 24-48 hours postpartum in severe cases<br>
+    • Treatment of eclamptic seizures<br>
+    <span class="highlight">The decision to use magnesium in preeclampsia without severe features is more controversial, with some guidelines recommending it for all women and others reserving it for those at higher risk</span>.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Administration Protocol</h4>
+    <p><strong>Loading dose:</strong> 4-6 g IV over 15-30 minutes<br>
+    <strong>Maintenance:</strong> 1-2 g/hour by continuous IV infusion<br>
+    <strong>Therapeutic level:</strong> 4-7 mEq/L (4.8-8.4 mg/dL)<br>
+    <strong>Duration:</strong> Continue for 24-48 hours after delivery or last seizure</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Monitoring for Magnesium Toxicity</h4>
+    <p>Signs of magnesium toxicity occur at progressively higher levels:<br>
+    <strong>Loss of deep tendon reflexes:</strong> At levels &gt;7 mEq/L<br>
+    <strong>Respiratory depression:</strong> At levels &gt;10 mEq/L<br>
+    <strong>Cardiac arrest:</strong> At levels &gt;25 mEq/L<br>
+    Monitor urine output (should be &gt;30 mL/hour), reflexes, and respiratory rate every 1-4 hours. Calcium gluconate should be available as an antidote.</p>
+</div>
+
+<h3>Corticosteroids for Fetal Lung Maturation</h3>
+<p>When preterm delivery is anticipated, corticosteroids should be administered to promote fetal lung maturity and reduce neonatal complications.</p>
+
+<div class="anatomy-section">
+    <h4>Administration Guidelines</h4>
+    <p><strong>Betamethasone:</strong> 12 mg IM every 24 hours × 2 doses (preferred)<br>
+    <strong>Dexamethasone:</strong> 6 mg IM every 12 hours × 4 doses (alternative)<br>
+    <strong>Timing:</strong> Maximum benefit occurs 48 hours to 7 days after administration<br>
+    <strong>Gestational age:</strong> Recommended for deliveries anticipated at 24-34 weeks; may consider at 34-36+6 weeks if not previously administered</p>
+</div>
+
+<div class="statistic">
+    Antenatal corticosteroids reduce neonatal mortality by approximately 30%, respiratory distress syndrome by 35%, and intraventricular hemorrhage by 45% when delivery occurs between 24-34 weeks. Even a single dose provides significant benefit if delivery occurs before the complete course can be administered.
+</div>
+
+<h2>Delivery Considerations</h2>
+
+<h3>Mode of Delivery</h3>
+<p>Preeclampsia itself is not an indication for cesarean delivery, and vaginal delivery is often achievable.</p>
+
+<div class="anatomy-section">
+    <h4>Factors Favoring Vaginal Delivery</h4>
+    <p>Vaginal delivery is often preferred when:<br>
+    • Cervix is favorable (Bishop score ≥6)<br>
+    • Fetal status is reassuring<br>
+    • No absolute contraindications to vaginal delivery<br>
+    • Maternal condition is stable<br>
+    <span class="highlight">Induction of labor is successful in approximately 70-80% of women with preeclampsia who undergo labor trial</span>.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Indications for Cesarean Delivery</h4>
+    <p>Cesarean may be necessary when:<br>
+    • Fetal status requires immediate delivery<br>
+    • Cervix is very unfavorable and induction unlikely to succeed in reasonable timeframe<br>
+    • Prior cesarean delivery<br>
+    • Other obstetric indications (malpresentation, placenta previa)<br>
+    • Maternal condition is deteriorating rapidly</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Anesthesia Considerations</h4>
+    <p>Regional anesthesia (epidural or spinal) is generally preferred when platelet count is adequate (&gt;70,000/μL in many protocols, though thresholds vary). Epidural analgesia during labor can help control blood pressure by reducing pain and anxiety. General anesthesia carries increased risks but may be necessary in some emergencies.</p>
+</div>
+
+<h2>Postpartum Management</h2>
+
+<h3>Immediate Postpartum Period</h3>
+<p>Preeclampsia does not resolve immediately after delivery and may even worsen in the first few days postpartum.</p>
+
+<div class="anatomy-section">
+    <h4>Monitoring Requirements</h4>
+    <p>Close monitoring should continue for at least 48-72 hours after delivery:<br>
+    • Blood pressure monitoring every 4-6 hours initially<br>
+    • Daily assessment of symptoms (headache, visual changes, epigastric pain)<br>
+    • Laboratory studies as indicated (typically at 24-48 hours postpartum)<br>
+    • Fluid balance assessment (urine output, peripheral edema)</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Postpartum Hypertension Management</h4>
+    <p>Hypertension often persists or worsens 3-6 days postpartum before improving. Antihypertensive medications may need adjustment:<br>
+    <strong>Safe for breastfeeding:</strong> Labetalol, nifedipine, hydralazine, methyldopa, enalapril, captopril<br>
+    <strong>Target blood pressure:</strong> &lt;150/100 mmHg initially; normalize over weeks<br>
+    <strong>Duration:</strong> Many women can discontinue medications within 6-12 weeks postpartum</p>
+</div>
+
+<div class="statistic">
+    Approximately 40% of eclamptic seizures and 20-30% of HELLP syndrome cases occur in the postpartum period. The risk of postpartum complications is highest in the first 48-72 hours but persists for up to 6 weeks, emphasizing the importance of continued vigilance and patient education about warning symptoms.
+</div>
+
+<h3>Postpartum Discharge and Follow-up</h3>
+<p>Careful planning for discharge and follow-up is essential to identify late complications and provide appropriate ongoing care.</p>
+
+<div class="anatomy-section">
+    <h4>Discharge Criteria</h4>
+    <p>Before discharge, women with preeclampsia should have:<br>
+    • Blood pressure &lt;150/100 mmHg (ideally trending toward normal)<br>
+    • No severe symptoms (headache, visual changes, epigastric pain)<br>
+    • Stable or improving laboratory values<br>
+    • Adequate urine output<br>
+    • Clear understanding of warning symptoms and when to seek care</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Outpatient Follow-up</h4>
+    <p>Women with preeclampsia should be seen within 72 hours of discharge, or 7-10 days after delivery at the latest. Blood pressure monitoring at home may be helpful. Follow-up should continue until blood pressure normalizes, which typically occurs within 12 weeks postpartum.</p>
+</div>
+
+<div class="key-point">
+    Patient education about postpartum warning signs is crucial. Women should seek immediate care if they experience severe headache, visual changes, epigastric or right upper quadrant pain, difficulty breathing, or significantly elevated blood pressure. The postpartum period is a vulnerable time, and late presentations of preeclampsia can be missed if patients are not well-informed.
+</div>
+
+<h2>Prevention Strategies</h2>
+
+<h3>Low-Dose Aspirin</h3>
+<p>Low-dose aspirin is currently the most effective evidence-based intervention for preeclampsia prevention in high-risk women.</p>
+
+<div class="anatomy-section">
+    <h4>Mechanism of Action</h4>
+    <p>Aspirin inhibits thromboxane production by platelets, shifting the thromboxane/prostacyclin balance toward vasodilation and reduced platelet aggregation. Early initiation (before 16 weeks) may improve trophoblast invasion and spiral artery remodeling, addressing the underlying placental pathology.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Recommended Protocols</h4>
+    <p><strong>Dose:</strong> 81-150 mg daily (most guidelines recommend 81 mg in the United States, 150 mg in the UK)<br>
+    <strong>Timing:</strong> Begin between 12-16 weeks (before 16 weeks is essential for efficacy)<br>
+    <strong>Duration:</strong> Continue until delivery<br>
+    <strong>Timing of dose:</strong> Evening administration may be more effective</p>
+</div>
+
+<div class="statistic">
+    Meta-analyses show that low-dose aspirin reduces preeclampsia risk by approximately 15-20% overall, with greater effects (up to 50-60% reduction) when initiated before 16 weeks in high-risk women. The number needed to treat to prevent one case of preeclampsia is approximately 50-70 in moderate-risk populations and 19-20 in high-risk populations.
+</div>
+
+<div class="anatomy-section">
+    <h4>Candidates for Aspirin Prophylaxis</h4>
+    <p><span class="highlight">High-risk factors (one is sufficient):</span><br>
+    • Prior preeclampsia<br>
+    • Chronic hypertension<br>
+    • Pregestational diabetes<br>
+    • Chronic kidney disease<br>
+    • Autoimmune disease (SLE, antiphospholipid syndrome)<br>
+    • Multiple gestation<br><br>
+    <span class="highlight">Moderate-risk factors (two or more):</span><br>
+    • Nulliparity<br>
+    • Obesity (BMI &gt;30)<br>
+    • Age ≥35 years<br>
+    • Family history of preeclampsia<br>
+    • Personal history of SGA infant or adverse pregnancy outcome<br>
+    • Pregnancy interval &gt;10 years<br>
+    • IVF pregnancy</p>
+</div>
+
+<h3>Calcium Supplementation</h3>
+<p>Calcium supplementation may reduce preeclampsia risk in women with low dietary calcium intake.</p>
+
+<div class="anatomy-section">
+    <h4>Evidence and Recommendations</h4>
+    <p>WHO recommends calcium supplementation (1.5-2 g daily) in populations where dietary calcium intake is low (&lt;600 mg/day). In such settings, calcium supplementation reduces preeclampsia risk by approximately 50%. The benefit is less clear in populations with adequate calcium intake, where routine supplementation is not currently recommended.</p>
+</div>
+
+<h3>Other Preventive Approaches</h3>
+<p>Several other interventions have been studied for preeclampsia prevention with varying results.</p>
+
+<div class="anatomy-section">
+    <h4>Approaches with Limited or No Benefit</h4>
+    <p><strong>Antioxidants (Vitamin C and E):</strong> Large trials have not shown benefit and may increase some risks<br>
+    <strong>Fish oil supplementation:</strong> Not proven to prevent preeclampsia<br>
+    <strong>Salt restriction:</strong> Not recommended; no evidence of benefit<br>
+    <strong>Bed rest:</strong> Not proven effective and may increase VTE risk<br>
+    <strong>Folic acid supplementation:</strong> Inconsistent evidence; trials ongoing</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Emerging Approaches</h4>
+    <p><strong>Pravastatin:</strong> Promising in observational studies and small trials; larger RCTs underway<br>
+    <strong>Metformin:</strong> Some evidence of benefit in obese women; being studied<br>
+    <strong>L-arginine supplementation:</strong> Limited and inconsistent evidence<br>
+    <strong>Exercise:</strong> Regular physical activity may reduce risk; generally recommended</p>
+</div>
+
+<h2>Long-Term Health Implications</h2>
+
+<h3>Cardiovascular Risk After Preeclampsia</h3>
+<p>Preeclampsia is now recognized as an important risk factor for future cardiovascular disease, not simply a pregnancy complication.</p>
+
+<div class="anatomy-section">
+    <h4>Increased Cardiovascular Risk</h4>
+    <p>Women with a history of preeclampsia have:<br>
+    <strong>2-fold increased risk</strong> of chronic hypertension<br>
+    <strong>2-fold increased risk</strong> of ischemic heart disease<br>
+    <strong>2-fold increased risk</strong> of stroke<br>
+    <strong>3-fold increased risk</strong> of heart failure<br>
+    <strong>2-fold increased risk</strong> of cardiovascular mortality</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Debate: Causation vs. Shared Risk Factors</h4>
+    <p><span class="highlight">The relationship between preeclampsia and future cardiovascular disease likely reflects both shared underlying risk factors and direct effects of the preeclamptic pregnancy on vascular health</span>. Women with preeclampsia often have pre-existing endothelial dysfunction, insulin resistance, and other cardiovascular risk factors that persist after pregnancy. Additionally, the preeclamptic pregnancy itself may cause lasting vascular damage.</p>
+</div>
+
+<div class="statistic">
+    A meta-analysis of over 3 million women found that preeclampsia was associated with a hazard ratio of 2.2 for future cardiovascular disease, with effects persisting for decades after the affected pregnancy. Early-onset preeclampsia, recurrent preeclampsia, and preeclampsia with severe features carry the highest long-term risks.
+</div>
+
+<div class="anatomy-section">
+    <h4>Recommendations for Long-Term Health</h4>
+    <p>Women with history of preeclampsia should:<br>
+    • Have blood pressure checked annually (and sooner if symptomatic)<br>
+    • Be screened for metabolic syndrome, diabetes, and kidney disease<br>
+    • Receive counseling about lifestyle modifications (weight, diet, exercise)<br>
+    • Discuss cardiovascular risk with their healthcare providers<br>
+    • Consider preeclampsia history as a cardiovascular risk factor comparable to smoking or family history</p>
+</div>
+
+<h3>Recurrence Risk in Future Pregnancies</h3>
+<p>Women who have experienced preeclampsia face increased risk in subsequent pregnancies, though many will have uncomplicated pregnancies.</p>
+
+<div class="anatomy-section">
+    <h4>Recurrence Rates</h4>
+    <p><strong>Overall recurrence:</strong> 13-18% after one preeclamptic pregnancy<br>
+    <strong>After early-onset preeclampsia:</strong> 25-40% recurrence<br>
+    <strong>After HELLP syndrome:</strong> 20-25% recurrence<br>
+    <strong>After eclampsia:</strong> 2-5% recurrence of eclampsia; 20-25% recurrence of preeclampsia<br>
+    <strong>After two preeclamptic pregnancies:</strong> Up to 30% recurrence</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Factors Affecting Recurrence</h4>
+    <p>Higher recurrence risk is associated with:<br>
+    • Earlier gestational age of prior preeclampsia<br>
+    • More severe prior disease<br>
+    • Underlying medical conditions<br>
+    • Shorter interval between pregnancies<br>
+    • Same partner (some data)<br>
+    Lower recurrence risk is seen with:<br>
+    • Later onset of prior disease<br>
+    • Resolution of modifiable risk factors (weight loss, blood pressure control)<br>
+    • Aspirin prophylaxis</p>
+</div>
+
+<div class="key-point">
+    Women with history of preeclampsia should receive preconception counseling to optimize health before pregnancy, identify any new or ongoing risk factors, and discuss preventive strategies such as low-dose aspirin. Early prenatal care and enhanced surveillance during pregnancy can help detect and manage recurrent disease promptly.
+</div>
+
+<h3>Metabolic and Renal Consequences</h3>
+<p>Beyond cardiovascular effects, preeclampsia has implications for metabolic health and kidney function.</p>
+
+<div class="anatomy-section">
+    <h4>Chronic Kidney Disease</h4>
+    <p>Preeclampsia is associated with a 4-5 fold increased risk of end-stage renal disease. Even in the absence of overt kidney disease, women with history of preeclampsia may have subclinical renal dysfunction detectable by more sensitive measures. Annual monitoring of kidney function (creatinine, eGFR, urinalysis) is reasonable.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Type 2 Diabetes</h4>
+    <p>Preeclampsia is associated with a 2-fold increased risk of developing type 2 diabetes, likely reflecting shared pathways involving insulin resistance, inflammation, and endothelial dysfunction. Regular screening for diabetes (fasting glucose or HbA1c) should be part of long-term follow-up.</p>
+</div>
+
+<h2>Special Populations</h2>
+
+<h3>Preeclampsia in Multiple Gestation</h3>
+<p>Twin and higher-order multiple pregnancies carry significantly elevated preeclampsia risk.</p>
+
+<div class="anatomy-section">
+    <h4>Incidence and Risk</h4>
+    <p>Preeclampsia complicates approximately 13-14% of twin pregnancies compared to 5-8% of singleton pregnancies. The risk in triplet and higher-order pregnancies may exceed 25%. This increased risk is attributed to larger placental mass, increased circulating anti-angiogenic factors, and potentially immune factors related to carrying genetically distinct fetuses.</p>
+</div>
+
+<h3>Preeclampsia in Chronic Hypertension</h3>
+<p>Women with pre-existing hypertension are at high risk for superimposed preeclampsia.</p>
+
+<div class="anatomy-section">
+    <h4>Diagnosis of Superimposed Preeclampsia</h4>
+    <p>Superimposed preeclampsia is diagnosed when a woman with chronic hypertension develops:<br>
+    • New-onset proteinuria (or worsening of pre-existing proteinuria)<br>
+    • Sudden increase in hypertension<br>
+    • Signs of end-organ dysfunction (elevated liver enzymes, low platelets, elevated creatinine)<br>
+    • New neurological symptoms</p>
+</div>
+
+<div class="statistic">
+    Approximately 20-25% of women with chronic hypertension develop superimposed preeclampsia. Those with secondary hypertension (from renal disease, renovascular disease, or other causes) and those with poor preconception blood pressure control have the highest risk. Superimposed preeclampsia often develops earlier and with greater severity than de novo preeclampsia.
+</div>
+
+<h3>Preeclampsia in Women with Autoimmune Disease</h3>
+<p>Systemic lupus erythematosus and antiphospholipid syndrome significantly increase preeclampsia risk.</p>
+
+<div class="anatomy-section">
+    <h4>SLE and Preeclampsia</h4>
+    <p>Women with SLE have 2-4 times higher preeclampsia risk. Additional challenges include distinguishing lupus nephritis flare from preeclampsia (both cause proteinuria) and managing immunosuppressive medications. Active lupus nephritis at conception is a particularly strong risk factor. Complement levels (C3, C4) may help differentiate lupus flare from preeclampsia.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Antiphospholipid Syndrome</h4>
+    <p>APS carries one of the highest risks of preeclampsia (up to 50% in some series). Management includes low-dose aspirin and prophylactic heparin. Despite treatment, rates of preeclampsia, growth restriction, and pregnancy loss remain elevated. Close surveillance and early delivery planning are often needed.</p>
+</div>
+
+<h2>Complications and Emergency Management</h2>
+
+<h3>Acute Severe Complications</h3>
+<p>Preeclampsia can rapidly progress to life-threatening complications requiring emergency intervention.</p>
+
+<div class="anatomy-section">
+    <h4>Stroke</h4>
+    <p>Stroke is a leading cause of death in preeclampsia/eclampsia. Both hemorrhagic and ischemic strokes can occur. Severe hypertension is the major modifiable risk factor. <span class="highlight">Aggressive treatment of severe hypertension to levels below 160/110 mmHg within 30-60 minutes is essential to prevent stroke</span>. Signs include severe headache, focal neurological deficits, altered consciousness, and seizures.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Pulmonary Edema</h4>
+    <p>Pulmonary edema complicates 2-5% of severe preeclampsia and typically occurs postpartum. Risk factors include aggressive fluid administration, diastolic dysfunction, and increased capillary permeability. Management includes oxygen, upright positioning, diuretics, and positive pressure ventilation if needed.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Hepatic Complications</h4>
+    <p><strong>Subcapsular hematoma:</strong> Presents with severe right upper quadrant pain; diagnosis by ultrasound or CT; may require surgery<br>
+    <strong>Hepatic rupture:</strong> Rare but catastrophic; high maternal mortality; requires immediate surgical intervention<br>
+    <strong>Hepatic infarction:</strong> May cause liver failure in severe cases</p>
+</div>
+
+<div class="trimester-box">
+    <h3>Emergency Warning Signs Requiring Immediate Care</h3>
+    <p><span class="highlight">Patients should seek immediate medical attention for:</span><br>
+    • Severe headache not relieved by acetaminophen<br>
+    • Visual disturbances (blurred vision, spots, temporary blindness)<br>
+    • Severe right upper quadrant or epigastric pain<br>
+    • Difficulty breathing or shortness of breath<br>
+    • Decreased urine output<br>
+    • Sudden swelling of face, hands, or feet<br>
+    • Seizure activity<br>
+    • Blood pressure &gt;160/110 mmHg at home</p>
+</div>
+
+<h3>Management of Eclamptic Seizure</h3>
+<p>Eclamptic seizures require immediate, systematic management to protect mother and fetus.</p>
+
+<div class="anatomy-section">
+    <h4>Immediate Management</h4>
+    <p><strong>Protect airway:</strong> Position on side, clear secretions, prepare for intubation if needed<br>
+    <strong>Prevent injury:</strong> Pad side rails, do not restrain<br>
+    <strong>Magnesium sulfate:</strong> 4-6 g IV bolus over 15-20 minutes, then 1-2 g/hour maintenance<br>
+    <strong>Oxygen:</strong> Supplemental oxygen via face mask<br>
+    <strong>Blood pressure control:</strong> Treat severe hypertension after seizure controlled</p>
+</div>
+
+<div class="statistic">
+    Magnesium sulfate reduces the recurrence of eclamptic seizures by 50% compared to phenytoin and 65% compared to diazepam. It also reduces maternal death from eclampsia. The Magpie trial demonstrated that magnesium sulfate reduces eclampsia risk by 58% when used for severe preeclampsia and reduces maternal death.
+</div>
+
+<h2>Global Perspectives on Preeclampsia</h2>
+
+<h3>Burden in Low-Resource Settings</h3>
+<p>Preeclampsia and eclampsia contribute disproportionately to maternal mortality in developing countries.</p>
+
+<div class="anatomy-section">
+    <h4>Global Mortality Impact</h4>
+    <p>Hypertensive disorders of pregnancy cause approximately 14% of maternal deaths worldwide—over 70,000 deaths annually. The vast majority occur in low- and middle-income countries where access to prenatal care, emergency obstetric services, and intensive care is limited. Maternal mortality from preeclampsia is 100-200 times higher in some developing regions compared to high-income countries.</p>
+</div>
+
+<div class="key-point">
+    Magnesium sulfate is on the WHO Model List of Essential Medicines and has been shown to be cost-effective even in the most resource-limited settings. Global initiatives to improve access to magnesium sulfate, train birth attendants to recognize preeclampsia, and strengthen referral systems could prevent thousands of maternal deaths annually.
+</div>
+
+<h3>Racial and Ethnic Disparities</h3>
+<p>Significant disparities exist in preeclampsia incidence and outcomes across racial and ethnic groups.</p>
+
+<div class="anatomy-section">
+    <h4>Disparities in the United States</h4>
+    <p>Black women in the United States have 1.5-2 times higher rates of preeclampsia compared to white women. They also have higher rates of severe preeclampsia, HELLP syndrome, eclampsia, and maternal death. These disparities persist after controlling for age, parity, and socioeconomic factors, suggesting contributions from chronic stress, racism, and systemic healthcare inequities.</p>
+</div>
+
+<div class="statistic">
+    Black women in the United States are 3-4 times more likely to die from pregnancy-related causes than white women, and hypertensive disorders are leading contributors to this disparity. Addressing these disparities requires multifaceted approaches including improved access to care, provider education, addressing implicit bias, and supporting community-based interventions.
+</div>
+
+<h2>Research Frontiers and Future Directions</h2>
+
+<h3>Prediction and Early Detection</h3>
+<p>Improving early prediction of preeclampsia could enable more targeted prevention and surveillance.</p>
+
+<div class="anatomy-section">
+    <h4>First-Trimester Screening Algorithms</h4>
+    <p>Multiparameter algorithms combining maternal factors, mean arterial pressure, uterine artery Doppler, and serum biomarkers (PlGF, PAPP-A) can identify women at high risk for preterm preeclampsia with detection rates of 75-90% at a 10% false-positive rate. These algorithms are increasingly used in clinical practice to guide aspirin prophylaxis decisions.</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Novel Biomarkers</h4>
+    <p>Research continues to identify additional biomarkers that may improve prediction:<br>
+    <strong>Cell-free fetal DNA:</strong> Elevated levels may precede clinical disease<br>
+    <strong>MicroRNAs:</strong> Placenta-specific microRNAs show promise as early markers<br>
+    <strong>Proteomics and metabolomics:</strong> Comprehensive molecular profiling may reveal new markers<br>
+    <strong>Extracellular vesicles:</strong> Placental exosomes carry information about placental function</p>
+</div>
+
+<h3>Therapeutic Innovations</h3>
+<p>New treatment approaches aim to address the underlying pathophysiology of preeclampsia.</p>
+
+<div class="anatomy-section">
+    <h4>Anti-sFlt-1 Strategies</h4>
+    <p>Because elevated sFlt-1 is central to preeclampsia pathophysiology, therapies that remove or neutralize this factor are being studied:<br>
+    <strong>Apheresis:</strong> Extracorporeal removal of sFlt-1 from maternal blood has shown promise in prolonging pregnancy in early-onset severe disease<br>
+    <strong>siRNA therapy:</strong> Silencing sFlt-1 expression in the placenta is in early development<br>
+    <strong>Recombinant VEGF:</strong> Could potentially counteract sFlt-1 effects</p>
+</div>
+
+<div class="anatomy-section">
+    <h4>Statin Therapy</h4>
+    <p><span class="highlight">Pravastatin has pleiotropic effects that may address multiple aspects of preeclampsia pathophysiology, including improving endothelial function, reducing inflammation, and modulating angiogenic balance</span>. Clinical trials are ongoing to determine whether pravastatin can prevent preeclampsia or treat established disease.</p>
+</div>
+
+<div class="statistic">
+    Despite decades of research, no pharmacological treatment has been proven to reverse established preeclampsia or significantly prolong pregnancy once severe features develop. The only definitive treatment remains delivery. However, ongoing clinical trials of novel approaches offer hope that targeted therapies may eventually be available to safely extend pregnancy and improve outcomes.
+</div>
+
+<h2>Conclusion: The Evolving Understanding of Preeclampsia</h2>
+
+<p>Preeclampsia remains one of the most significant challenges in obstetric care, affecting millions of pregnancies worldwide each year. Despite advances in understanding its pathophysiology, predicting who will develop the condition, and managing its complications, much remains to be discovered about this complex syndrome.</p>
+
+<div class="key-point">
+    The recognition of preeclampsia as not merely a pregnancy complication but a sentinel event revealing underlying cardiovascular risk has transformed how we view affected women. Pregnancy acts as a "stress test" that unmasks vascular vulnerability, and preeclampsia identifies women who warrant lifelong cardiovascular surveillance and risk modification.
+</div>
+
+<p>The two-stage model of preeclampsia—abnormal placentation followed by maternal syndrome—provides a framework for understanding both preventive and therapeutic approaches. Low-dose aspirin, initiated early in pregnancy, can reduce preeclampsia risk by improving placentation. Once the maternal syndrome develops, management focuses on balancing the risks of prematurity against the risks of disease progression, with delivery remaining the only definitive treatment.</p>
+
+<div class="statistic">
+    Global efforts to reduce maternal mortality from preeclampsia have made significant progress, but substantial disparities remain between high- and low-income countries and among racial and ethnic groups within countries. Ensuring universal access to prenatal care, evidence-based prevention, and emergency obstetric services could prevent thousands of deaths annually.
+</div>
+
+<p>Research continues to advance our understanding and capabilities. Novel biomarkers improve our ability to predict and diagnose preeclampsia. Therapeutic approaches targeting the underlying angiogenic imbalance offer hope for future treatments beyond delivery. Understanding the genetic and immunological factors that predispose to preeclampsia may eventually enable truly personalized prevention and treatment.</p>
+
+<p>For now, the cornerstone of preeclampsia management remains vigilant prenatal care, early recognition of disease, timely intervention to prevent complications, and appropriate counseling about long-term health implications. Every woman deserves access to these fundamental elements of care, and closing the gap between evidence and practice remains a critical public health priority.</p>
+
+<p>As we continue to unravel the mysteries of this ancient disease—recognized since antiquity but only now beginning to be understood at a molecular level—we move closer to a future where preeclampsia can be predicted, prevented, and treated effectively, reducing its burden on mothers and babies worldwide.</p>
+
+<h2>Scientific References</h2>
+<div class="statistic">
+    1. American College of Obstetricians and Gynecologists. Gestational Hypertension and Preeclampsia: ACOG Practice Bulletin, Number 222. <em>Obstet Gynecol</em>. 2020;135(6):e237-e260.
+    <br><br>2. Rana S, Lemoine E, Granger JP, Karumanchi SA. Preeclampsia: Pathophysiology, Challenges, and Perspectives. <em>Circ Res</em>. 2019;124(7):1094-1112.
+    <br><br>3. Chappell LC, Cluver CA, Kingdom J, Tong S. Pre-eclampsia. <em>Lancet</em>. 2021;398(10297):341-354.
+    <br><br>4. Redman CW, Sargent IL. Latest advances in understanding preeclampsia. <em>Science</em>. 2005;308(5728):1592-1594.
+    <br><br>5. Burton GJ, Redman CW, Roberts JM, Moffett A. Pre-eclampsia: pathophysiology and clinical implications. <em>BMJ</em>. 2019;366:l2381.
+    <br><br>6. Magee LA, Brown MA, Hall DR, et al. The 2021 International Society for the Study of Hypertension in Pregnancy classification, diagnosis &amp; management recommendations for international practice. <em>Pregnancy Hypertens</em>. 2022;27:148-169.
+    <br><br>7. Verlohren S, Galindo A, Schlembach D, et al. An automated method for the determination of the sFlt-1/PlGF ratio in the assessment of preeclampsia. <em>Am J Obstet Gynecol</em>. 2010;202(2):161.e1-161.e11.
+    <br><br>8. Zeisler H, Llurba E, Chantraine F, et al. Predictive Value of the sFlt-1:PlGF Ratio in Women with Suspected Preeclampsia. <em>N Engl J Med</em>. 2016;374(1):13-22.
+    <br><br>9. Rolnik DL, Wright D, Poon LC, et al. Aspirin versus Placebo in Pregnancies at High Risk for Preterm Preeclampsia. <em>N Engl J Med</em>. 2017;377(7):613-622.
+    <br><br>10. Duley L, Henderson-Smart DJ, Meher S, King JF. Antiplatelet agents for preventing pre-eclampsia and its complications. <em>Cochrane Database Syst Rev</em>. 2007;(2):CD004659.
+    <br><br>11. Altman D, Carroli G, Duley L, et al. Do women with pre-eclampsia, and their babies, benefit from magnesium sulphate? The Magpie Trial: a randomised placebo-controlled trial. <em>Lancet</em>. 2002;359(9321):1877-1890.
+    <br><br>12. Bellamy L, Casas JP, Hingorani AD, Williams DJ. Pre-eclampsia and risk of cardiovascular disease and cancer in later life: systematic review and meta-analysis. <em>BMJ</em>. 2007;335(7627):974.
+    <br><br>13. Wu P, Haththotuwa R, Kwok CS, et al. Preeclampsia and Future Cardiovascular Health: A Systematic Review and Meta-Analysis. <em>Circ Cardiovasc Qual Outcomes</em>. 2017;10(3):e003497.
+    <br><br>14. Mol BWJ, Roberts CT, Thangaratinam S, et al. Pre-eclampsia. <em>Lancet</em>. 2016;387(10022):999-1011.
+    <br><br>15. Redman CW, Sargent IL, Staff AC. IFPA Senior Award Lecture: Making sense of pre-eclampsia—Two placental causes of preeclampsia? <em>Placenta</em>. 2014;35 Suppl:S20-25.
+    <br><br>16. Sibai BM, Dekker G, Kupferminc M. Pre-eclampsia. <em>Lancet</em>. 2005;365(9461):785-799.
+    <br><br>17. Hofmeyr GJ, Lawrie TA, Atallah AN, et al. Calcium supplementation during pregnancy for preventing hypertensive disorders and related problems. <em>Cochrane Database Syst Rev</em>. 2018;10(10):CD001059.
+    <br><br>18. Abalos E, Cuesta C, Grosso AL, et al. Global and regional estimates of preeclampsia and eclampsia: a systematic review. <em>Eur J Obstet Gynecol Reprod Biol</em>. 2013;170(1):1-7.
+    <br><br>19. Khan KS, Wojdyla D, Say L, et al. WHO analysis of causes of maternal death: a systematic review. <em>Lancet</em>. 2006;367(9516):1066-1074.
+    <br><br>20. Poon LC, Shennan A, Hyett JA, et al. The International Federation of Gynecology and Obstetrics (FIGO) initiative on pre-eclampsia: A pragmatic guide for first-trimester screening and prevention. <em>Int J Gynaecol Obstet</em>. 2019;145 Suppl 1(Suppl 1):1-33.
+    <br><br>21. Levine RJ, Maynard SE, Qian C, et al. Circulating angiogenic factors and the risk of preeclampsia. <em>N Engl J Med</em>. 2004;350(7):672-683.
+    <br><br>22. Wang A, Rana S, Karumanchi SA. Preeclampsia: the role of angiogenic factors in its pathogenesis. <em>Physiology (Bethesda)</em>. 2009;24:147-158.
+    <br><br>23. Magee LA, Pels A, Helewa M, et al. Diagnosis, evaluation, and management of the hypertensive disorders of pregnancy: executive summary. <em>J Obstet Gynaecol Can</em>. 2014;36(5):416-441.
+    <br><br>24. Sibai BM. Diagnosis, controversies, and management of the syndrome of hemolysis, elevated liver enzymes, and low platelet count. <em>Obstet Gynecol</em>. 2004;103(5 Pt 1):981-991.
+</div>
+
+    <div class="comments-section">
+        <h3>Comments</h3>
+        <ul class="comments-list"></ul>
+        <form class="comment-form">
+            <input type="text" placeholder="Your name" class="comment-author" required />
+            <textarea placeholder="Your comment" class="comment-text" required></textarea>
+            <button type="submit">Add Comment</button>
+        </form>
+    </div>
+
+    <p class="back-link"><a href="index.html">← Back to blog</a></p>
+
+    <footer class="site-footer">
+        <div class="wrapper">
+            <p>&copy; 2025 Her Body Guide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" title="Back to top">↑</button>
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
