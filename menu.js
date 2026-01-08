@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="twins.html">Twins</a></li>
                     <li><a href="iui.html">IUI</a></li>
                     <li><a href="bloodtests.html">Blood tests</a></li>
+                    <li><a href="letrozole.html">Letrozole</a></li>
                 </ul>
             </li>
             
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="iud.html">IUD</a></li>
                     <li><a href="rod.html">Contraceptive implant - The Rod</a></li>
                     <li><a href="condoms.html">The Science of Condoms</a></li>
+                    <li><a href="virginity.html">Virginity</a></li>
                 </ul>
             </li>
             
@@ -51,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="uterus.html"> The Uterus</a></li>
                     <li><a href="breastcancer.html"> Breast Cancer</a></li>
                     <li><a href="migraines.html"> Migraines and Women</a></li>
+                    <li><a href="hpv.html"> Human Papillomavirus (HPV)</a></li>
+           <li><a href="lapendo.html"> Laparoscopic endometrius excision surgery</a></li>
                 </ul>
             </li>
 
@@ -65,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="cluevsflo.html">Clue vs Flo</a></li>
                     <li><a href="tampons.html">Tampons</a></li>
                     <li><a href="animalperiod.html">Animals That Menstruate</a></li>
+                    <li><a href="pmdd.html"> Premenstrual Dysphoric Disorder (PMDD) </a></li>
                 </ul>
             </li>
             
@@ -90,6 +95,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="homebirths.html">Home Births</a></li>
                     <li><a href="pregsym.html"> Pregnancy symptoms</a></li>
                     <li><a href="fetalgrowth.html">Fetal Growth</a></li>
+                    <li><a href="gestdiab.html">Gestational Diabetes</a></li>
+          <li><a href="molarpreg.html">Molar Pregnancy</a></li>
+            <li><a href="preeclampsia.html">Preeclampsia</a></li>
                 </ul>
             </li>
             
@@ -100,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <ul class="section-content">
                     <li><a href="what-is-consent.html">What is Consent?</a></li>
                     <li><a href="birthratedecline.html">The Global birth rate Decline</a></li>
+                    <li><a href="dv.html">Partner and Sexual Violance</a></li>
                 </ul>
             </li>
         </ul> 
