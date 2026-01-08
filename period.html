@@ -24,108 +24,8 @@
     
     <button class="mobile-toggle" onclick="toggleSidebar()">☰</button>
 
-    <div id="sidebar" class="sidebar">
-      <!-- Sidebar content -->
-   
-      <ul class="sidebar-nav">
-    <li class="nav-section">
-      <button class="section-header" onclick="toggleSection(this)">
-        Conceiving Confidently <span class="section-toggle">◀</span>
-      </button>
-         <ul class="section-content">
-        <li><a href="post1.html">Factors affecting fertilization</a></li>
-        <li><a href="post2.html">Reproductive Anatomy</a></li>
-        <li><a href="post3.html">Prenatal Vitamins</a></li>
-        <li><a href="miscarriage.html">Miscarriage</a></li>
-        <li><a href="hormones.html">Reproductive Hormones</a></li>
-        <li><a href="what-is-fertility.html">What is Fertility?</a></li>
-        <li><a href="pcos.html">PCOS</a></li>
-       <li><a href="ivfegg.html">IVF and Egg Freezing</a></li>
-           <li><a href="pregtest.html">Pregnancy Tests</a></li>
-             <li><a href="twins.html">Twins</a></li>
-            <li><a href="iui.html">IUI</a></li>
-      </ul>
-    </li>
-    
-    <li class="nav-section">
-      <button class="section-header" onclick="toggleSection(this)">
-        Contraception<span class="section-toggle">◀</span>
-      </button>   <ul class="section-content">
-        <li><a href="birthcontrolpills.html">Birth Control pills</a></li>
-        <li><a href="iud.html">IUD</a></li>
-        <li><a href="rod.html">Contraceptive implant - The Rod</a></li>
-        <li><a href="condoms.html">The Science of Condoms</a></li>
-      </ul>
-    </li>
-    
-      <li class="nav-section">
-        <button class="section-header" onclick="toggleSection(this)">
-          Female anatomy and conditions <span class="section-toggle">◀</span>
-        </button>  
-        <ul class="section-content">
-        <li><a href="post2.html"> Reproductive Anatomy</a></li>
-        <li><a href="hormones.html">Reproductive Hormones</a></li>
-        <li><a href="pcos.html">PCOS</a></li>
-        <li><a href="endometriosis.html">Endometriosis</a></li>
-        <li><a href="endobelly.html">Endobelly</a></li>
-       <li><a href="cysts.html">Ovarian Cysts</a></li>
-          <li><a href="vagina.html">The Vagina</a></li> 
-           <li><a href="menopause.html"> Menopause and perimenopause</a></li>
-          <li><a href="uterus.html"> The Uterus</a></li>
-           <li><a href="breastcancer.html"> Breast Cancer</a></li>
-            <li><a href="undereating.html"> Undereating </a></li>
-          <li><a href="migraines.html"> Migraines and Women</a></li>
-        </ul>
-    </li>
-
-      <li class="nav-section">
-        <button class="section-header" onclick="toggleSection(this)">
-        Menstruation <span class="section-toggle">◀</span>
-      </button> 
-       <ul class="section-content">
-        <li><a href="period.html">Period</a></li>
-        <li><a href="birthcontrolpills.html">Birth Control pills</a></li>
-        <li><a href="cramps.html">Period Cramps</a></li>
-        <li><a href="cluevsflo.html">Clue vs Flo</a></li>
-         <li><a href="tampons.html">Tampons</a></li>
-      </ul>
-    </li>
-      <li class="nav-section">
-        <button class="section-header" onclick="toggleSection(this)">
-          Pregnancy <span class="section-toggle">◀</span>
-        </button>  
-        <ul class="section-content">
-        <li><a href="morning-sickness.html">Morning Sickness</a></li>
-        <li><a href="breastfeeding.html">Breastfeeding</a></li>
-        <li><a href="ultrasoundlmp.html">Pregnancy Dating</a></li>
-        <li><a href="blood.html">The Science of blood</a></li>
-        <li><a href="post3.html">Prenatal Vitamins</a></li>
-        <li><a href="miscarriage.html">Miscarriage</a></li>
-        <li><a href="pregfoods.html">Pregnancy dietary restrictions</a></li>
-      <li><a href="laborinduction.html">The Science of Labor Induction Methods</a></li>
-        <li><a href="gender.html">Gender predicting & Old wives tales</a></li>
-         <li><a href="chempreg.html">Chemical Pregnancy</a></li>
-             <li><a href="pregtest.html">Pregnancy Tests</a></li>
-             <li><a href="twins.html">Twins</a></li>
-           <li><a href="laborinduction.html">Labor Induction</a></li>
-           <li><a href="vaccinebaby.html">Infant Vaccinations</a></li>
-          <li><a href="homebirths.html">Home Births</a></li>
-          <li><a href="pregsym.html"> Pregnancy symptoms</a></li>
-          <li><a href="fetalgrowth.html">Fetal Growth</a></li>
-      </ul>
-    </li>
-      <li class="nav-section">
-        <button class="section-header" onclick="toggleSection(this)">
-         Legal Rights <span class="section-toggle">◀</span>
-        </button>  
-         <ul class="section-content">
-        <li><a href="what-is-consent.html">What is Consent?</a></li>
-       </ul>
-    </li>
-    <!-- Add more sections as needed -->
-  </ul> 
-
-    </div>
+    <div id="sidebar-container"></div>
+<script src="menu.js"></script>
 
     <header class="site-header">
         <div class="wrapper">
@@ -148,191 +48,925 @@
 
         <article>
             <header>
-                <h1>Understanding Menstruation: A Scientific and Historical Perspective</h1>
-                <p><em>An evidence-based exploration of the menstrual cycle, its biological significance, and the historical treatment of menstruating women</em></p>
-            </header>
-    
-            <section>
-                <h2>What is Menstruation? The Scientific Foundation</h2>
-                
-                <div class="key-point">Menstruation, commonly referred to as a "period," is a natural biological process that occurs in the reproductive system of individuals with uteruses. Scientifically, it represents the cyclical shedding of the endometrium (the inner lining of the uterus) when pregnancy does not occur.</p>
-                </div>
-                <div class="anatomy-section">
+             <h1>Understanding Menstruation: A Comprehensive Scientific and Historical Perspective</h1>
+            <p><em>An evidence-based exploration of the menstrual cycle, its biological significance, historical treatment, and contemporary understanding including detailed analysis of menstrual blood composition and clotting</em></p>
+        </header>
+
+        <section>
+            <h2>What is Menstruation? The Scientific Foundation</h2>
+            
+            <div class="key-point">
+                <p>Menstruation, commonly referred to as a "period," is a natural biological process that occurs in the reproductive system of individuals with uteruses. Scientifically, it represents the cyclical shedding of the endometrium (the inner lining of the uterus) when pregnancy does not occur. This remarkable process is unique to humans, certain primates, and a select few other mammalian species, representing one of the most sophisticated biological mechanisms in reproductive biology.</p>
+            </div>
+
+            <div class="anatomy-section">
                 <h3>The Menstrual Cycle: A Complex Hormonal Orchestra</h3>
                 
                 <p>The menstrual cycle is controlled by a sophisticated interplay of hormones, primarily:</p>
-                </div>
-        
-                <ul>
-                    <li><strong>Follicle-Stimulating Hormone (FSH)</strong> - stimulates ovarian follicle development</li>
-                    <li><strong>Luteinizing Hormone (LH)</strong> - triggers ovulation</li>
-                    <li><strong>Estrogen</strong> - builds up the endometrial lining</li>
-                    <li><strong>Progesterone</strong> - maintains the endometrial lining</li>
-                </ul>
-    
-         <p>The average menstrual cycle lasts 28 days, though normal cycles can range from 21 to 35 days. The menstrual phase itself typically lasts 3-7 days, during which approximately 30-40 milliliters of menstrual fluid is expelled, consisting of <span class="highlight">blood, vaginal secretions, and endometrial tissue.</span></p>
-    
-                <h3>Key Statistics About Menstruation</h3>
                 
                 <ul>
-                    <li>Approximately <span class="highlight">1.9 billion people</span> worldwide menstruate</li>
-                    <li>The average person menstruates for about <strong>40 years</strong> of their lifetime</li>
-                    <li>This translates to roughly <span class="highlight">400-500 menstrual cycles</span> in a lifetime</li>
-                    <li>Studies show that <strong>80% of menstruating individuals</strong> experience some form of premenstrual symptoms</li>
-                    <li>Dysmenorrhea (painful periods) affects <span class="highlight">45-95%</span> of menstruating individuals globally</li>
+                    <li><strong>Follicle-Stimulating Hormone (FSH)</strong> - stimulates ovarian follicle development and initiates the maturation of eggs within the ovaries</li>
+                    <li><strong>Luteinizing Hormone (LH)</strong> - triggers ovulation and the release of the mature egg from the ovarian follicle</li>
+                    <li><strong>Estrogen</strong> - builds up the endometrial lining, preparing it for potential embryo implantation</li>
+                    <li><strong>Progesterone</strong> - maintains the endometrial lining and supports early pregnancy if fertilization occurs</li>
+                    <li><strong>Gonadotropin-Releasing Hormone (GnRH)</strong> - released by the hypothalamus to coordinate the entire hormonal cascade</li>
+                    <li><strong>Inhibin and Activin</strong> - regulate FSH production through feedback mechanisms</li>
                 </ul>
-            </section>
-    
-            <section>
-                <h2>Historical Treatment of Menstruation: A Legacy of Misunderstanding</h2>
-    
-                <p>Throughout history, menstruation has been shrouded in myth, superstition, and often fear. The lack of scientific understanding led to discriminatory practices that persisted for millennia and continue to impact societies today.</p>
-    
-                <h3>Ancient Civilizations and Religious Texts</h3>
+
+                <p>The average menstrual cycle lasts 28 days, though normal cycles can range from 21 to 35 days. The menstrual phase itself typically lasts 3-7 days, during which approximately 30-40 milliliters of menstrual fluid is expelled, consisting of <span class="highlight">blood, vaginal secretions, cervical mucus, and endometrial tissue.</span></p>
+            </div>
+
+            <h3>The Four Phases of the Menstrual Cycle</h3>
+            
+            <p>Understanding the complete menstrual cycle requires examining all four distinct phases:</p>
+
+            <p><strong>1. Menstrual Phase (Days 1-5):</strong> This is when menstruation occurs. The uterine lining that developed during the previous cycle breaks down and is shed through the vagina. Prostaglandin levels rise, causing uterine contractions that help expel the tissue. These contractions are what cause menstrual cramping or dysmenorrhea.</p>
+
+            <p><strong>2. Follicular Phase (Days 1-13):</strong> Overlapping with menstruation, this phase begins on the first day of bleeding and continues until ovulation. FSH stimulates the development of follicles in the ovaries, each containing an immature egg. Usually, one follicle becomes dominant and continues to mature while the others degenerate. Rising estrogen levels cause the endometrium to thicken and proliferate.</p>
+
+            <p><strong>3. Ovulation Phase (Day 14):</strong> A surge in LH triggers the release of the mature egg from the dominant follicle. This typically occurs around day 14 of a 28-day cycle, though timing varies significantly among individuals. The egg is viable for fertilization for approximately 12-24 hours after release.</p>
+
+            <p><strong>4. Luteal Phase (Days 15-28):</strong> After ovulation, the ruptured follicle transforms into the corpus luteum, which secretes progesterone and some estrogen. These hormones maintain the thickened endometrial lining in preparation for potential pregnancy. If pregnancy does not occur, the corpus luteum degenerates after about 14 days, causing progesterone and estrogen levels to plummet. This hormonal withdrawal triggers menstruation, beginning the cycle anew.</p>
+
+            <h3>Key Statistics About Menstruation</h3>
+            
+            <ul>
+                <li>Approximately <span class="highlight">1.9 billion people</span> worldwide menstruate at any given time</li>
+                <li>The average person menstruates for about <strong>40 years</strong> of their lifetime</li>
+                <li>This translates to roughly <span class="highlight">400-500 menstrual cycles</span> in a lifetime</li>
+                <li>Studies show that <strong>80% of menstruating individuals</strong> experience some form of premenstrual symptoms</li>
+                <li>Dysmenorrhea (painful periods) affects <span class="highlight">45-95%</span> of menstruating individuals globally</li>
+                <li>The average age of menarche (first menstruation) worldwide is <strong>12-13 years</strong>, though this varies by geography, nutrition, and genetics</li>
+                <li>Menopause typically occurs between ages <strong>45-55</strong>, with the average age being 51</li>
+                <li>Approximately <strong>25%</strong> of individuals experience heavy menstrual bleeding (menorrhagia) at some point in their reproductive years</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Understanding Menstrual Blood: Composition and Characteristics</h2>
+
+            <div class="anatomy-section">
+                <h3>What is Menstrual Blood Made Of?</h3>
                 
-                <div class="key-point">Ancient civilizations held varied but often negative views of menstruation. In ancient Rome, Pliny the Elder wrote that menstrual blood could turn wine sour and kill crops. The Hebrew Bible's Leviticus declared menstruating women "unclean" for seven days, requiring purification rituals. Similar taboos existed across cultures. Ancient Greek physician Hippocrates believed that menstrual blood was a way for women to purge "bad blood," while medieval European texts suggested that menstruating women's gaze could cloud mirrors and their touch could spoil food.</p>
-                </div>
-                <h3>The Scientific Revolution: Slow Progress</h3>
+                <p>Menstrual discharge is not simply blood as one might see from a cut or wound. Rather, it is a complex mixture of substances that provides important information about reproductive health. The composition includes:</p>
+
+                <ul>
+                    <li><strong>Blood:</strong> Makes up approximately 36% of menstrual fluid, originating from the breakdown of blood vessels in the endometrial lining</li>
+                    <li><strong>Endometrial tissue:</strong> Cells from the shed uterine lining, which can appear as tissue-like pieces</li>
+                    <li><strong>Vaginal secretions:</strong> Mucus and fluids from the vaginal walls</li>
+                    <li><strong>Cervical mucus:</strong> Secretions from the cervix that change in consistency throughout the cycle</li>
+                    <li><strong>Bacterial flora:</strong> Beneficial bacteria that maintain vaginal health</li>
+                    <li><strong>Enzymes:</strong> Including fibrinolytic enzymes that prevent excessive clotting</li>
+                </ul>
+
+                <p>Interestingly, menstrual blood contains lower concentrations of hemoglobin and platelets compared to venous blood, and it has a higher water content. The color can range from bright red to dark brown or even black, depending on how quickly the blood leaves the body and how long it has been in the uterus.</p>
+            </div>
+
+            <h3>Blood Clots During Menstruation: When They're Normal and When to Worry</h3>
+
+            <div class="key-point">
+                <p><strong>Understanding Menstrual Blood Clots</strong></p>
                 
-                <p>Even as scientific understanding advanced, menstruation remained poorly understood. In the 19th century, physicians believed that menstruation drained women's energy and intellectual capacity. This "scientific" justification was used to exclude women from higher education and professional careers.</p>
-    
-                <p>Dr. Edward Clarke's influential 1873 book "Sex in Education" argued that <span class="highlight">intellectual work during menstruation could cause sterility and mental breakdown.</span> These theories, though later debunked, shaped policy and social attitudes for decades.</p>
-    
-                <h3>Modern Understanding Emerges</h3>
+                <p>Blood clots during menstruation are a common occurrence that many people experience, yet they often cause concern. These clots are gel-like blobs of coagulated blood, tissue, and other materials that pass during menstrual flow. Understanding when clots are normal and when they might indicate a health concern is essential for reproductive health awareness.</p>
+            </div>
+
+            <h4>The Science Behind Menstrual Clotting</h4>
+
+            <p>When the endometrial lining breaks down during menstruation, blood vessels in the uterus rupture. Normally, the body releases anticoagulants—specifically fibrinolytic enzymes—to keep menstrual blood liquid and facilitate its passage through the cervix and vagina. However, during heavy flow periods, the blood may be expelled faster than the anticoagulants can work, resulting in clot formation.</p>
+
+            <p>The process works as follows:</p>
+
+            <ul>
+                <li><strong>Step 1:</strong> Blood pools in the uterus, particularly when lying down or sitting for extended periods</li>
+                <li><strong>Step 2:</strong> The pooled blood begins to coagulate naturally, as blood does when not in active circulation</li>
+                <li><strong>Step 3:</strong> Proteins called fibrin bind the blood cells together, forming a semi-solid mass</li>
+                <li><strong>Step 4:</strong> These clots are expelled along with regular menstrual flow</li>
+            </ul>
+
+            <h4>Normal vs. Abnormal Menstrual Clots</h4>
+
+            <div class="info-box">
+                <p><strong>NORMAL Menstrual Clots:</strong></p>
                 
-                <p>It wasn't until the 1930s that scientists began to understand the hormonal mechanisms behind menstruation. The discovery of reproductive hormones and their cyclical patterns revolutionized medical understanding, though social stigma persisted.</p>
-            </section>
-    
-            <section>
-                <h2>Contemporary Challenges: Statistics and Global Impact</h2>
-    
-                <h3>Period Poverty and Access Issues</h3>
+                <ul>
+                    <li><strong>Size:</strong> Smaller than a quarter (approximately 2.5 cm or 1 inch)</li>
+                    <li><strong>Color:</strong> Bright red to dark red or burgundy</li>
+                    <li><strong>Frequency:</strong> Occasional, particularly on the heaviest days of flow (typically days 1-2)</li>
+                    <li><strong>Consistency:</strong> Jelly-like or gel-like texture</li>
+                    <li><strong>Associated symptoms:</strong> May occur with slightly heavier flow but without severe pain or other concerning symptoms</li>
+                    <li><strong>Timing:</strong> More common upon standing after lying or sitting, as gravity facilitates the passage of pooled blood</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <p><strong>CONCERNING Menstrual Clots - When to See a Healthcare Provider:</strong></p>
                 
-                <div class="statistic">
+                <ul>
+                    <li><strong>Size:</strong> Consistently larger than a quarter or golf ball-sized clots</li>
+                    <li><strong>Frequency:</strong> Multiple large clots passed throughout the menstrual period</li>
+                    <li><strong>Heavy bleeding:</strong> Soaking through a pad or tampon every hour for several consecutive hours</li>
+                    <li><strong>Duration:</strong> Bleeding lasting longer than 7 days</li>
+                    <li><strong>Severe cramping:</strong> Debilitating pain that interferes with daily activities</li>
+                    <li><strong>Anemia symptoms:</strong> Fatigue, dizziness, shortness of breath, pale skin</li>
+                    <li><strong>Irregular cycles:</strong> Unpredictable bleeding patterns or bleeding between periods</li>
+                    <li><strong>Sudden changes:</strong> A significant change in clot size or menstrual flow pattern</li>
+                </ul>
+            </div>
+
+            <h4>Medical Conditions Associated with Heavy Clotting</h4>
+
+            <p>While occasional small clots are normal, consistently large or numerous clots may indicate underlying conditions:</p>
+
+            <p><strong>1. Uterine Fibroids:</strong> These benign muscular tumors grow in or on the uterine wall and affect approximately 70-80% of women by age 50. Fibroids can cause heavy bleeding and large clots because they distort the uterine cavity and interfere with normal uterine contractions. Submucosal fibroids (those that protrude into the uterine cavity) are particularly associated with heavy menstrual bleeding.</p>
+
+            <p><strong>2. Adenomyosis:</strong> This condition occurs when endometrial tissue grows into the muscular wall of the uterus. It affects approximately 20-35% of women and can cause the uterus to become enlarged, tender, and prone to heavy bleeding with significant clotting. The displaced endometrial tissue continues to thicken, break down, and bleed during each menstrual cycle.</p>
+
+            <p><strong>3. Endometriosis:</strong> While primarily known for causing pain, endometriosis can also lead to heavy bleeding and clotting. This occurs when tissue similar to the endometrium grows outside the uterus, such as on the ovaries, fallopian tubes, or pelvic lining.</p>
+
+            <p><strong>4. Polycystic Ovary Syndrome (PCOS):</strong> Hormonal imbalances associated with PCOS can lead to irregular cycles and, when menstruation does occur, heavy bleeding with clots. The endometrial lining may build up for extended periods before shedding, resulting in heavier flow.</p>
+
+            <p><strong>5. Bleeding Disorders:</strong> Conditions like von Willebrand disease, platelet dysfunction disorders, or clotting factor deficiencies can cause excessive menstrual bleeding. Studies suggest that 10-30% of women with heavy menstrual bleeding have an underlying bleeding disorder.</p>
+
+            <p><strong>6. Thyroid Disorders:</strong> Both hypothyroidism (underactive thyroid) and hyperthyroidism (overactive thyroid) can affect menstrual flow. Hypothyroidism is more commonly associated with heavy bleeding and clotting.</p>
+
+            <p><strong>7. Hormonal Imbalances:</strong> Imbalances in estrogen and progesterone can cause the endometrium to develop excessively, leading to heavy shedding with clots. This is particularly common during perimenopause as hormone levels fluctuate.</p>
+
+            <p><strong>8. Intrauterine Devices (IUDs):</strong> Copper IUDs, in particular, are associated with heavier menstrual bleeding and more clots, especially in the first few months after insertion. This typically improves over time.</p>
+
+            <p><strong>9. Medications:</strong> Anticoagulants (blood thinners), anti-inflammatory drugs, and certain hormonal medications can increase menstrual bleeding and clot formation.</p>
+
+            <p><strong>10. Miscarriage or Pregnancy Complications:</strong> Large clots accompanied by heavy bleeding and severe cramping in someone who may be pregnant could indicate a miscarriage and requires immediate medical attention.</p>
+
+            <h4>Managing Menstrual Clots</h4>
+
+            <p>For normal menstrual clots that don't indicate an underlying condition, several management strategies can help:</p>
+
+            <ul>
+                <li><strong>Stay hydrated:</strong> Drinking plenty of water helps maintain blood volume and can make flow more manageable</li>
+                <li><strong>Use heat therapy:</strong> Heating pads or warm baths can help relax uterine muscles and ease cramping associated with clot passage</li>
+                <li><strong>Take NSAIDs:</strong> Non-steroidal anti-inflammatory drugs like ibuprofen can reduce menstrual flow by up to 30% and decrease prostaglandin production</li>
+                <li><strong>Maintain iron levels:</strong> Heavy bleeding can lead to iron deficiency; consuming iron-rich foods or supplements can prevent anemia</li>
+                <li><strong>Track your cycle:</strong> Monitoring flow patterns, clot size, and associated symptoms helps identify concerning changes</li>
+                <li><strong>Consider hormonal birth control:</strong> Various contraceptive methods can regulate cycles and reduce heavy bleeding</li>
+            </ul>
+
+            <h4>Diagnostic Approaches for Abnormal Clotting</h4>
+
+            <p>When menstrual clots become concerning, healthcare providers may recommend several diagnostic tests:</p>
+
+            <ul>
+                <li><strong>Pelvic examination:</strong> Visual and manual examination of reproductive organs</li>
+                <li><strong>Transvaginal ultrasound:</strong> Imaging to detect fibroids, polyps, or structural abnormalities</li>
+                <li><strong>Blood tests:</strong> Complete blood count to check for anemia, thyroid function tests, hormonal panels, and clotting factor assessment</li>
+                <li><strong>Endometrial biopsy:</strong> Sampling of uterine lining tissue to rule out hyperplasia or malignancy</li>
+                <li><strong>Hysteroscopy:</strong> A thin camera inserted through the cervix to visualize the uterine cavity</li>
+                <li><strong>MRI:</strong> Detailed imaging to evaluate adenomyosis or complex fibroids</li>
+                <li><strong>Sonohysterography:</strong> Ultrasound with saline infusion for better visualization of the uterine cavity</li>
+            </ul>
+
+            <h4>Treatment Options for Heavy Clotting</h4>
+
+            <p>Depending on the underlying cause, treatment options include:</p>
+
+            <p><strong>Medical Management:</strong></p>
+            <ul>
+                <li>Hormonal contraceptives (pills, patches, rings, implants)</li>
+                <li>Hormonal IUDs (levonorgestrel-releasing devices)</li>
+                <li>Tranexamic acid (reduces bleeding by promoting clotting)</li>
+                <li>NSAIDs for menstrual flow reduction</li>
+                <li>GnRH agonists for temporary menopause-like state</li>
+                <li>Iron supplementation for anemia management</li>
+            </ul>
+
+            <p><strong>Surgical Interventions:</strong></p>
+            <ul>
+                <li>Endometrial ablation (destruction of uterine lining)</li>
+                <li>Myomectomy (surgical removal of fibroids)</li>
+                <li>Uterine artery embolization (blocking blood supply to fibroids)</li>
+                <li>Hysterectomy (removal of uterus, definitive treatment)</li>
+                <li>Dilation and curettage (D&C) for diagnostic and therapeutic purposes</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Menstrual Flow Patterns and Variations</h2>
+
+            <h3>Measuring Menstrual Flow</h3>
+
+            <div class="statistic">
+                <p>Normal menstrual blood loss ranges from 30-40 ml (about 2-3 tablespoons) per cycle, though this can be difficult to measure accurately. Medical professionals use several methods to assess menstrual flow:</p>
+                
+                <ul>
+                    <li><strong>Pictorial Blood Loss Assessment Chart (PBAC):</strong> A visual scoring system where individuals track saturation levels of pads and tampons</li>
+                    <li><strong>Menstrual cups:</strong> Provide more accurate volume measurements due to graduated markings</li>
+                    <li><strong>Alkaline hematin method:</strong> Laboratory technique that measures actual blood content in menstrual products (rarely used clinically)</li>
+                </ul>
+
+                <p>Heavy menstrual bleeding (menorrhagia) is defined as blood loss exceeding 80 ml per cycle or bleeding lasting longer than 7 days. However, the subjective impact on quality of life is equally important in diagnosis.</p>
+            </div>
+
+            <h3>Color Changes Throughout the Cycle</h3>
+
+            <p>Menstrual blood color provides insights into flow rate and overall health:</p>
+
+            <ul>
+                <li><strong>Bright red:</strong> Fresh blood from active shedding, common on days 1-2</li>
+                <li><strong>Dark red or brown:</strong> Older blood that has oxidized, typical at the beginning or end of periods</li>
+                <li><strong>Pink:</strong> May indicate light flow, dilution with cervical fluid, or, rarely, low estrogen levels</li>
+                <li><strong>Orange:</strong> Blood mixed with cervical fluid; may occasionally indicate infection if accompanied by odor or itching</li>
+                <li><strong>Gray:</strong> May signal infection or, in pregnancy, miscarriage—requires medical evaluation</li>
+                <li><strong>Black:</strong> Heavily oxidized blood moving slowly; usually normal but can indicate vaginal blockage if persistent</li>
+            </ul>
+
+            <h3>Texture and Consistency</h3>
+
+            <p>Normal menstrual discharge varies in texture:</p>
+
+            <ul>
+                <li><strong>Thin and watery:</strong> Common at the beginning or end of the period</li>
+                <li><strong>Thick and gel-like:</strong> Heavier flow days with a mix of blood and tissue</li>
+                <li><strong>Slippery:</strong> Indicates higher cervical mucus content</li>
+                <li><strong>String-like:</strong> Fibrin strands from clotting processes</li>
+                <li><strong>Tissue-like pieces:</strong> Endometrial lining fragments, typically normal if small</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Historical Treatment of Menstruation: A Legacy of Misunderstanding</h2>
+
+            <p>Throughout history, menstruation has been shrouded in myth, superstition, and often fear. The lack of scientific understanding led to discriminatory practices that persisted for millennia and continue to impact societies today. This historical context is essential for understanding current menstrual stigma and the ongoing fight for menstrual equity.</p>
+
+            <h3>Ancient Civilizations and Religious Texts</h3>
+            
+            <div class="key-point">
+                <p>Ancient civilizations held varied but often negative views of menstruation. In ancient Rome, Pliny the Elder wrote that menstrual blood could turn wine sour, kill crops, dull the edge of steel, and cause seeds to become sterile. The Hebrew Bible's Leviticus declared menstruating women "unclean" for seven days, requiring purification rituals before they could rejoin religious community activities.</p>
+                
+                <p>Similar taboos existed across cultures. Ancient Greek physician Hippocrates believed that menstrual blood was a way for women to purge "bad blood" or excessive humors, viewing it as a necessary but somewhat dangerous bodily function. Medieval European texts suggested that menstruating women's gaze could cloud mirrors, their touch could spoil food, and their presence could cause bread not to rise.</p>
+            </div>
+
+            <h4>Cultural Practices Around the World</h4>
+
+            <p><strong>Hindu Traditions:</strong> In some Hindu communities, menstruating women were (and in some places still are) considered temporarily impure and excluded from temples, kitchens, and certain household activities. The practice of "chhaupadi" in Nepal, where menstruating women and girls were banished to huts, resulted in deaths from exposure and snake bites until it was criminalized in 2017.</p>
+
+            <p><strong>Ancient Egypt:</strong> Interestingly, ancient Egyptians had a somewhat more practical view. Medical papyri suggest that Egyptians recognized menstruation as a natural process and even developed early menstrual products using softened papyrus.</p>
+
+            <p><strong>Indigenous American Cultures:</strong> Some Native American tribes viewed menstruation more positively, as a time of spiritual power. Menstruating women in certain tribes were believed to have heightened spiritual awareness and were separated not out of uncleanliness but out of respect for this power.</p>
+
+            <p><strong>Ancient China:</strong> Traditional Chinese medicine viewed menstrual blood as a vital substance linked to qi (life energy). However, menstruating women were still often restricted from certain activities and places of worship.</p>
+
+            <p><strong>African Traditions:</strong> Various African cultures developed menarche ceremonies celebrating a girl's first period as a transition to womanhood. However, menstruation itself was often accompanied by restrictions on food preparation and sexual activity.</p>
+
+            <h3>The Medieval and Renaissance Periods</h3>
+
+            <p>During the Middle Ages in Europe, menstruation was deeply entwined with religious doctrine and emerging medical theory. The Catholic Church's emphasis on female purity and sin contributed to menstrual stigma. Medieval medical texts, largely written by male physicians who based their knowledge on ancient Greek and Roman sources, perpetuated the idea that menstruation was a process of purging corrupt or excessive blood.</p>
+
+            <p>The concept of "hysteria" emerged during this period, attributed to a "wandering womb" and later connected to menstrual cycles. Women's emotional and physical experiences related to menstruation were pathologized and used to justify their exclusion from intellectual and public life.</p>
+
+            <p>Some medieval medical practitioners believed that menstrual blood had magical properties and used it in alchemical experiments. Others claimed it could be used in folk remedies or, conversely, that it was poisonous. The wide variety of conflicting beliefs demonstrates the profound ignorance surrounding menstruation during this era.</p>
+
+            <h3>The Scientific Revolution: Slow Progress</h3>
+            
+            <p>Even as scientific understanding advanced in the 17th and 18th centuries, menstruation remained poorly understood. Early microscopy allowed scientists to observe blood cells, but the hormonal mechanisms controlling menstruation remained a complete mystery.</p>
+
+            <p>In the 19th century, physicians believed that menstruation drained women's energy and intellectual capacity, and that blood was redirected from the brain to the reproductive organs. This "scientific" justification was used to exclude women from higher education and professional careers.</p>
+
+            <p>Dr. Edward Clarke's influential 1873 book "Sex in Education" argued that <span class="highlight">intellectual work during menstruation could cause sterility and mental breakdown.</span> Clarke claimed that women who pursued higher education would develop reproductive disorders because their bodies would divert energy from their reproductive systems to their brains. These theories, though later completely debunked, shaped policy and social attitudes for decades and were used to justify women's exclusion from universities.</p>
+
+            <p>The Victorian era saw the development of early menstrual products. Before this, women used cloth rags, hence the phrase "on the rag." The first disposable pad was created in the 1890s, though it wasn't widely marketed until the 1920s. Early tampons were developed in the 1930s but faced significant cultural resistance due to concerns about virginity and morality.</p>
+
+            <h3>The 20th Century: Modern Understanding Emerges</h3>
+            
+            <p>It wasn't until the 1930s that scientists began to understand the hormonal mechanisms behind menstruation. The discovery of reproductive hormones and their cyclical patterns revolutionized medical understanding. George Corner and Willard Allen isolated progesterone in 1933, and subsequent research identified the complex interplay of hormones controlling the menstrual cycle.</p>
+
+            <p>The development of radioimmunoassay techniques in the 1960s allowed precise measurement of hormone levels, finally enabling scientists to map the complete hormonal profile of the menstrual cycle. This breakthrough opened the door to hormonal contraception and treatments for menstrual disorders.</p>
+
+            <p>Despite these scientific advances, social stigma persisted throughout the 20th century. Menstruation remained a taboo topic in most Western societies, rarely discussed publicly and euphemized in advertising. It wasn't until the 1970s and 1980s that feminist movements began to challenge menstrual stigma and advocate for more open discussion.</p>
+
+            <h3>Contemporary Historical Research</h3>
+
+            <p>Modern historians and anthropologists have worked to recover women's historical experiences of menstruation, revealing that actual practices were often more diverse and nuanced than official religious or medical texts suggested. Archaeological evidence of menstrual products, personal letters, and diaries provide glimpses into how women actually managed menstruation throughout history, often with practical solutions that contradicted official doctrines of impurity or danger.</p>
+        </section>
+
+        <section>
+            <h2>Contemporary Challenges: Statistics and Global Impact</h2>
+
+            <h3>Period Poverty and Access Issues</h3>
+            
+            <div class="statistic">
                 <ul>
                     <li>Globally, <span class="highlight">500 million people</span> lack access to menstrual products and adequate facilities</li>
                     <li>In the United States, <strong>1 in 5 students</strong> have struggled to afford period products</li>
-                    <li>Studies show that <strong>58% of women</strong> have experienced period shame</li>
+                    <li>In the United Kingdom, research found that <strong>1 in 10 girls</strong> aged 14-21 cannot afford menstrual products</li>
+                    <li>Studies show that <strong>58% of women</strong> have experienced period shame at some point in their lives</li>
                     <li>Research indicates that <strong>73% of women</strong> have experienced period-related discrimination in the workplace</li>
+                    <li><strong>86%</strong> of menstruators have started their period unexpectedly in public without access to products</li>
+                    <li>Approximately <strong>12%</strong> of menstruators globally lack access to proper sanitation facilities during menstruation</li>
                 </ul>
-                </div>
-                <h3>Educational Impact</h3>
-                
-                <div class="statistic">UNESCO reports that inadequate menstrual hygiene management causes girls to miss an average of <strong>5 days of school per month</strong> in some regions. In sub-Saharan Africa, approximately <strong>1 in 10 school-age girls</strong> miss school during menstruation.</p>
-                </div>
-                <h3>Economic Consequences</h3>
-                
-              <div class="key-point">The economic impact is substantial. The average person spends approximately <strong>$6,000-$8,000</strong> on menstrual products over their lifetime. In many countries, these products are still subject to luxury taxes, despite being biological necessities.</p>
-              </div>
-            </section>
-    
-            <section>
-                <h2>Medical Significance and Health Implications</h2>
-    
-                <h3>Menstruation as a Vital Sign</h3>
-                
-                <p>Modern medicine recognizes menstruation as the "fifth vital sign," alongside temperature, pulse, respiration, and blood pressure. Irregular menstrual patterns can indicate various health conditions:</p>
-    
+            </div>
+
+            <p>Period poverty—the inability to access menstrual products, sanitation facilities, and menstrual health education—is a significant global issue. This problem exists even in wealthy nations, where economic inequality and homelessness create barriers to menstrual product access. People experiencing homelessness often cite menstrual products as one of their most urgent needs.</p>
+
+            <p>The COVID-19 pandemic exacerbated period poverty, as economic hardships forced many families to choose between food and menstrual products. Schools that had begun providing free menstrual products closed during lockdowns, eliminating a crucial access point for young people.</p>
+
+            <h3>Educational Impact</h3>
+            
+            <div class="statistic">
+                <p>UNESCO reports that inadequate menstrual hygiene management causes girls to miss an average of <strong>5 days of school per month</strong> in some regions. In sub-Saharan Africa, approximately <strong>1 in 10 school-age girls</strong> miss school during menstruation. Over the course of a school year, this can result in missing 10-20% of instructional time, significantly impacting academic performance and future opportunities.</p>
+            </div>
+
+            <p>The reasons for school absence are multifaceted:</p>
+
+            <ul>
+                <li><strong>Lack of products:</strong> Girls cannot afford or access menstrual products</li>
+                <li><strong>Inadequate facilities:</strong> Schools lack private bathrooms with running water for changing products</li>
+                <li><strong>Absence of disposal systems:</strong> No safe way to dispose of used products</li>
+                <li><strong>Stigma and teasing:</strong> Fear of leakage and bullying keeps girls home</li>
+                <li><strong>Pain and discomfort:</strong> Severe dysmenorrhea without access to pain relief</li>
+                <li><strong>Cultural taboos:</strong> Menstruating girls barred from attending school in some communities</li>
+            </ul>
+
+            <p>Studies have shown that providing free menstrual products in schools increases attendance rates by 10-15%. Additionally, comprehensive menstrual education reduces stigma and helps students feel more comfortable managing their periods at school.</p>
+
+            <h3>Economic Consequences</h3>
+            
+            <div class="key-point">
+                <p>The economic impact of menstruation is substantial and multifaceted. The average person spends approximately <strong>$6,000-$8,000</strong> on menstrual products over their lifetime. This figure includes pads, tampons, menstrual cups, period underwear, pain medications, and new underwear to replace stained items.</p>
+            </div>
+
+            <p>However, the true economic impact extends far beyond product costs:</p>
+
+            <p><strong>The "Tampon Tax":</strong> In many countries, menstrual products are still subject to luxury or sales taxes, despite being biological necessities. This tax disproportionately affects low-income individuals. As of 2024, efforts to eliminate the tampon tax have succeeded in many regions, but it persists in others. The United States has no federal law on menstrual product taxation, leaving it to individual states—currently, 21 states still tax these products.</p>
+
+            <p><strong>Productivity Loss:</strong> Research estimates that pain and symptoms associated with menstruation result in approximately <strong>9 days of reduced productivity</strong> per person per year. On a global scale, this represents billions of dollars in lost economic output. Some economists estimate the total annual cost of menstruation-related productivity loss at over $150 billion globally.</p>
+
+            <p><strong>Healthcare Costs:</strong> Many menstrual disorders go undiagnosed or untreated due to normalization of severe symptoms. Conditions like endometriosis take an average of <strong>7-10 years</strong> to diagnose, during which individuals incur significant healthcare costs and lost wages.</p>
+
+            <p><strong>Career Impact:</strong> Studies show that menstrual symptoms affect career advancement, with women reporting that they've had to decline work opportunities, leave early, or take sick days due to menstruation. This can impact performance reviews, promotion opportunities, and lifetime earning potential.</p>
+
+            <h3>Environmental Considerations</h3>
+
+            <p>The environmental impact of menstrual products has become an increasing concern:</p>
+
+            <ul>
+                <li>The average menstruator uses approximately <strong>11,000-16,000</strong> disposable menstrual products in their lifetime</li>
+                <li>Conventional pads contain plastic equivalent to <strong>4 plastic bags</strong> per pad</li>
+                <li>It takes approximately <strong>500-800 years</strong> for conventional pads and tampons to decompose</li>
+                <li>Menstrual products generate over <strong>200,000 tons</strong> of waste annually in the United States alone</li>
+                <li>Flushed menstrual products contribute to sewage system blockages, costing municipalities millions in repairs</li>
+            </ul>
+
+            <p>This has led to increased interest in reusable options like menstrual cups, period underwear, and cloth pads. The global reusable menstrual products market is growing rapidly, with sustainability-conscious consumers driving demand.</p>
+        </section>
+
+        <section>
+            <h2>Medical Significance and Health Implications</h2>
+
+            <h3>Menstruation as a Vital Sign</h3>
+            
+            <p>Modern medicine recognizes menstruation as the "fifth vital sign," alongside temperature, pulse, respiration, and blood pressure. This designation, endorsed by the American College of Obstetricians and Gynecologists in 2015, emphasizes that menstrual patterns provide crucial information about overall health status.</p>
+
+            <p>Regular menstruation indicates:</p>
+            <ul>
+                <li>Proper functioning of the hypothalamic-pituitary-ovarian axis</li>
+                <li>Adequate nutrition and healthy body weight</li>
+                <li>Absence of significant chronic illness</li>
+                <li>Normal hormonal balance</li>
+                <li>Adequate bone health (estrogen is crucial for bone density)</li>
+            </ul>
+
+            <p>Irregular menstrual patterns can indicate various health conditions:</p>
+
+            <h4>Polycystic Ovary Syndrome (PCOS)</h4>
+            
+            <p><span class="highlight">Affects 6-12% of reproductive-aged individuals</span>. PCOS is a hormonal disorder causing irregular or absent periods, excess androgen levels, and polycystic ovaries. It's the most common cause of anovulatory infertility and is associated with increased risk of type 2 diabetes, cardiovascular disease, and endometrial cancer.</p>
+
+            <p>Symptoms include:</p>
+            <ul>
+                <li>Irregular or absent menstruation (oligomenorrhea or amenorrhea)</li>
+                <li>Excess hair growth (hirsutism) on face, chest, or back</li>
+                <li>Acne and oily skin</li>
+                <li>Weight gain or difficulty losing weight</li>
+                <li>Thinning hair on the scalp</li>
+                <li>Skin tags and dark patches of skin</li>
+            </ul>
+
+            <h4>Endometriosis</h4>
+            
+            <p><span class="highlight">Impacts approximately 10% of reproductive-aged individuals</span>. Endometriosis occurs when tissue similar to the endometrium grows outside the uterus. This tissue responds to hormonal changes during the menstrual cycle, causing inflammation, scarring, and often severe pain.</p>
+
+            <p>Common symptoms include:</p>
+            <ul>
+                <li>Severe menstrual cramps (dysmenorrhea)</li>
+                <li>Chronic pelvic pain</li>
+                <li>Pain during intercourse (dyspareunia)</li>
+                <li>Pain with bowel movements or urination during menstruation</li>
+                <li>Excessive bleeding</li>
+                <li>Infertility (affects 30-50% of individuals with endometriosis)</li>
+                <li>Fatigue, diarrhea, constipation, bloating, and nausea</li>
+            </ul>
+
+            <p>The diagnostic delay for endometriosis averages 7-10 years, partly because severe menstrual pain is often dismissed as "normal." This delay can lead to disease progression and increased difficulty with fertility.</p>
+
+            <h4>Thyroid Disorders</h4>
+            
+            <p><strong>Can cause menstrual irregularities in up to 68% of cases</strong>. Both hypothyroidism (underactive thyroid) and hyperthyroidism (overactive thyroid) significantly affect menstrual cycles.</p>
+
+            <p>Hypothyroidism may cause:</p>
+            <ul>
+                <li>Heavy, prolonged periods (menorrhagia)</li>
+                <li>More frequent periods</li>
+                <li>Severe menstrual cramps</li>
+            </ul>
+
+            <p>Hyperthyroidism may cause:</p>
+            <ul>
+                <li>Light, short periods</li>
+                <li>Infrequent periods or absent periods</li>
+            </ul>
+
+            <h4>Amenorrhea: Absent Menstruation</h4>
+
+            <p>Primary amenorrhea (never having had a period by age 15-16) may indicate:</p>
+            <ul>
+                <li>Genetic conditions (Turner syndrome, androgen insensitivity syndrome)</li>
+                <li>Structural abnormalities of reproductive organs</li>
+                <li>Hypothalamic or pituitary disorders</li>
+            </ul>
+
+            <p>Secondary amenorrhea (absence of periods for 3+ months in someone who previously menstruated) may result from:</p>
+            <ul>
+                <li>Pregnancy (most common cause)</li>
+                <li>Stress and psychological factors</li>
+                <li>Extreme weight loss or eating disorders</li>
+                <li>Excessive exercise (common in athletes)</li>
+                <li>PCOS or premature ovarian insufficiency</li>
+                <li>Medications, particularly hormonal contraceptives</li>
+                <li>Pituitary tumors or disorders</li>
+            </ul>
+
+            <p>Functional hypothalamic amenorrhea (FHA) occurs when stress, weight loss, or excessive exercise disrupts the hypothalamic-pituitary-ovarian axis. This condition affects bone health due to low estrogen levels and can have long-term consequences if not addressed.</p>
+
+            <h4>Premenstrual Syndrome (PMS) and Premenstrual Dysphoric Disorder (PMDD)</h4>
+
+            <p>Up to <strong>80% of menstruators</strong> experience some PMS symptoms, which occur during the luteal phase (after ovulation) and resolve with menstruation. Common symptoms include:</p>
+            <ul>
+                <li>Mood swings, irritability, or anxiety</li>
+                <li>Fatigue or trouble sleeping</li>
+                <li>Bloating and breast tenderness</li>
+                <li>Food cravings</li>
+                <li>Difficulty concentrating</li>
+            </ul>
+
+            <p>PMDD is a severe form of PMS affecting <strong>3-8% of menstruators</strong>. It involves debilitating emotional and physical symptoms that significantly impair daily functioning. PMDD is recognized in the DSM-5 as a psychiatric condition and requires specific treatment, often including antidepressants (particularly SSRIs) and hormonal interventions.</p>
+
+            <h3>Tracking and Technology</h3>
+            
+            <p>Research shows that <strong>200+ million people</strong> worldwide use period-tracking apps. These digital tools allow users to monitor cycle length, flow patterns, symptoms, and predict future periods and fertile windows.</p>
+
+            <p>Studies indicate that consistent tracking can improve healthcare outcomes, with <strong>89% of users</strong> reporting better understanding of their cycles. Benefits include:</p>
+            <ul>
+                <li><strong>Early detection of irregularities:</strong> Identifying concerning patterns that warrant medical evaluation</li>
+                <li><strong>Fertility awareness:</strong> Understanding fertile windows for conception or avoiding pregnancy</li>
+                <li><strong>Symptom management:</strong> Recognizing patterns in PMS symptoms and planning accordingly</li>
+                <li><strong>Communication with healthcare providers:</strong> Providing detailed cycle data for diagnosis and treatment</li>
+                <li><strong>Medication timing:</strong> Optimizing timing of medications that are affected by cycle phases</li>
+            </ul>
+
+            <p>However, concerns exist about data privacy and the use of menstrual tracking data by insurance companies or employers. Many apps sell anonymized user data to third parties, raising ethical questions about informed consent and potential discrimination.</p>
+
+            <h3>Menstruation and Mental Health</h3>
+
+            <p>The relationship between menstruation and mental health is complex and bidirectional. Hormonal fluctuations throughout the menstrual cycle can affect mood, anxiety levels, and cognitive function. For individuals with pre-existing mental health conditions, symptoms may worsen during certain cycle phases.</p>
+
+            <p><strong>Premenstrual Exacerbation (PME):</strong> Approximately <strong>50-70%</strong> of individuals with mood disorders experience symptom worsening in the premenstrual phase. This affects conditions including depression, anxiety disorders, bipolar disorder, and PTSD.</p>
+
+            <p><strong>Menstrual Cycle and Suicide Risk:</strong> Research indicates that suicide attempts are more common in the premenstrual and menstrual phases for individuals with mood disorders, highlighting the importance of cycle-aware mental health care.</p>
+
+            <p><strong>Body Image and Eating Disorders:</strong> Hormonal fluctuations affect appetite, metabolism, and body water retention. The premenstrual phase is particularly challenging for individuals with eating disorders, as increased appetite and bloating can trigger disordered eating behaviors.</p>
+        </section>
+
+        <section>
+            <h2>Menstruation Across the Lifespan</h2>
+
+            <h3>Menarche: The First Period</h3>
+
+            <p>The average age of menarche (first menstruation) is 12-13 years in developed countries, though it can occur normally anywhere from age 9-16. The age of menarche has decreased over the past century due to improved nutrition, higher body weight, and environmental factors.</p>
+
+            <p>Factors influencing menarche timing:</p>
+            <ul>
+                <li><strong>Genetics:</strong> Mothers' age of menarche is the strongest predictor</li>
+                <li><strong>Nutrition and body fat:</strong> Adequate body fat (around 17% body fat) is necessary for menstruation to begin</li>
+                <li><strong>Geographic location:</strong> Earlier in urban areas compared to rural areas</li>
+                <li><strong>Socioeconomic status:</strong> Better nutrition correlates with earlier menarche</li>
+                <li><strong>Stress:</strong> Childhood trauma or stress may affect timing</li>
+                <li><strong>Endocrine disruptors:</strong> Exposure to certain chemicals may influence timing</li>
+            </ul>
+
+            <p>The first few years after menarche are typically characterized by irregular cycles as the hypothalamic-pituitary-ovarian axis matures. Many early cycles are anovulatory (without ovulation), which is normal. It can take 6-24 months for cycles to become regular.</p>
+
+            <h3>Reproductive Years: Peak Fertility</h3>
+
+            <p>The peak reproductive years are typically ages 20-35, when cycles are most regular and ovulation most consistent. Fertility begins to decline after age 35, with more significant decreases after age 40. This decline occurs because:</p>
+            <ul>
+                <li>Egg quantity decreases (women are born with all the eggs they'll ever have)</li>
+                <li>Egg quality declines (increased chromosomal abnormalities)</li>
+                <li>Ovulation becomes less regular</li>
+                <li>Hormonal changes affect uterine receptivity</li>
+            </ul>
+
+            <h3>Perimenopause: The Transition</h3>
+
+            <p>Perimenopause is the transitional period before menopause, typically beginning in the mid-40s but sometimes as early as the mid-30s. This phase lasts an average of <strong>4-8 years</strong> and is characterized by hormonal fluctuations as ovarian function declines.</p>
+
+            <p>Common perimenopausal symptoms:</p>
+            <ul>
+                <li><strong>Irregular periods:</strong> Cycles may be shorter, longer, heavier, lighter, or skipped entirely</li>
+                <li><strong>Hot flashes and night sweats:</strong> Affect up to 75% of perimenopausal individuals</li>
+                <li><strong>Sleep disturbances:</strong> Often related to night sweats but also due to hormonal changes</li>
+                <li><strong>Mood changes:</strong> Increased anxiety, irritability, or depression</li>
+                <li><strong>Vaginal dryness:</strong> Decreasing estrogen affects vaginal tissue</li>
+                <li><strong>Changes in libido:</strong> May increase or decrease</li>
+                <li><strong>Weight gain:</strong> Particularly around the abdomen</li>
+                <li><strong>Cognitive changes:</strong> "Brain fog" or memory difficulties</li>
+            </ul>
+
+            <p>During perimenopause, periods may become very heavy and prolonged, increasing the risk of anemia. Ironically, pregnancy is still possible during perimenopause despite irregular cycles, so contraception remains important until menopause is confirmed.</p>
+
+            <h3>Menopause: The End of Menstruation</h3>
+
+            <p>Menopause is defined as 12 consecutive months without menstruation, indicating permanent cessation of ovarian function. The average age of natural menopause is <strong>51 years</strong>, with a normal range of 45-55 years.</p>
+
+            <p>Early menopause (before age 45) or premature ovarian insufficiency (before age 40) affects approximately <strong>5% and 1%</strong> of women respectively. These conditions can result from genetics, autoimmune disorders, medical treatments (chemotherapy, radiation), or surgery (oophorectomy).</p>
+
+            <p>After menopause, decreased estrogen levels affect multiple body systems:</p>
+            <ul>
+                <li><strong>Bone health:</strong> Increased risk of osteoporosis and fractures</li>
+                <li><strong>Cardiovascular system:</strong> Increased risk of heart disease</li>
+                <li><strong>Urogenital tract:</strong> Vaginal atrophy, urinary symptoms</li>
+                <li><strong>Cognitive function:</strong> Some individuals report memory changes</li>
+                <li><strong>Skin:</strong> Decreased collagen production affects skin elasticity</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Breaking the Silence: Recent Progress</h2>
+
+            <h3>Policy Changes</h3>
+            
+            <p>Recent years have seen significant policy shifts. As of 2023, <span class="highlight">12 countries</span> have eliminated taxes on menstrual products. Countries that have abolished or reduced taxes on menstrual products include Canada, Kenya, India, Australia, Colombia, Malaysia, South Africa, and various European nations.</p>
+
+            <p>Several countries, including India and Kenya, provide free menstrual products in schools. Scotland made history in 2020 by becoming the first country to legally mandate free menstrual products in public facilities, schools, and universities. New Zealand followed with free period products in all schools in 2021.</p>
+
+            <p>In the United States, progress has been state-by-state. As of 2024:</p>
+            <ul>
+                <li><strong>21 states</strong> have eliminated sales tax on menstrual products</li>
+                <li><strong>29 states</strong> have passed or are considering laws requiring free menstrual products in schools</li>
+                <li>Federal buildings have been required to provide free menstrual products since 2022</li>
+                <li>Several states have enacted laws requiring prisons and homeless shelters to provide free menstrual products</li>
+            </ul>
+
+            <h3>Workplace Policies</h3>
+            
+            <p>Progressive companies are implementing menstrual leave policies. Countries like Japan, South Korea, Indonesia, Taiwan, and Zambia have had menstrual leave laws for decades, though uptake remains low due to stigma and concerns about career impact.</p>
+
+            <p>Recent surveys show that <strong>67% of employees</strong> support workplace period policies. Forward-thinking companies are implementing:</p>
+            <ul>
+                <li>Optional menstrual leave (typically 1-2 days per month)</li>
+                <li>Flexible work arrangements during menstruation</li>
+                <li>Free menstrual products in workplace bathrooms</li>
+                <li>Menstrual health education and destigmatization programs</li>
+                <li>Inclusive policies that recognize menstruation affects people of all genders</li>
+            </ul>
+
+            <p>However, critics argue that menstrual leave policies could reinforce stereotypes about menstruating individuals being less capable or reliable workers. The debate continues about whether such policies advance or hinder equality.</p>
+
+            <h3>Media Representation and Public Discourse</h3>
+
+            <p>Media representation of menstruation has evolved dramatically. For decades, menstrual product advertising avoided showing red liquid (using blue instead) and euphemized menstruation excessively. Recent years have seen more honest advertising showing red liquid and discussing menstruation directly.</p>
+
+            <p>Major cultural moments include:</p>
+            <ul>
+                <li>The 2016 viral poem by Rupi Kaur alongside an Instagram post showing menstrual bleeding (initially censored by Instagram)</li>
+                <li>Olympic swimmer Fu Yuanhui discussing her period affecting her performance at the 2016 Olympics</li>
+                <li>The 2018 documentary "Period. End of Sentence." winning an Academy Award</li>
+                <li>Disney Pixar's "Turning Red" (2022) depicting menstruation in a children's film</li>
+                <li>Increasing number of celebrities and athletes openly discussing menstruation</li>
+            </ul>
+
+            <p>Social media has played a crucial role in destigmatizing menstruation, with activists using platforms to share experiences, education, and advocacy. Hashtags like #PeriodPoverty, #MenstruationMatters, and #EndPeriodStigma have gained millions of engagements.</p>
+
+            <h3>Education Reform</h3>
+
+            <p>Comprehensive menstrual education is increasingly recognized as essential. Effective menstrual education should:</p>
+            <ul>
+                <li>Begin before menarche (ages 8-10)</li>
+                <li>Be inclusive of all genders (menstruation affects transgender men and non-binary individuals)</li>
+                <li>Cover biology, hygiene, product options, and when to seek medical care</li>
+                <li>Address menstrual stigma and cultural attitudes</li>
+                <li>Provide accurate information about the menstrual cycle's connection to overall health</li>
+                <li>Discuss menstrual disorders and normalize seeking medical help</li>
+            </ul>
+
+            <p>Studies show that countries with comprehensive menstrual education report <strong>higher rates</strong> of appropriate period product usage and <strong>better reproductive health outcomes</strong>. Additionally, educating all students (not just those who menstruate) helps reduce stigma and increases empathy.</p>
+        </section>
+
+        <section>
+            <h2>Scientific Research: Current Frontiers</h2>
+
+            <div class="key-point">
+                <p>Contemporary research continues to reveal new insights about menstruation. Recent studies have shown that menstrual blood contains stem cells with potential therapeutic applications. These endometrial stem cells can differentiate into various cell types and show promise for regenerative medicine.</p>
+            </div>
+
+            <h3>Emerging Research Areas</h3>
+
+            <p><strong>1. Menstrual Blood Stem Cells:</strong> Unlike embryonic stem cells, menstrual blood stem cells can be collected non-invasively and don't raise ethical concerns. Research is exploring their use in treating heart disease, stroke, diabetes, and neurodegenerative conditions. These cells have high proliferation rates and can differentiate into cardiac, neural, bone, and other tissue types.</p>
+
+            <p><strong>2. Athletic Performance and Menstrual Cycle:</strong> Studies demonstrate that <strong>athletic performance can vary</strong> across menstrual cycle phases, leading to more personalized training approaches. Research indicates:</p>
+            <ul>
+                <li><strong>Follicular phase</strong> (days 1-14): Higher pain tolerance, better muscle growth response, improved endurance</li>
+                <li><strong>Ovulation</strong> (day 14): Peak physical performance for many athletes</li>
+                <li><strong>Luteal phase</strong> (days 15-28): Increased body temperature, higher caloric needs, potential for reduced endurance</li>
+            </ul>
+
+            <p>Elite athletes and sports teams are beginning to incorporate cycle-based training, adjusting workout intensity and timing based on hormonal phases. The U.S. Women's Soccer Team and British Rowing are among those implementing menstrual cycle tracking in training protocols.</p>
+
+            <p><strong>3. Neuroimaging and Cognitive Function:</strong> Neuroimaging research shows that brain structure and function fluctuate with hormonal changes throughout the cycle. Studies using fMRI and PET scans reveal:</p>
+            <ul>
+                <li>Changes in gray matter volume in specific brain regions across the cycle</li>
+                <li>Variations in neurotransmitter activity (particularly serotonin and GABA)</li>
+                <li>Differences in cognitive performance patterns: some tasks improve during high-estrogen phases, while others are enhanced during high-progesterone phases</li>
+                <li>Altered emotional processing and amygdala reactivity across phases</li>
+            </ul>
+
+            <p><strong>4. Immune Function:</strong> The menstrual cycle significantly affects immune function. Research shows:</p>
+            <ul>
+                <li>Immune responses vary across cycle phases, with implications for vaccine timing and autoimmune disease management</li>
+                <li>Susceptibility to infections may change across the cycle</li>
+                <li>Inflammatory markers fluctuate, affecting conditions like asthma, irritable bowel syndrome, and arthritis</li>
+                <li>Women with autoimmune diseases often report symptom changes across their cycles</li>
+            </ul>
+
+            <p><strong>5. Metabolic Changes:</strong> Basal metabolic rate increases by approximately 5-10% during the luteal phase, requiring an additional 100-300 calories daily. This helps explain premenstrual food cravings and increased appetite. Research is exploring how this knowledge can inform nutrition and weight management strategies.</p>
+
+            <p><strong>6. Pain Mechanisms:</strong> Scientists are investigating why dysmenorrhea (painful periods) affects some individuals severely while others experience minimal discomfort. Current research focuses on:</p>
+            <ul>
+                <li>Genetic factors influencing pain sensitivity and prostaglandin production</li>
+                <li>Central nervous system sensitization in chronic menstrual pain</li>
+                <li>The relationship between menstrual pain and other chronic pain conditions</li>
+                <li>Novel pain management approaches including targeted hormonal interventions and neuromodulation</li>
+            </ul>
+
+            <p><strong>7. Environmental and Endocrine Disruptors:</strong> Research is examining how environmental chemicals affect menstrual cycles and reproductive health:</p>
+            <ul>
+                <li>Phthalates and BPA exposure linked to earlier menarche and cycle irregularities</li>
+                <li>Per- and polyfluoroalkyl substances (PFAS) associated with menstrual disorders</li>
+                <li>Air pollution and its effects on cycle regularity and hormonal balance</li>
+            </ul>
+
+            <h3>Technology and Innovation</h3>
+
+            <p>Emerging technologies are revolutionizing menstrual health management:</p>
+
+            <p><strong>Smart Menstrual Products:</strong> Devices like smart menstrual cups and period underwear with sensors can track flow volume, cycle patterns, and even detect health issues. Some products sync with apps to provide real-time data.</p>
+
+            <p><strong>Hormone Monitoring:</strong> At-home hormone testing kits allow individuals to track estrogen, progesterone, LH, and FSH levels throughout their cycles. This technology is improving fertility tracking and helping diagnose hormonal imbalances.</p>
+
+            <p><strong>Artificial Intelligence:</strong> AI algorithms are being developed to predict cycles more accurately, identify patterns indicating health concerns, and personalize menstrual health recommendations.</p>
+
+            <p><strong>Telemedicine for Menstrual Health:</strong> Virtual consultations are increasing access to specialized menstrual health care, particularly for individuals in underserved areas or those dealing with stigma-related barriers to seeking in-person care.</p>
+        </section>
+
+        <section>
+            <h2>Menstrual Products: Past, Present, and Future</h2>
+
+            <h3>Historical Menstrual Products</h3>
+
+            <p>Throughout history, people have developed creative solutions for managing menstruation:</p>
+
+            <ul>
+                <li><strong>Ancient civilizations:</strong> Used wool, animal skins, grass, moss, and other natural materials</li>
+                <li><strong>Ancient Egypt:</strong> Softened papyrus</li>
+                <li><strong>Ancient Greece and Rome:</strong> Wool wrapped around wood</li>
+                <li><strong>Medieval Europe:</strong> Cloth rags pinned to undergarments (hence "on the rag")</li>
+                <li><strong>19th century:</strong> Homemade cloth pads, menstrual aprons, rubber underwear</li>
+            </ul>
+
+            <h3>Modern Menstrual Products</h3>
+
+            <p><strong>Disposable Pads:</strong> First commercially available in the 1890s, though they didn't become widely used until the 1920s. Modern pads contain absorbent polymers and are designed for different flow levels. They're convenient but contribute significantly to landfill waste.</p>
+
+            <p><strong>Tampons:</strong> Ancient tampons existed (ancient Egyptians used papyrus), but modern commercial tampons were invented in 1931 by Dr. Earle Haas. Initially controversial due to concerns about virginity and morality, they're now widely used. Important considerations include Toxic Shock Syndrome (TSS) risk, though it's rare (1-2 cases per 100,000 menstruating individuals annually).</p>
+
+            <p><strong>Menstrual Cups:</strong> First patented in 1937 but didn't gain popularity until the 2000s. Made of medical-grade silicone, rubber, or latex, they can be worn for up to 12 hours and last for years. The global menstrual cup market is expected to reach <strong>$1.89 billion by 2026</strong>.</p>
+
+            <p><strong>Period Underwear:</strong> Absorbent underwear with moisture-wicking layers that can hold the equivalent of 1-5 tampons worth of fluid. Reusable and environmentally friendly, though expensive upfront.</p>
+
+            <p><strong>Cloth Pads:</strong> Modern versions of historical rags, made with absorbent fabrics and waterproof backing. Washable and reusable, they appeal to environmentally conscious users and those in areas with limited access to disposable products.</p>
+
+            <p><strong>Menstrual Discs:</strong> Similar to cups but sit at the cervix rather than in the vaginal canal. Can be worn during intercourse. Available in both disposable and reusable versions.</p>
+
+            <h3>Innovations on the Horizon</h3>
+
+            <p>Future menstrual products may include:</p>
+            <ul>
+                <li>Smart products with embedded sensors for health monitoring</li>
+                <li>Biodegradable disposable products that decompose in months rather than centuries</li>
+                <li>Products made from sustainable materials like organic cotton, bamboo, or even algae</li>
+                <li>Customizable 3D-printed menstrual cups</li>
+                <li>Products that actively deliver pain medication or hormones</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Menstrual Disorders: Recognition and Treatment</h2>
+
+            <h3>Common Menstrual Disorders</h3>
+
+            <p>Beyond the conditions mentioned earlier, several other menstrual disorders deserve attention:</p>
+
+            <p><strong>Menorrhagia (Heavy Menstrual Bleeding):</strong> Defined as blood loss exceeding 80ml per cycle or bleeding lasting longer than 7 days. Affects approximately <strong>25-30%</strong> of reproductive-aged individuals. Causes include hormonal imbalances, uterine fibroids, adenomyosis, bleeding disorders, and certain medications.</p>
+
+            <p><strong>Dysmenorrhea (Painful Periods):</strong> Primary dysmenorrhea (no underlying pathology) is caused by excessive prostaglandin production. Secondary dysmenorrhea results from conditions like endometriosis or adenomyosis. Treatment ranges from NSAIDs and heat therapy to hormonal contraceptives and surgical interventions.</p>
+
+            <p><strong>Oligomenorrhea:</strong> Infrequent periods (cycles longer than 35 days). Can be caused by PCOS, thyroid disorders, hyperprolactinemia, or excessive exercise.</p>
+
+            <p><strong>Polymenorrhea:</strong> Frequent periods (cycles shorter than 21 days). May indicate anovulation, thyroid problems, or uterine abnormalities.</p>
+
+            <p><strong>Metrorrhagia:</strong> Irregular bleeding between periods. Causes include hormonal imbalances, polyps, fibroids, infections, or, rarely, cancer.</p>
+
+            <p><strong>Dysmenorrheic Bleeding:</strong> Prolonged intermenstrual bleeding that can indicate hormonal issues or structural abnormalities.</p>
+
+            <h3>The Importance of Seeking Medical Care</h3>
+
+            <div class="warning-box">
+                <p><strong>Seek immediate medical attention if you experience:</strong></p>
                 <ul>
-                    <li><span class="highlight">Polycystic Ovary Syndrome (PCOS)</span> - affects 6-12% of reproductive-aged individuals</li>
-                    <li><span class="highlight">Endometriosis</span> - impacts approximately 10% of reproductive-aged individuals</li>
-                    <li><strong>Thyroid disorders</strong> - can cause menstrual irregularities in up to 68% of cases</li>
+                    <li>Soaking through a pad or tampon every hour for several hours</li>
+                    <li>Passing blood clots larger than a golf ball</li>
+                    <li>Severe pain not relieved by over-the-counter medications</li>
+                    <li>Signs of anemia (extreme fatigue, dizziness, shortness of breath, chest pain)</li>
+                    <li>Sudden changes in menstrual patterns</li>
+                    <li>Heavy bleeding accompanied by pregnancy signs</li>
+                    <li>Fever with severe menstrual symptoms</li>
                 </ul>
-    
-                <h3>Tracking and Technology</h3>
-                
-                <p>Research shows that <strong>200+ million people</strong> worldwide use period-tracking apps. Studies indicate that consistent tracking can improve healthcare outcomes, with <strong>89% of users</strong> reporting better understanding of their cycles.</p>
-            </section>
-    
-            <section>
-                <h2>Breaking the Silence: Recent Progress</h2>
-    
-                <h3>Policy Changes</h3>
-                
-                <p>Recent years have seen significant policy shifts. As of 2023, <span class="highlight">12 countries</span> have eliminated taxes on menstrual products. Several countries, including India and Kenya, provide free menstrual products in schools.</p>
-    
-                <h3>Workplace Policies</h3>
-                
-                <p>Progressive companies are implementing menstrual leave policies. Countries like Japan, South Korea, and Indonesia have had menstrual leave laws for decades, though uptake remains low due to stigma. Recent surveys show that <strong>67% of employees</strong> support workplace period policies.</p>
-            </section>
-    
-            <section>
-                <h2>Scientific Research: Current Frontiers</h2>
-    
-                <div class="key-point">Contemporary research continues to reveal new insights about menstruation. Recent studies have shown that menstrual blood contains stem cells with potential therapeutic applications. Research also indicates that menstrual cycle phases can affect everything from immune function to cognitive performance.</p>
-                </div>
-                <p>Studies demonstrate that <strong>athletic performance can vary</strong> across menstrual cycle phases, leading to more personalized training approaches. Neuroimaging research shows that brain structure and function fluctuate with hormonal changes throughout the cycle.</p>
-            </section>
-    
-            <section>
-                <h2>Looking Forward: The Future of Menstrual Health</h2>
-    
-                <p>The future of menstrual health lies in continued research, education, and policy change. Emerging technologies like reusable menstrual products are becoming more accessible, with the global menstrual cup market expected to reach <strong>$1.89 billion by 2026</strong>.</p>
-    
-                <p>Educational initiatives are crucial. Countries with comprehensive menstrual education report <strong>higher rates</strong> of period product usage and <strong>better reproductive health outcomes</strong>. The goal is to transform menstruation from a source of shame into a recognized aspect of human biology deserving of scientific attention and social support.</p>
-            </section>
-    
-            <footer>
-                <h2>Conclusion</h2>
-                
-                <p>Understanding menstruation through a scientific lens reveals it to be a complex, fascinating biological process rather than the mysterious and shameful phenomenon it was historically considered. While significant progress has been made in both scientific understanding and social acceptance, challenges remain in ensuring access to menstrual products, education, and healthcare worldwide.</p>
-    
-                <p>The statistics paint a clear picture: menstruation affects nearly half the world's population, yet misconceptions and inequalities persist. By continuing to invest in research, education, and policy reform, we can work toward a world where menstruation is treated with the scientific rigor and social acceptance it deserves.</p>
-    
-                <p><em>This article represents current scientific understanding based on peer-reviewed research and global health statistics. For specific medical concerns, always consult with healthcare professionals.</em></p>
-            </footer>
+            </div>
+
+            <p>Unfortunately, many individuals delay seeking care for menstrual problems due to:</p>
+            <ul>
+                <li>Normalization of severe symptoms ("my mother had painful periods too")</li>
+                <li>Stigma and embarrassment about discussing menstruation</li>
+                <li>Previous experiences of having concerns dismissed by healthcare providers</li>
+                <li>Lack of access to healthcare</li>
+                <li>Financial barriers</li>
+                <li>Cultural factors that discourage discussing reproductive health</li>
+            </ul>
+
+            <p>Advocacy and self-advocacy are crucial. Individuals should feel empowered to insist on thorough evaluation of menstrual concerns and seek second opinions when necessary.</p>
+        </section>
+
+        <section>
+            <h2>Cultural Perspectives and Inclusivity</h2>
+
+            <h3>Menstruation and Gender Identity</h3>
+
+            <p>It's essential to recognize that not all people who menstruate are women, and not all women menstruate. Transgender men, non-binary individuals, and intersex people may menstruate. Gender-affirming hormone therapy (testosterone) typically stops menstruation, but not all transgender men choose or have access to hormonal treatment.</p>
+
+            <p>Inclusive language and practices are important:</p>
+            <ul>
+                <li>Using terms like "people who menstruate" or "menstruating individuals" in appropriate contexts</li>
+                <li>Ensuring menstrual product dispensers are available in all-gender and men's bathrooms</li>
+                <li>Recognizing that menstruation can cause significant dysphoria for transgender and non-binary individuals</li>
+                <li>Providing gender-affirming care options for managing menstruation</li>
+            </ul>
+
+            <h3>Global Cultural Practices</h3>
+
+            <p>Menstrual practices and beliefs vary enormously worldwide. Understanding this diversity is crucial for global health initiatives and cultural competency:</p>
+
+            <p><strong>Positive Traditions:</strong> Some cultures celebrate menarche with coming-of-age ceremonies, viewing it as a transition to adulthood deserving of recognition and celebration. The Apache Sunrise Ceremony, Ghanaian dipo, and Ulwaluko in South Africa are examples.</p>
+
+            <p><strong>Restrictive Practices:</strong> Other cultures impose restrictions during menstruation, prohibiting women from cooking, touching certain objects, entering religious spaces, or participating in community activities. While rooted in historical beliefs about menstrual impurity, these practices can be isolating and discriminatory.</p>
+
+            <p><strong>Modern Evolution:</strong> Many communities are re-examining traditional menstrual practices, working to preserve positive cultural elements while eliminating harmful restrictions.</p>
+        </section>
+
+        <section>
+            <h2>Looking Forward: The Future of Menstrual Health</h2>
+
+            <p>The future of menstrual health lies in continued research, education, and policy change. Key areas for progress include:</p>
+
+            <h3>Research Priorities</h3>
+            <ul>
+                <li>Better understanding and treatment of endometriosis, PMDD, and other menstrual disorders</li>
+                <li>Investigating environmental factors affecting menstrual health</li>
+                <li>Developing more effective, less invasive treatments</li>
+                <li>Studying diverse populations to ensure research inclusivity</li>
+                <li>Exploring the menstrual cycle's effects on various aspects of health</li>
+            </ul>
+
+            <h3>Policy Goals</h3>
+            <ul>
+                <li>Universal access to affordable menstrual products</li>
+                <li>Comprehensive menstrual education in all schools</li>
+                <li>Elimination of taxes on menstrual products globally</li>
+                <li>Workplace policies that accommodate menstruation</li>
+                <li>Improved healthcare coverage for menstrual disorders</li>
+                <li>Funding for menstrual health research</li>
+            </ul>
+
+            <h3>Social Change</h3>
+            <ul>
+                <li>Continued destigmatization through education and media representation</li>
+                <li>Normalizing open discussion of menstruation</li>
+                <li>Empowering individuals to advocate for their menstrual health</li>
+                <li>Promoting gender-inclusive language and practices</li>
+                <li>Challenging harmful cultural practices while respecting diverse traditions</li>
+            </ul>
+
+            <h3>Technological Innovation</h3>
+            <ul>
+                <li>Sustainable, environmentally friendly menstrual products</li>
+                <li>Advanced tracking and diagnostic tools</li>
+                <li>Personalized menstrual health interventions</li>
+                <li>Telemedicine expanding access to specialized care</li>
+                <li>AI and machine learning improving menstrual health management</li>
+            </ul>
+
+            <p>The goal is to transform menstruation from a source of shame and barrier to equality into a recognized aspect of human biology deserving of scientific attention, social support, and adequate resources. This requires coordinated efforts from researchers, healthcare providers, policymakers, educators, activists, and communities worldwide.</p>
+        </section>
+
+ </footer>
         </article>
 <div class="statistic">
-1. United Nations Department of Economic and Social Affairs. (2020). *World Population Prospects 2019*. United Nations. \[Provides global population figures used to estimate that approximately 1.9 billion people menstruate]
-
-2. American College of Obstetricians and Gynecologists. (2015). Committee Opinion No. 651: Menstruation in Girls and Adolescents: Using the Menstrual Cycle as a Vital Sign. *Obstetrics & Gynecology*, 126(6), e143–e146. \[Covers average cycle length (21–35 days), typical menstrual phase duration (3–7 days), lifetime cycle count (\~400–500), and recognition of menstruation as a vital sign]
-
-3. Stevenson, J. C. (2005). Premenstrual symptoms: epidemiology and causes. *Australian Family Physician*, 34(11), 947–951. \[Reports that up to 80 percent of menstruating individuals experience some form of premenstrual symptoms]
-
-4. Ju, H., Jones, M., & Mishra, G. D. (2014). The prevalence and risk factors of dysmenorrhea: A systematic review and meta-analysis. *Epidemiologic Reviews*, 36(1), 104–113. \[Finds that globally, dysmenorrhea affects between 45 and 95 percent of menstruating individuals]
-
-5. Pliny the Elder. (77 CE). *Naturalis Historia*. \[Describes ancient Roman beliefs that menstrual blood could turn wine sour or harm crops]
-
-6. The Holy Bible, Leviticus 15:19–30. \[Prescribes that a menstruating woman was considered “unclean” for seven days and required ritual purification]
-
-7. Hippocrates. (c. 400 BCE). *On the Nature of Man*. \[Records Hippocratic theories that menstrual blood functioned as a means for women to purge “bad humors”]
-
-8. Clarke, E. L. (1873). *Sex in Education, or, A Fair Chance for the Girls*. Boston, MA: James R. Osgood & Co. \[Argues that intellectual exertion during menstruation could cause sterility and mental breakdown]
-
-9. Brown, P. H. (1933). The discovery of progesterone and its role in the menstrual cycle. *Journal of Endocrinology*, 15(2), 141–147. \[Details early 20th century identification of progesterone and its significance in understanding hormonal regulation of menstruation]
-
-10. Sommer, M., Schmitt, M., Clatworthy, D., et al. (2015). Menstrual hygiene management and school absenteeism: Findings from Ghana, Kenya, and Ethiopia. *BMJ Global Health*, 1(3), e000183. \[Reports that, in some regions of sub-Saharan Africa, girls miss an average of five days of school per month due to menstruation and that approximately one in ten school-age girls miss school during their period]
-
-11. MacNeill, S., & Wilbur, J. (2018). Economic impact of menstrual products: A lifetime cost analysis. *Journal of Women's Health*, 27(3), 295–300. \[Estimates that the average person spends between USD 6,000 and 8,000 on menstrual products over their lifetime]
-
-12. Azziz, R., Carmina, E., Dewailly, D., et al. (2004). The prevalence and features of the polycystic ovary syndrome in an unselected population. *Journal of Clinical Endocrinology & Metabolism*, 89(6), 2745–2749. \[Estimates PCOS prevalence at 6–12 percent among reproductive-aged individuals]
-
-13. Eskenazi, B., & Warner, M. L. (1997). Epidemiology of endometriosis in reproductive-age women. *Obstetrics & Gynecology Clinics of North America*, 24(2), 235–258. \[Estimates that endometriosis affects approximately 10 percent of reproductive-aged individuals]
-
-14. Polyzos, N. P., & Anagnostis, P. (2011). Thyroid dysfunction and menstrual disorders: A systematic review. *Journal of Clinical Endocrinology & Metabolism*, 96(1), 264–271. \[Reports that thyroid disorders contribute to menstrual irregularities in up to 68 percent of cases]
-
-15. Westwood, M., Acharya, G., & Jain, R. (2020). Mobile app usage in menstrual cycle management: A cross-sectional study. *International Journal of Women's Health*, 12, 575–583. \[Finds that over 200 million people worldwide use period-tracking apps and that 89 percent of users report improved understanding of their cycles]
-
-16. United Nations Entity for Gender Equality and the Empowerment of Women (UN Women). (2023). *Menstrual Product Taxation Tracker Report*. UN Women. \[Documents that, as of 2023, 12 countries have eliminated taxes on menstrual products]
-
-17. United Nations Children's Fund (UNICEF). (2022). *Menstrual Hygiene and Education: Global Progress Report*. UNICEF. \[Reports that India and Kenya provide free menstrual products in schools]
-
-18. Bennett, S., Campello, A., & McCormack, S. (2020). Menstrual leave policies: A global review. *Global Public Health*, 15(4), 585–599. \[Surveys countries with menstrual leave laws (e.g., Japan, South Korea, Indonesia) and examines workplace uptake]
-
-19. Ipsos MORI. (2021). *Survey of Employee Attitudes towards Workplace Menstrual Policies*. Ipsos Global Reports. \[Finds that 67 percent of employees support menstrual-friendly workplace policies]
-
-20. Plan International USA. (2017). *Period Equity Survey 2017*. Plan International USA. \[Reports that 1 in 5 students in the United States have struggled to afford menstrual products]
-
-21. Madden, A., Leichliter, J. S., & Rosenbaum, J. (2018). Menstrual stigma: A global review of literature. *Women's Health Issues*, 28(3), 263–276. \[Finds that 58 percent of women report experiencing period-related shame]
-
-22. Plan International UK. (2017). *Because I Am a Girl: Period Poverty Report*. Plan International UK. \[Reports that 73 percent of women have faced period-related discrimination in the workplace]
-
-23. Pan, J., Ding, J. Y., Zhang, P., & Liu, Y. H. (2008). Isolation and characterization of human endometrial stem cells from menstrual blood. *Reproductive Biomedicine Online*, 17(1), 118–127. \[Demonstrates that menstrual blood contains stem cells with therapeutic potential]
-
-24. McNulty, K. L., Elliott-Sale, K. J., Dolan, E., et al. (2020). The effects of menstrual cycle phase on athletic performance: A systematic review. *International Journal of Sports Physiology and Performance*, 15(4), 516–528. \[Synthesizes evidence that athletic performance can vary across menstrual phases]
-
-25. De Bondt, T., De Belder, M., & Vingerhoets, G. (2013). Brain imaging across the menstrual cycle: A systematic review. *Journal of Neuroendocrinology*, 25(2), 107–116. \[Reviews neuroimaging studies showing that brain structure and function fluctuate with hormonal changes over the cycle]
-</div>
+  <li>United Nations Department of Economic and Social Affairs. (2020). <em>World Population Prospects 2019</em>. United Nations.</li>
+                
+                <li>American College of Obstetricians and Gynecologists. (2015). Committee Opinion No. 651: Menstruation in Girls and Adolescents: Using the Menstrual Cycle as a Vital Sign. <em>Obstetrics & Gynecology</em>, 126(6), e143–e146.</li>
+                
+                <li>Stevenson, J. C. (2005). Premenstrual symptoms: epidemiology and causes. <em>Australian Family Physician</em>, 34(11), 947–951.</li>
+                
+                <li>Ju, H., Jones, M., & Mishra, G. D. (2014). The prevalence and risk factors of dysmenorrhea: A systematic review and meta-analysis. <em>Epidemiologic Reviews</em>, 36(1), 104–113.</li>
+                
+                <li>Pliny the Elder. (77 CE). <em>Naturalis Historia</em>.</li>
+                
+                <li>The Holy Bible, Leviticus 15:19–30.</li>
+                
+                <li>Hippocrates. (c. 400 BCE). <em>On the Nature of Man</em>.</li>
+                
+                <li>Clarke, E. L. (1873). <em>Sex in Education, or, A Fair Chance for the Girls</em>. Boston, MA: James R. Osgood & Co.</li>
+                
+                <li>Brown, P. H. (1933). The discovery of progesterone and its role in the menstrual cycle. <em>Journal of Endocrinology</em>, 15(2), 141–147.</li>
+                
+                <li>Sommer, M., Schmitt, M., Clatworthy, D., et al. (2015). Menstrual hygiene management and school absenteeism: Findings from Ghana, Kenya, and Ethiopia. <em>BMJ Global Health</em>, 1(3), e000183.</li>
+                
+                <li>MacNeill, S., & Wilbur, J. (2018). Economic impact of menstrual products: A lifetime cost analysis. <em>Journal of Women's Health</em>, 27(3), 295–300.</li>
+                
+                <li>Azziz, R., Carmina, E., Dewailly, D., et al. (2004). The prevalence and features of the polycystic ovary syndrome in an unselected population. <em>Journal of Clinical Endocrinology & Metabolism</em>, 89(6), 2745–2749.</li>
+                
+                <li>Eskenazi, B., & Warner, M. L. (1997). Epidemiology of endometriosis in reproductive-age women. <em>Obstetrics & Gynecology Clinics of North America</em>, 24(2), 235–258.</li>
+                
+                <li>Polyzos, N. P., & Anagnostis, P. (2011). Thyroid dysfunction and menstrual disorders: A systematic review. <em>Journal of Clinical Endocrinology & Metabolism</em>, 96(1), 264–271.</li>
+                
+                <li>Westwood, M., Acharya, G., & Jain, R. (2020). Mobile app usage in menstrual cycle management: A cross-sectional study. <em>International Journal of Women's Health</em>, 12, 575–583.</li>
+                
+                <li>United Nations Entity for Gender Equality and the Empowerment of Women (UN Women). (2023). <em>Menstrual Product Taxation Tracker Report</em>. UN Women.</li>
+                
+                <li>United Nations Children's Fund (UNICEF). (2022). <em>Menstrual Hygiene and Education: Global Progress Report</em>. UNICEF.</li>
+                
+                <li>Bennett, S., Campello, A., & McCormack, S. (2020). Menstrual leave policies: A global review. <em>Global Public Health</em>, 15(4), 585–599.</li>
+                
+                <li>Ipsos MORI. (2021). <em>Survey of Employee Attitudes towards Workplace Menstrual Policies</em>. Ipsos Global Reports.</li>
+                
+                <li>Plan International USA. (2017). <em>Period Equity Survey 2017</em>. Plan International USA.</li>
+                
+                <li>Madden, A., Leichliter, J. S., & Rosenbaum, J. (2018). Menstrual stigma: A global review of literature. <em>Women's Health Issues</em>, 28(3), 263–276.</li>
+                
+                <li>Plan International UK. (2017). <em>Because I Am a Girl: Period Poverty Report</em>. Plan International UK.</li>
+                
+                <li>Pan, J., Ding, J. Y., Zhang, P., & Liu, Y. H. (2008). Isolation and characterization of human endometrial stem cells from menstrual blood. <em>Reproductive Biomedicine Online</em>, 17(1), 118–127.</li>
+                
+                <li>McNulty, K. L., Elliott-Sale, K. J., Dolan, E., et al. (2020). The effects of menstrual cycle phase on athletic performance: A systematic review. <em>International Journal of Sports Physiology and Performance</em>, 15(4), 516–528.</li>
+                
+                <li>De Bondt, T., De Belder, M., & Vingerhoets, G. (2013). Brain imaging across the menstrual cycle: A systematic review. <em>Journal of Neuroendocrinology</em>, 25(2), 107–116.</li>
+                
+                <li>Munro, M. G., Critchley, H. O., Fraser, I. S., et al. (2011). The FIGO classification of causes of abnormal uterine bleeding. <em>International Journal of Gynecology & Obstetrics</em>, 113(1), 3–13.</li>
+                
+                <li>Hawkins, S. M., & Matzuk, M. M. (2008). The menstrual cycle: basic biology. <em>Annals of the New York Academy of Sciences</em>, 1135, 10–18.</li>
+                
+                <li>Kouides, P. A., Conard, J., Peyvandi, F., et al. (2005). Hemostasis and menstruation: appropriate investigation for underlying disorders of hemostasis in women with excessive menstrual bleeding. <em>Fertility and Sterility</em>, 84(5), 1345–1351.</li>
+                
+                <li>Haamid, F., Sass, A. E., & Dietrich, J. E. (2017). Heavy menstrual bleeding in adolescents. <em>Journal of Pediatric and Adolescent Gynecology</em>, 30(3), 335–340.</li>
+                
+                <li>Rees, M. C., & Turnbull, A. C. (1989). Menstrual blood loss and prostaglandins. <em>British Journal of Obstetrics and Gynaecology</em>, 96(6), 697–701.</li>
+                
+                <li>Yonkers, K. A., O'Brien, P. M., & Eriksson, E. (2008). Premenstrual syndrome. <em>The Lancet</em>, 371(9619), 1200–1210.</li>
+                
+                <li>Stewart, E. A. (2015). Uterine fibroids. <em>The Lancet</em>, 357(9252), 293–298.</li>
+                
+                <li>Benagiano, G., Habiba, M., & Brosens, I. (2012). The pathophysiology of uterine adenomyosis: an update. <em>Fertility and Sterility</em>, 98(3), 572–579.</li>
+                
+                <li>Hallberg, L., Högdahl, A. M., Nilsson, L., & Rybo, G. (1966). Menstrual blood loss—a population study. <em>Acta Obstetricia et Gynecologica Scandinavica</em>, 45(3), 320–351.</li>
+                
+                <li>Gordon, C. M., Ackerman, K. E., Berga, S. L., et al. (2017). Functional hypothalamic amenorrhea: An Endocrine Society clinical practice guideline. <em>The Journal of Clinical Endocrinology & Metabolism</em>, 102(5), 1413–1439.</li> </div>
     <div class="comments-section">
         <h3>Comments</h3>
         <ul class="comments-list"></ul>
