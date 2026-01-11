@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="iui.html">IUI</a></li>
                     <li><a href="bloodtests.html">Blood tests</a></li>
                     <li><a href="letrozole.html">Letrozole</a></li>
+                    <li><a href="maleinf.html">Male infertility</a></li>
                 </ul>
             </li>
             
