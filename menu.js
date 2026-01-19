@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="rod.html">Contraceptive implant - The Rod</a></li>
                     <li><a href="condoms.html">The Science of Condoms</a></li>
                     <li><a href="virginity.html">Virginity</a></li>
+                    <li><a href="pillsymptoms.html">Pill Symptoms Scientific</a></li>
                 </ul>
             </li>
             
