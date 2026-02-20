@@ -14,7 +14,7 @@
   --soft-gray: #c4c4c4;
   --paper-white: #fafafa;
   --cream-paper: #f8f6f3;
-  --rose-accent: #d4537c;
+  --rose-accent: #e6a3de;
   --terracotta: #c47b5f;
   --sage: #7a9b76;
   
@@ -469,8 +469,8 @@ a:hover {
 }
 
 .statistic {
-  background: var(--ink-black);
-  color: var(--paper-white);
+  background: #e3f2fd;
+  color: var(--charcoal);
   padding: var(--space-4);
   margin: var(--space-5) 0;
   border-left: 4px solid var(--rose-accent);
@@ -520,7 +520,7 @@ a:hover {
 }
 
 .read-more::after {
-  content: 'â†’';
+  content: '→';
   transition: transform var(--transition-base);
 }
 
