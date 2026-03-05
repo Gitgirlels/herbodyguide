@@ -695,6 +695,7 @@ a:hover {
    ============================================ */
 
 .mobile-toggle {
+   display: block; /* ← always visible */
   position: fixed;
   top: var(--space-3);
   left: var(--space-3);
@@ -706,7 +707,6 @@ a:hover {
   height: 48px;
   font-size: 20px;
   cursor: pointer;
-  display: none;
   transition: all var(--transition-base);
 }
 
