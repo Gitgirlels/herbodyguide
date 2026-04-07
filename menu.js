@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="hpv.html"> Human Papillomavirus (HPV)</a></li>
            <li><a href="lapendo.html"> Laparoscopic endometrius excision surgery</a></li>
            <li><a href="estrogen.html"> Estrogen</a></li>
+            <li><a href="uti.html"> Urinary Tract Infection UTI </a></li>
+          
                 </ul>
             </li>
 
