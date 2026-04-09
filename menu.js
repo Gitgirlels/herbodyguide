@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="pregtest.html">Pregnancy Tests</a></li>
                     <li><a href="twins.html">Twins</a></li>
                     <li><a href="iui.html">IUI</a></li>
+                    
                     <li><a href="bloodtests.html">Blood tests</a></li>
                     <li><a href="letrozole.html">Letrozole</a></li>
                     <li><a href="maleinf.html">Male infertility</a></li>
@@ -140,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="tampons.html">Tampons</a></li>
                     <li><a href="animalperiod.html">Animals That Menstruate</a></li>
                     <li><a href="pmdd.html">Premenstrual Dysphoric Disorder (PMDD)</a></li>
+                    <li><a href="heavyperiods.html">Heavy Periods</a></li>
                 </ul>
             </li>
             
@@ -168,6 +170,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="gestdiab.html">Gestational Diabetes</a></li>
                     <li><a href="molarpreg.html">Molar Pregnancy</a></li>
                     <li><a href="preeclampsia.html">Preeclampsia</a></li>
+                    <li><a href="ectopic.html">Ectopic Pregnancy</a></li>
+                    <li><a href="postpdep.html">Postpartum depression</a></li>
                 </ul>
             </li>
             
