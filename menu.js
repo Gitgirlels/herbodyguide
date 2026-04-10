@@ -278,4 +278,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Sidebar toggle (mobile button)
+  window.toggleSidebar = function() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('open');
+  };
+
+  // Section accordion toggle
+  window.toggleSection = function(btn) {
+    const content = btn.nextElementSibling;
+    const toggle = btn.querySelector('.section-toggle');
+    const isOpen = content.style.display === 'block';
+    content.style.display = isOpen ? 'none' : 'block';
+    toggle.textContent = isOpen ? '◀' : '▼';
+  };
+  
 });
