@@ -33,14 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
       line-height: 1;
     }
     .search-results {
-      padding: 0 4px 8px;
+      padding: 0 16px 8px;
       font-size: 13px;
-      max-height: 300px;
-      overflow-y: auto;
     }
     .search-results a {
       display: block;
-      padding: 6px 0 4px;
+      padding: 5px 0;
       color: #c2507a;
       text-decoration: none;
       border-bottom: 1px solid #f0f0f0;
@@ -48,30 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
     .search-results a:hover {
       text-decoration: underline;
     }
-    .search-results .result-snippet {
-      font-size: 11px;
-      color: #777;
-      margin-top: 2px;
-      line-height: 1.4;
-    }
-    .search-results .result-snippet mark {
-      background: #fde8f0;
-      color: #c2507a;
-      font-weight: bold;
-      border-radius: 2px;
-      padding: 0 1px;
-    }
     .search-results .no-results {
       color: #999;
       padding: 6px 0;
-    }
-    .search-results .searching {
-      color: #aaa;
-      font-style: italic;
-      padding: 6px 0;
-    }
-    .section-content {
-      display: none;
     }
   `;
   document.head.appendChild(style);
@@ -83,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="search-container">
           <div class="search-wrapper">
             <span>🔍</span>
-            <input type="text" id="siteSearch" placeholder="Search..." />
+            <input type="text" id="siteSearch" placeholder="Search articles..." />
           </div>
           <div class="search-results" id="searchResults"></div>
         </div>
@@ -106,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="pregtest.html">Pregnancy Tests</a></li>
                     <li><a href="twins.html">Twins</a></li>
                     <li><a href="iui.html">IUI</a></li>
+                    
                     <li><a href="bloodtests.html">Blood tests</a></li>
                     <li><a href="letrozole.html">Letrozole</a></li>
                     <li><a href="maleinf.html">Male infertility</a></li>
@@ -120,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <ul class="section-content">
                     <li><a href="birthcontrolpills.html">Birth Control pills</a></li>
                     <li><a href="iud.html">IUD Intrauterine device</a></li>
-                    <li><a href="pull.html">The Pull Out Method</a></li>
+                      <li><a href="pull.html">The Pull Out Method</a></li>
                     <li><a href="rod.html">Contraceptive implant - The Rod</a></li>
                     <li><a href="condoms.html">The Science of Condoms</a></li>
                     <li><a href="virginity.html">Virginity</a></li>
@@ -211,14 +189,10 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   `;
   
-  const container = document.getElementById('sidebar-container');
-  if (!container) {
-    console.error('menu.js: No element with id="sidebar-container" found. Add <div id="sidebar-container"></div> to your HTML.');
-    return;
-  }
-  container.innerHTML = sidebarHTML;
+  document.getElementById('sidebar-container').innerHTML = sidebarHTML;
 
-  // --- Page index ---
+  // --- Search logic ---
+  // Master list of all pages (title + url)
   const allPages = [
     { title: "Factors affecting fertilization", url: "post1.html" },
     { title: "Reproductive Anatomy", url: "post2.html" },
@@ -236,8 +210,7 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Male infertility", url: "maleinf.html" },
     { title: "Testosterone", url: "testosterone.html" },
     { title: "Birth Control pills", url: "birthcontrolpills.html" },
-    { title: "IUD Intrauterine device", url: "iud.html" },
-    { title: "The Pull Out Method", url: "pull.html" },
+    { title: "IUD", url: "iud.html" },
     { title: "Contraceptive implant - The Rod", url: "rod.html" },
     { title: "The Science of Condoms", url: "condoms.html" },
     { title: "Virginity", url: "virginity.html" },
@@ -251,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Breast Cancer", url: "breastcancer.html" },
     { title: "Migraines and Women", url: "migraines.html" },
     { title: "Human Papillomavirus (HPV)", url: "hpv.html" },
-    { title: "Laparoscopic endometriosis excision surgery", url: "lapendo.html" },
+    { title: "Laparoscopic endometrius excision surgery", url: "lapendo.html" },
     { title: "Estrogen", url: "estrogen.html" },
     { title: "Urinary Tract Infection UTI", url: "uti.html" },
     { title: "Period", url: "period.html" },
@@ -260,7 +233,6 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Tampons", url: "tampons.html" },
     { title: "Animals That Menstruate", url: "animalperiod.html" },
     { title: "Premenstrual Dysphoric Disorder (PMDD)", url: "pmdd.html" },
-    { title: "Heavy Periods", url: "heavyperiods.html" },
     { title: "Morning Sickness", url: "morning-sickness.html" },
     { title: "Breastfeeding", url: "breastfeeding.html" },
     { title: "Pregnancy Dating", url: "ultrasoundlmp.html" },
@@ -276,119 +248,34 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Gestational Diabetes", url: "gestdiab.html" },
     { title: "Molar Pregnancy", url: "molarpreg.html" },
     { title: "Preeclampsia", url: "preeclampsia.html" },
-    { title: "Ectopic Pregnancy", url: "ectopic.html" },
-    { title: "Postpartum Depression", url: "postpdep.html" },
     { title: "What is Consent?", url: "what-is-consent.html" },
-    { title: "The Global Birth Rate Decline", url: "birthratedecline.html" },
+    { title: "The Global birth rate Decline", url: "birthratedecline.html" },
     { title: "Partner and Sexual Violence", url: "dv.html" },
   ];
-
-  // --- Content cache ---
-  const contentCache = {};
-
-  async function fetchPageText(url) {
-    if (contentCache[url] !== undefined) return contentCache[url];
-    try {
-      const res = await fetch(url);
-      if (!res.ok) { contentCache[url] = ''; return ''; }
-      const html = await res.text();
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      doc.querySelectorAll('script, style, nav, #sidebar-container').forEach(el => el.remove());
-      const text = ((doc.body && (doc.body.innerText || doc.body.textContent)) || '').replace(/\s+/g, ' ').trim();
-      contentCache[url] = text;
-      return text;
-    } catch {
-      contentCache[url] = '';
-      return '';
-    }
-  }
-
-  function getSnippet(text, query) {
-    const idx = text.toLowerCase().indexOf(query.toLowerCase());
-    if (idx === -1) return '';
-    const start = Math.max(0, idx - 60);
-    const end = Math.min(text.length, idx + query.length + 60);
-    let snippet = (start > 0 ? '...' : '') + text.slice(start, end) + (end < text.length ? '...' : '');
-    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-    snippet = snippet.replace(regex, '<mark>$1</mark>');
-    return snippet;
-  }
 
   const searchInput = document.getElementById('siteSearch');
   const searchResults = document.getElementById('searchResults');
 
-  let debounceTimer;
-
   searchInput.addEventListener('input', function() {
-    clearTimeout(debounceTimer);
-    const query = this.value.trim();
+    const query = this.value.trim().toLowerCase();
     searchResults.innerHTML = '';
 
-    if (query.length < 2) return;
+    if (query.length < 2) return; // don't search until 2+ chars typed
 
-    searchResults.innerHTML = '<p class="searching">Searching...</p>';
+    const matches = allPages.filter(page =>
+      page.title.toLowerCase().includes(query)
+    );
 
-    debounceTimer = setTimeout(async () => {
-      const queryLower = query.toLowerCase();
-
-      const results = await Promise.all(
-        allPages.map(async (page) => {
-          const titleMatch = page.title.toLowerCase().includes(queryLower);
-          const bodyText = await fetchPageText(page.url);
-          const bodyMatch = bodyText.toLowerCase().includes(queryLower);
-          if (titleMatch || bodyMatch) {
-            return { page, titleMatch, snippet: bodyMatch ? getSnippet(bodyText, query) : '' };
-          }
-          return null;
-        })
-      );
-
-      const matches = results.filter(Boolean);
-      matches.sort((a, b) => b.titleMatch - a.titleMatch);
-
-      searchResults.innerHTML = '';
-
-      if (matches.length === 0) {
-        searchResults.innerHTML = '<p class="no-results">No results found.</p>';
-      } else {
-        matches.forEach(({ page, snippet }) => {
-          const item = document.createElement('div');
-          item.style.borderBottom = '1px solid #f0f0f0';
-          item.style.paddingBottom = '6px';
-          item.style.marginBottom = '4px';
-
-          const link = document.createElement('a');
-          link.href = page.url;
-          link.textContent = page.title;
-          item.appendChild(link);
-
-          if (snippet) {
-            const snippetEl = document.createElement('div');
-            snippetEl.className = 'result-snippet';
-            snippetEl.innerHTML = snippet;
-            item.appendChild(snippetEl);
-          }
-
-          searchResults.appendChild(item);
-        });
-      }
-    }, 300);
+    if (matches.length === 0) {
+      searchResults.innerHTML = '<p class="no-results">No results found.</p>';
+    } else {
+      matches.forEach(page => {
+        const link = document.createElement('a');
+        link.href = page.url;
+        link.textContent = page.title;
+        searchResults.appendChild(link);
+      });
+    }
   });
-
-  // Sidebar toggle (mobile)
-  window.toggleSidebar = function() {
-    const sidebar = document.getElementById('sidebar');
-    if (sidebar) sidebar.classList.toggle('open');
-  };
-
-  // Section accordion toggle — fixed: uses getComputedStyle so first click works
-  window.toggleSection = function(btn) {
-    const content = btn.nextElementSibling;
-    const toggle = btn.querySelector('.section-toggle');
-    const isOpen = getComputedStyle(content).display !== 'none';
-    content.style.display = isOpen ? 'none' : 'block';
-    toggle.textContent = isOpen ? '◀' : '▼';
-  };
 
 });
