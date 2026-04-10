@@ -70,6 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
       font-style: italic;
       padding: 6px 0;
     }
+    .section-content {
+      display: none;
+    }
   `;
   document.head.appendChild(style);
 
@@ -80,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="search-container">
           <div class="search-wrapper">
             <span>🔍</span>
-            <input type="text" id="siteSearch" placeholder="  Search...  " />
+            <input type="text" id="siteSearch" placeholder="Search..." />
           </div>
           <div class="search-results" id="searchResults"></div>
         </div>
@@ -208,9 +211,14 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   `;
   
-  document.getElementById('sidebar-container').innerHTML = sidebarHTML;
+  const container = document.getElementById('sidebar-container');
+  if (!container) {
+    console.error('menu.js: No element with id="sidebar-container" found. Add <div id="sidebar-container"></div> to your HTML.');
+    return;
+  }
+  container.innerHTML = sidebarHTML;
 
-  // --- Page index (title + url + keywords to boost search) ---
+  // --- Page index ---
   const allPages = [
     { title: "Factors affecting fertilization", url: "post1.html" },
     { title: "Reproductive Anatomy", url: "post2.html" },
@@ -275,34 +283,33 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Partner and Sexual Violence", url: "dv.html" },
   ];
 
-  // --- Content cache: fetch and store page text on first search ---
+  // --- Content cache ---
   const contentCache = {};
 
   async function fetchPageText(url) {
-    if (contentCache[url]) return contentCache[url];
+    if (contentCache[url] !== undefined) return contentCache[url];
     try {
       const res = await fetch(url);
+      if (!res.ok) { contentCache[url] = ''; return ''; }
       const html = await res.text();
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
-      // Remove script, style, nav tags so we only get article text
       doc.querySelectorAll('script, style, nav, #sidebar-container').forEach(el => el.remove());
-      const text = (doc.body?.innerText || doc.body?.textContent || '').replace(/\s+/g, ' ').trim();
+      const text = ((doc.body && (doc.body.innerText || doc.body.textContent)) || '').replace(/\s+/g, ' ').trim();
       contentCache[url] = text;
       return text;
     } catch {
+      contentCache[url] = '';
       return '';
     }
   }
 
-  // Extract a short snippet around the matched word
   function getSnippet(text, query) {
     const idx = text.toLowerCase().indexOf(query.toLowerCase());
     if (idx === -1) return '';
     const start = Math.max(0, idx - 60);
     const end = Math.min(text.length, idx + query.length + 60);
     let snippet = (start > 0 ? '...' : '') + text.slice(start, end) + (end < text.length ? '...' : '');
-    // Highlight the matched word
     const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
     snippet = snippet.replace(regex, '<mark>$1</mark>');
     return snippet;
@@ -322,29 +329,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchResults.innerHTML = '<p class="searching">Searching...</p>';
 
-    // Debounce so we don't fire on every single keystroke
     debounceTimer = setTimeout(async () => {
       const queryLower = query.toLowerCase();
 
-      // Fetch all pages in parallel
       const results = await Promise.all(
         allPages.map(async (page) => {
           const titleMatch = page.title.toLowerCase().includes(queryLower);
           const bodyText = await fetchPageText(page.url);
           const bodyMatch = bodyText.toLowerCase().includes(queryLower);
           if (titleMatch || bodyMatch) {
-            return {
-              page,
-              titleMatch,
-              snippet: bodyMatch ? getSnippet(bodyText, query) : ''
-            };
+            return { page, titleMatch, snippet: bodyMatch ? getSnippet(bodyText, query) : '' };
           }
           return null;
         })
       );
 
       const matches = results.filter(Boolean);
-      // Title matches float to top
       matches.sort((a, b) => b.titleMatch - a.titleMatch);
 
       searchResults.innerHTML = '';
@@ -361,7 +361,6 @@ document.addEventListener('DOMContentLoaded', function() {
           const link = document.createElement('a');
           link.href = page.url;
           link.textContent = page.title;
-
           item.appendChild(link);
 
           if (snippet) {
@@ -374,20 +373,20 @@ document.addEventListener('DOMContentLoaded', function() {
           searchResults.appendChild(item);
         });
       }
-    }, 300); // wait 300ms after user stops typing before searching
+    }, 300);
   });
 
-  // Sidebar toggle (mobile button)
+  // Sidebar toggle (mobile)
   window.toggleSidebar = function() {
     const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('open');
+    if (sidebar) sidebar.classList.toggle('open');
   };
 
-  // Section accordion toggle
+  // Section accordion toggle — fixed: uses getComputedStyle so first click works
   window.toggleSection = function(btn) {
     const content = btn.nextElementSibling;
     const toggle = btn.querySelector('.section-toggle');
-    const isOpen = content.style.display === 'block';
+    const isOpen = getComputedStyle(content).display !== 'none';
     content.style.display = isOpen ? 'none' : 'block';
     toggle.textContent = isOpen ? '◀' : '▼';
   };
