@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="search-container">
           <div class="search-wrapper">
             <span>🔍</span>
-            <input type="text" id="siteSearch" placeholder="Search articles..." />
+            <input type="text" id="siteSearch" placeholder="  Search...  " />
           </div>
           <div class="search-results" id="searchResults"></div>
         </div>
