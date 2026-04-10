@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="pregtest.html">Pregnancy Tests</a></li>
                     <li><a href="twins.html">Twins</a></li>
                     <li><a href="iui.html">IUI</a></li>
-                    
                     <li><a href="bloodtests.html">Blood tests</a></li>
                     <li><a href="letrozole.html">Letrozole</a></li>
                     <li><a href="maleinf.html">Male infertility</a></li>
@@ -98,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <ul class="section-content">
                     <li><a href="birthcontrolpills.html">Birth Control pills</a></li>
                     <li><a href="iud.html">IUD Intrauterine device</a></li>
-                      <li><a href="pull.html">The Pull Out Method</a></li>
+                    <li><a href="pull.html">The Pull Out Method</a></li>
                     <li><a href="rod.html">Contraceptive implant - The Rod</a></li>
                     <li><a href="condoms.html">The Science of Condoms</a></li>
                     <li><a href="virginity.html">Virginity</a></li>
@@ -192,7 +191,6 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('sidebar-container').innerHTML = sidebarHTML;
 
   // --- Search logic ---
-  // Master list of all pages (title + url)
   const allPages = [
     { title: "Factors affecting fertilization", url: "post1.html" },
     { title: "Reproductive Anatomy", url: "post2.html" },
@@ -259,13 +257,10 @@ document.addEventListener('DOMContentLoaded', function() {
   searchInput.addEventListener('input', function() {
     const query = this.value.trim().toLowerCase();
     searchResults.innerHTML = '';
-
-    if (query.length < 2) return; // don't search until 2+ chars typed
-
+    if (query.length < 2) return;
     const matches = allPages.filter(page =>
       page.title.toLowerCase().includes(query)
     );
-
     if (matches.length === 0) {
       searchResults.innerHTML = '<p class="no-results">No results found.</p>';
     } else {
@@ -279,3 +274,19 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 });
+
+// ── Sidebar toggle (called by the ☰ button) ──────────────────────────────────
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  if (sidebar) sidebar.classList.toggle('mobile-open');
+}
+
+// ── Section accordion (called by each section header button) ─────────────────
+function toggleSection(btn) {
+  const content = btn.nextElementSibling;
+  const toggle  = btn.querySelector('.section-toggle');
+  const isOpen  = content.style.display === 'block';
+
+  content.style.display = isOpen ? 'none' : 'block';
+  if (toggle) toggle.textContent = isOpen ? '◀' : '▼';
+}
