@@ -171,6 +171,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="preeclampsia.html">Preeclampsia</a></li>
                     <li><a href="ectopic.html">Ectopic Pregnancy</a></li>
                     <li><a href="postpdep.html">Postpartum depression</a></li>
+                    <li><a href="blackma.html">Black Pregnancy</a></li>
+                   
                 </ul>
             </li>
             
@@ -229,6 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Period Cramps", url: "cramps.html" },
     { title: "Clue vs Flo", url: "cluevsflo.html" },
     { title: "Tampons", url: "tampons.html" },
+     { title: "Postpartum Depression", url: "postpdep.html" },
     { title: "Animals That Menstruate", url: "animalperiod.html" },
     { title: "Premenstrual Dysphoric Disorder (PMDD)", url: "pmdd.html" },
     { title: "Morning Sickness", url: "morning-sickness.html" },
@@ -246,6 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Gestational Diabetes", url: "gestdiab.html" },
     { title: "Molar Pregnancy", url: "molarpreg.html" },
     { title: "Preeclampsia", url: "preeclampsia.html" },
+    { title: "Black Pregnancy", url: "blackma.html" },
     { title: "What is Consent?", url: "what-is-consent.html" },
     { title: "The Global birth rate Decline", url: "birthratedecline.html" },
     { title: "Partner and Sexual Violence", url: "dv.html" },
