@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="lapendo.html">Laparoscopic endometrius excision surgery</a></li>
                     <li><a href="estrogen.html">Estrogen</a></li>
                     <li><a href="uti.html">Urinary Tract Infection UTI</a></li>
-                    <li><a href="bone.html">Why our bones weaken as we age</a></li>
+                    <li><a href="bone.html">The Estrogen in our bones</a></li>
                 </ul>
             </li>
 
@@ -203,6 +203,8 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Reproductive Hormones", url: "hormones.html" },
     { title: "What is Fertility?", url: "what-is-fertility.html" },
     { title: "PCOS", url: "pcos.html" },
+    { title: "Falling sick while pregnant", url: "sickpreg.html" }
+    { title: "The estrogen in our bones ", url: "bone.html" }
     { title: "IVF and Egg Freezing", url: "ivfegg.html" },
     { title: "Pregnancy Tests", url: "pregtest.html" },
     { title: "Twins", url: "twins.html" },
