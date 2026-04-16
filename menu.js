@@ -203,8 +203,8 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Reproductive Hormones", url: "hormones.html" },
     { title: "What is Fertility?", url: "what-is-fertility.html" },
     { title: "PCOS", url: "pcos.html" },
-    { title: "Falling sick while pregnant", url: "sickpreg.html" }
-    { title: "The estrogen in our bones ", url: "bone.html" }
+    { title: "Falling sick while pregnant", url: "sickpreg.html" },
+    { title: "The estrogen in our bones ", url: "bone.html" },
     { title: "IVF and Egg Freezing", url: "ivfegg.html" },
     { title: "Pregnancy Tests", url: "pregtest.html" },
     { title: "Twins", url: "twins.html" },
