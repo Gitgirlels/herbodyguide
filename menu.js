@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="lapendo.html">Laparoscopic endometrius excision surgery</a></li>
                     <li><a href="estrogen.html">Estrogen</a></li>
                     <li><a href="uti.html">Urinary Tract Infection UTI</a></li>
+                    <li><a href="bone.html">Why our bones weaken as we age</a></li>
                 </ul>
             </li>
 
@@ -172,6 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="ectopic.html">Ectopic Pregnancy</a></li>
                     <li><a href="postpdep.html">Postpartum depression</a></li>
                     <li><a href="blackma.html">Black Pregnancy</a></li>
+                    <li><a href="sickpreg.html">Falling sick while pregnant</a></li>
                    
                 </ul>
             </li>
