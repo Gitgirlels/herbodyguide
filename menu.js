@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="estrogen.html">Estrogen</a></li>
                     <li><a href="uti.html">Urinary Tract Infection UTI</a></li>
                     <li><a href="bone.html">The Estrogen in our bones</a></li>
-                        <li><a href="discharge.html"> Vaginal discharge</a></li>
+                    <li><a href="discharge.html">Vaginal discharge</a></li>
                 </ul>
             </li>
 
@@ -222,7 +222,8 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Pill Symptoms Scientific", url: "pillsymptoms.html" },
     { title: "Endometriosis", url: "endometriosis.html" },
     { title: "Endobelly", url: "endobelly.html" },
-    { title: "Vaginal discharge ", url: "discharge.html" },title: "Vaginal discharge ", url: "cysts.html" },
+    { title: "Vaginal discharge", url: "discharge.html" },
+    { title: "Ovarian cysts", url: "cysts.html" },
     { title: "The Vagina", url: "vagina.html" },
     { title: "Menopause and perimenopause", url: "menopause.html" },
     { title: "The Uterus", url: "uterus.html" },
