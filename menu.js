@@ -112,7 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <ul class="section-content">
                     <li><a href="post2.html">Reproductive Anatomy</a></li>
                     <li><a href="hormones.html">Reproductive Hormones</a></li>
-                    <li><a href="pcos.html">PCOS</a></li>
+                    <li><a href="pcos.html">PCOS Polycystic ovarian syndrome</a></li>
+                    <li><a href="pmos.html">PMOS Polyendocrine metabolic ovarian syndrome</a></li>
                     <li><a href="endometriosis.html">Endometriosis</a></li>
                     <li><a href="endobelly.html">Endobelly</a></li>
                     <li><a href="cysts.html">Ovarian Cysts</a></li>
@@ -204,6 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Reproductive Hormones", url: "hormones.html" },
     { title: "What is Fertility?", url: "what-is-fertility.html" },
     { title: "PCOS", url: "pcos.html" },
+     { title: "PMOS", url: "pmos.html" },
     { title: "Falling sick while pregnant", url: "sickpreg.html" },
     { title: "The estrogen in our bones ", url: "bone.html" },
     { title: "IVF and Egg Freezing", url: "ivfegg.html" },
