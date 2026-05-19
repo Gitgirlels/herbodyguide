@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="condoms.html">The Science of Condoms</a></li>
                     <li><a href="virginity.html">Virginity</a></li>
                     <li><a href="pillsymptoms.html">Pill Symptoms Scientific</a></li>
+                    <li><a href="bcbloodclot.html">Birth Control Side Effect - Pulmonary embolism</a></li>
                 </ul>
             </li>
             
@@ -239,6 +240,7 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Period Cramps", url: "cramps.html" },
     { title: "Clue vs Flo", url: "cluevsflo.html" },
     { title: "Tampons", url: "tampons.html" },
+    { title: "Birth Control side effect- blood clots", url: "bcbloodclot.html" },
      { title: "Postpartum Depression", url: "postpdep.html" },
     { title: "Animals That Menstruate", url: "animalperiod.html" },
     { title: "Premenstrual Dysphoric Disorder (PMDD)", url: "pmdd.html" },
