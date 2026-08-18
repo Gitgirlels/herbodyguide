@@ -129,6 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="uti.html">Urinary Tract Infection UTI</a></li>
                     <li><a href="bone.html">The Estrogen in our bones</a></li>
                     <li><a href="discharge.html">Vaginal discharge</a></li>
+                    <li><a href="undereating.html">Undereating</a></li>
                 </ul>
             </li>
 
@@ -263,6 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "What is Consent?", url: "what-is-consent.html" },
     { title: "The Global birth rate Decline", url: "birthratedecline.html" },
     { title: "Partner and Sexual Violence", url: "dv.html" },
+     { title: "Under eating", url: "undereating.html" },
   ];
 
   const searchInput = document.getElementById('siteSearch');
