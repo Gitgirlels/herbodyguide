@@ -103,7 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="virginity.html">Virginity</a></li>
                     <li><a href="pillsymptoms.html">Pill Symptoms Scientific</a></li>
                     <li><a href="bcbloodclot.html">Birth Control Side Effect - Pulmonary embolism</a></li>
-                </ul>
+                <li><a href="weightgainbc.html">Weight gain while on birth control</a></li>
+                 </ul>
             </li>
             
             <li class="nav-section">
@@ -178,7 +179,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="postpdep.html">Postpartum depression</a></li>
                     <li><a href="blackma.html">Black Pregnancy</a></li>
                     <li><a href="sickpreg.html">Falling sick while pregnant</a></li>
-                   
+                    <li><a href="stillbirth.html">Stillbirth</a></li>
+                   <li><a href="shortcervix-pregnancy.html">Short cervix pregnancy</a></li>
+                  
                 </ul>
             </li>
             
@@ -265,6 +268,10 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "The Global birth rate Decline", url: "birthratedecline.html" },
     { title: "Partner and Sexual Violence", url: "dv.html" },
      { title: "Under eating", url: "undereating.html" },
+     { title: "Weight Gain while on birth control", url: "weightgainbc.html" },
+     { title: "Stillbirth", url: "stillbirth.html" },
+     { title: "Short cervix pregnancy", url: "shortcervix-pregnancy.html" },
+    
   ];
 
   const searchInput = document.getElementById('siteSearch');
